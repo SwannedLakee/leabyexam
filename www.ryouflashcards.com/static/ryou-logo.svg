@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1024"
+   height="1024"
+   viewBox="0 0 270.93333 270.93334"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.1.2 (b8e25be8, 2022-02-05)"
+   sodipodi:docname="ryou-logo.svg"
+   inkscape:export-filename="C:\Users\anjhe\Desktop\logo.png"
+   inkscape:export-xdpi="48"
+   inkscape:export-ydpi="48"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-1025.7143"
+     inkscape:cy="561.42857"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     units="px"
+     inkscape:window-width="2560"
+     inkscape:window-height="957"
+     inkscape:window-x="76"
+     inkscape:window-y="146"
+     inkscape:window-maximized="0"
+     showguides="false"
+     inkscape:pagecheckerboard="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-26.06665)">
+    <circle
+       style="fill:#4c8ffb;fill-opacity:1;stroke-width:0.28795347"
+       id="path10"
+       cx="135.46666"
+       cy="161.53331"
+       r="130.40178" />
+    <rect
+       style="opacity:0.99;fill:#228be6;fill-opacity:1;stroke:none;stroke-width:1.00891;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1473"
+       width="270.93335"
+       height="270.93335"
+       x="0"
+       y="26.06665"
+       ry="135.46667" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:193.101px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:4.82753"
+       x="38.916145"
+       y="226.78035"
+       id="text4522"><tspan
+         sodipodi:role="line"
+         id="tspan4520"
+         x="38.916145"
+         y="226.78035"
+         style="fill:#ffffff;stroke-width:4.82753">両</tspan></text>
+  </g>
+</svg>
