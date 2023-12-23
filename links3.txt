@@ -1,0 +1,17 @@
+https://www.learnbyexample.org/sql-select-statement/
+https://www.learnbyexample.org/sql-select-distinct-statement/
+https://www.learnbyexample.org/sql-where-clause/
+https://www.learnbyexample.org/sql-and-or-not-operators/
+https://www.learnbyexample.org/sql-between-operator/
+https://www.learnbyexample.org/sql-in-operator/
+https://www.learnbyexample.org/sql-like-operator/
+https://www.learnbyexample.org/sql-order-by-clause/
+https://www.learnbyexample.org/sql-aggregate-functions/
+https://www.learnbyexample.org/sql-group-by-statement/
+https://www.learnbyexample.org/sql-having-clause/
+https://www.learnbyexample.org/sql-insert-into-statement/
+https://www.learnbyexample.org/sql-insert-select-statement/
+https://www.learnbyexample.org/sql-select-into-statement/
+https://www.learnbyexample.org/sql-update-statement/
+https://www.learnbyexample.org/sql-delete-statement/
+
