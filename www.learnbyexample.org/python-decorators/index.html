@@ -1,0 +1,719 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="profile" href="https://gmpg.org/xfn/11" />
+<meta name="robots" content="max-image-preview:large" />
+<script type="application/ld+json">{"@context":"http:\/\/schema.org","publisher":{"@type":"Organization","name":"Learn By Example","logo":{"@type":"ImageObject","url":"https:\/\/www.learnbyexample.org\/wp-content\/themes\/siddhai-child\/logo\/logo.png","height":90,"width":193}},"@type":"BlogPosting","mainEntityOfPage":"https:\/\/www.learnbyexample.org\/python-decorators\/","headline":"Python Decorators","datePublished":"2019-10-19T16:39:15+00:00","dateModified":"2020-04-20T13:07:00+00:00","author":{"@type":"Person","name":"learnbyexample"},"image":{"@type":"ImageObject","url":"https:\/\/www.learnbyexample.org\/wp-content\/uploads\/2019\/06\/Learn-Python-Programming.png","width":763,"height":436}}</script>
+
+<title>Python Decorators - Learn By Example</title>
+<meta name="description" content="Learn about decorators in Python, @ decorator syntax, decorate functions with arguments, returne values from decorated functions, preserve function metadata, unwrapping a decorator, nesting decorators, apply decorators to built-in functions, real world examples" />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<link rel="canonical" href="index.html" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Python Decorators - Learn By Example" />
+<meta property="og:description" content="Learn about decorators in Python, @ decorator syntax, decorate functions with arguments, returne values from decorated functions, preserve function metadata, unwrapping a decorator, nesting decorators, apply decorators to built-in functions, real world examples" />
+<meta property="og:url" content="https://www.learnbyexample.org/python-decorators/" />
+<meta property="og:site_name" content="Learn By Example" />
+<meta property="article:published_time" content="2019-10-19T16:39:15+00:00" />
+<meta property="article:modified_time" content="2020-04-20T13:07:00+00:00" />
+<meta property="og:image" content="https://www.learnbyexample.org/wp-content/uploads/2019/06/Learn-Python-Programming.png" />
+<meta property="og:image:width" content="763" />
+<meta property="og:image:height" content="436" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:label1" value="Written by">
+<meta name="twitter:data1" value="learnbyexample">
+<meta name="twitter:label2" value="Est. reading time">
+<meta name="twitter:data2" value="7 minutes">
+
+<link rel="dns-prefetch" href="https://scripts.mediavine.com/" />
+<link rel="dns-prefetch" href="https://s.w.org/" />
+<script async="async" data-noptimize="1" data-cfasync="false" src="https://scripts.mediavine.com/tags/learn-by-example.js" id="mv-script-wrapper-js"></script>
+<link rel="icon" type="image/png" href="../wp-content/themes/siddhai-child/logo/favicon.png"><script async src="https://www.googletagmanager.com/gtag/js?id=UA-142181689-1"></script>
+<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-142181689-1');
+		</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QGDW35GZW0"></script>
+<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'G-QGDW35GZW0');
+		</script>
+<style type="text/css">
+html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}body,input{margin:0}article,figure,footer,header,main,nav,section{display:block}figure{margin:0;max-width:100%}pre{font-family:monospace,monospace;font-size:1em;padding:4px 10px}a{background-color:transparent;-webkit-text-decoration-skip:objects;text-decoration:none;color:#1a73e8}a:active,a:hover{outline-width:0}b,strong{font-weight:500}.site-footer .footer-menu li{display:inline-block}img{border-style:none}svg:not(:root){overflow:hidden}input{overflow:visible}[type=checkbox]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:0}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}body,input{color:#191919;font-family:Segoe UI,system-ui,-apple-system,sans-serif;font-size:clamp(1rem, 0.96rem + 0.18vw, 1.125rem);font-weight:400;line-height:1.7}h1,h2,h3{clear:both;line-height:1.4;margin:0 0 .75em;color:#191919;font-size:24px;font-size:1.5rem;font-weight:300}h2,h3{font-size:20px;font-size:1.25rem}h3{font-size:18px;font-size:1.125rem}p,ul{padding:0;margin:0 0 1.5em}:focus,a:focus{outline:0}input[type=search]{color:#666;background:#fff;background-image:-webkit-linear-gradient(rgba(255,255,255,0),rgba(255,255,255,0));border:1px solid #bbb;-webkit-border-radius:3px;border-radius:3px;display:block;padding:.7em;width:100%}input[type=search]:focus{color:#222;border-color:#333}input[type=checkbox]:focus{outline:thin dotted #333}input[type=checkbox]{margin-right:.5em}input[type=checkbox]+label{font-weight:400}:-moz-placeholder,:-ms-input-placeholder,::-moz-placeholder,::-webkit-input-placeholder,::placeholder{color:#888}::-moz-placeholder{opacity:1}ul{list-style:disc}a:active,a:hover{outline:0}*,:after,:before{-webkit-box-sizing:inherit;-moz-box-sizing:inherit;box-sizing:inherit}body{background:#fff;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}body,button,input,select,textarea{font-family:Segoe UI,system-ui,-apple-system,sans-serif}img{height:auto;max-width:100%}
+article{font-size:17px}h1,h2,h3,h4,h5,h6{font-weight:400;line-height:1.2}article p{margin:clamp(1.375rem,1.2rem + .89vw,2rem)0;font-size:clamp(1.02rem,.96rem + .18vw,1.125rem);line-height:1.7}article li{line-height:1.7;margin-top:1em;font-size:clamp(1rem,.96rem + .18vw,1.125rem)}article ul{padding-left:30px}article h2{font-size:clamp(1.5rem,1.29rem + 1.07vw,2.25rem);margin:0;margin-top:clamp(2.375rem,1.98rem + 1.96vw,3.75rem)}article h3,article h4,article h5,article h6{font-size:clamp(1.25rem,1.11rem + .71vw,1.75rem);margin:0;margin-top:clamp(2.2rem,1.7rem + 1.96vw,3rem)}article h4,article h5,article h6{font-size:clamp(1rem,1.15rem + .18vw,1.45rem)}caption:empty,p:empty{margin:0}article b,article strong{font-weight:500}.hide,.invisi,article hr{display:none!important}a:not([href]){color:inherit}article h2+*,article h3+*,article h4+*{margin-top:1rem}.wp-block-image,.wp-block-image+*{margin-top:clamp(2.375rem,1.98rem + 1.96vw,3.75rem)}.wp-block-image img{margin:0 auto;display:block}.entry-content p:first-child{margin-top:0}.svg-assets{position:absolute;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);display:none}.entry-content>.quote+h2,.entry-content>h2:first-child{margin-top:0}
+.single-post .site-main{display:flex;flex-wrap:wrap;gap:20px}#main,.post-wrapper{flex-basis:0;flex-grow:999;min-width:70%}.main-wrapper{display:flex;gap:20px;flex-direction:row-reverse;flex-wrap:nowrap}#main{flex:auto}.entry-content{width:auto;max-width:770px;margin:0 auto;padding:0 20px;overflow:hidden;overflow-wrap:break-word}@media (max-width:767px){.post{width:100%}h1,h2,h3,h4,h5,h6{font-weight:500}.site-main{gap:0}}.site-footer{background-color:#f8f9fa;font-size:14px;overflow:hidden;text-align:center;margin-top:30px;padding:10px;border-top:1px solid #ededed}.site-footer .copyright{line-height:20px;margin-bottom:15px;color:#888}.site-footer .footer-menu{margin:12px 0}.site-footer .footer-menu li a{margin:0 16px;line-height:18px;color:#191919;letter-spacing:.25px}.header-nav .dropdown a:hover,.site-footer .footer-menu li a:hover{color:#54a0ff}.example h4,.menu-checkbox-label{display:none}
+.post-header{padding:clamp(1.5rem,1.5rem + 2vw,3.5rem) 20px}.featured-image{padding:0 20px;margin-bottom:clamp(2.375rem,1.98rem + 1.96vw,3.75rem)}.featured-image img{border-radius:10px;box-shadow:0 0 0 1px #eee;margin:0 auto;display:block}.post-header h1,.entry-title{font-size:clamp(1.75rem,1.39rem + 1.79vw,2.8rem);text-align:center;max-width:900px;margin:1.8rem auto 2.5rem}@media (max-width:767px){.post-header h1,.entry-title{margin:1.2rem auto 2.2rem}}.article-tag{line-height:1.5714285714;font-size:15px;letter-spacing:1.5px;color:#888;text-transform:uppercase;font-weight:500;display:block;max-width:fit-content;margin:0 auto}.article-tag:hover{color:#1a73e8}
+.site-header{position:relative;border-bottom:1px solid #d2d3d7;display:flex;width:100%;height:65px;align-items:center;padding:0 20px}.sitelogo a{display:flex}.site-header .sitelogo{height:54px;width:192px}.search-form span:before{display:inline-block;position:relative;background-repeat:no-repeat;content:"";width:24px;height:24px;top:6px;left:-10px}.header-nav a{line-height:2.5;color:#585b63;padding:0 1em;font-weight:500;font-size:16px}.header-nav .dropdown{display:flex;align-items:center;gap:44px}.search-box .search-field{font-size:15px;min-height:36px;min-width:260px;background:#f3f3f3;border-radius:4px;padding:2px 38px;border:0}@media (min-width:768px){.menu-search-wrapper{display:flex;flex:1;flex-direction:row-reverse;justify-content:space-between;align-items:center}.header-nav{margin-left:60px}.header-nav b{display:none}}@media (max-width:767px){.search-box .search-field{min-width:200px}.sitelogo{margin:0 auto}.menu-search-wrapper{overflow-y:auto;background:#fff;position:fixed;z-index:2001;width:260px;height:100vh;right:0;top:1px;padding:20px 16px 30px;box-shadow:0 1px 0 1px rgba(0,0,0,.14),0 2px 2px 2px rgba(0,0,0,.12);-webkit-transition:transform .3s cubic-bezier(.55,0,.1,1) 0s;-moz-transition:transform .3s cubic-bezier(.55,0,.1,1) 0s;-o-transition:transform .3s cubic-bezier(.55,0,.1,1) 0s;transition:transform .3s cubic-bezier(.55,0,.1,1) 0s;transform:translate3d(-260px,0,0);-webkit-transform:translate3d(265px,0,0);-moz-transform:translate3d(265px,0,0);-ms-transform:translate3d(265px,0,0);-o-transform:translate3d(265px,0,0)}#menu-checkbox:checked~.menu-search-wrapper{transform:initial;-webkit-transform:initial;-moz-transform:initial;-ms-transform:initial;-o-transform:initial}#menu-checkbox:checked~.sidebar-overlay{opacity:1;visibility:visible}.menu-checkbox-label{display:block;position:absolute;top:0;right:0;padding:23px 20px}.header-nav .dropdown{margin-left:20px;align-items:flex-start;gap:0;flex-direction:column}.dropdown a{padding:0 10px;line-height:40px;display:block;margin:8px 0}.header-nav b{margin:30px 0 10px;display:block;font-size:16px}}@media (max-width:1070px) and (min-width:950px){.header-nav .dropdown{gap:34px}.search-box .search-field{min-width:190px;width:190px}}@media (max-width:950px) and (min-width:768px){.header-nav{margin-left:20px}.header-nav .dropdown{gap:20px}.search-box .search-field{min-width:190px;width:190px}}form.search-form{position:relative}.search-form span:before{display:block;position:absolute;top:7px;left:9px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='%23888888'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3C/svg%3E")}
+.tabler{font-size:1.03rem;border-top:1px solid #d2d3d7;text-align:center;border-collapse:collapse;border-spacing:0;margin:0 auto;caption-side:bottom;overflow:hidden;min-width:400px;width:100%}.tabler td{border-width:0;text-align:center;padding:8px}.tabler .tabler-smalltext{font-size:11px}.tabler tr.tabler-header{font-weight:500;border-bottom:2px solid #d2d3d7}.tabler tr{border-bottom:1px solid #d2d3d7}.parametertabler tr td{text-align:left;padding-left:30px}.wp-caption-text,caption,figcaption{font-size:clamp(.75rem,.71rem + .18vw,.875rem);font-style:italic;line-height:1.7;color:#585b63;margin-top:1rem;text-align:center}.tablescroll,.sqltable{overflow-x:auto;margin-top:clamp(1.375rem,1.2rem + .89vw,2rem);background:linear-gradient(to right,#fff 30%,rgba(255,255,255,0)),linear-gradient(to right,rgba(255,255,255,0),#fff 70%)0 100%,radial-gradient(farthest-side at 0 50%,rgba(0,0,0,.2),transparent),radial-gradient(farthest-side at 100% 50%,rgba(0,0,0,.2),transparent)0 100%;background-repeat:no-repeat;background-size:40px 100%,40px 100%,14px 100%,14px 100%;background-position:0 0,100%,0 0,100%;background-attachment:local,local,scroll,scroll}@media (max-width:550px){.parametertabler td:first-child{padding-left:20px}.tabler{font-size:.95rem}}.parametertabler td:first-child{font-family:Consolas,Monaco,"Courier New",monospace}.tabler-header td:first-child{font-family:inherit}.tablescroll{overflow-x:auto;margin-top:clamp(1.375rem,1.2rem + .89vw,2rem);background:linear-gradient(to right,#fff 30%,rgba(255,255,255,0)),linear-gradient(to right,rgba(255,255,255,0),#fff 70%)0 100%,radial-gradient(farthest-side at 0 50%,rgba(0,0,0,.2),transparent),radial-gradient(farthest-side at 100% 50%,rgba(0,0,0,.2),transparent)0 100%;background-repeat:no-repeat;background-size:40px 100%,40px 100%,14px 100%,14px 100%;background-position:0 0,100%,0 0,100%;background-attachment:local,local,scroll,scroll}.tabler br{display:block}
+.sqltable{border:1px solid #d2d3d7;border-radius:8px;margin:clamp(1.375rem,1.2rem + .89vw,2rem)0}.sqltable .tabler tr.tabler-header{background:rgb(0 0 0/3%);border-bottom:2px solid #d2d3d7}.sqltable .tabler{font-size:.95rem;border-width:0}.sqltable .tabler td{padding:7px 30px;white-space:nowrap}.sqltable .tabler tr:last-child{border-bottom-width:0}.sqltable.fittable{width:fit-content;margin-left:0;min-width:100px;max-width:100%}@media (max-width:630px){.sqltable .tabler td{padding:4px 20px}}.sqltable td i{color:#aaa}.pk{position:relative}td.pk:before{content:"";width:10px;height:17px;display:block;position:absolute;left:calc(50% - 25px);top:11px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='16.488' viewBox='8.5 5.256 8 16.488'%3E%3Cpath fill='%23F7BC00' d='M15.011 17.856h-1.783v-6.844c0-.017.027-.033.026-.049h.393c1.573 0 2.854-1.28 2.854-2.854s-1.28-2.854-2.854-2.854h-2.293C9.78 5.256 8.5 6.536 8.5 8.11s1.28 2.854 2.854 2.854h.442c-.001.016-.031.032-.031.049v10a.732.732 0 0 0 1.463 0v-1.996h1.783v1.328H16.5V16.5h-1.489v1.356zM11.354 9.5c-.767 0-1.39-.624-1.39-1.39s.624-1.39 1.39-1.39h2.293c.767 0 1.39.624 1.39 1.39s-.623 1.39-1.39 1.39h-2.293z'/%3E%3C/svg%3E");background-repeat:no-repeat;transform:scale(1.3)}
+pre .com{color:#65798c}pre .dec,pre .lit{color:#c53929}pre .atv,pre .str{color:#d12f1b}pre .kwd,pre .tag{color:#1a73e8}pre .atn,pre .typ{color:#9c27b0}.example pre,code{font-family:Consolas,Monaco,"Courier New",monospace;font-size:.945em}.example pre{line-height:23px;display:block;background-color:transparent;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;margin:0;overflow-x:auto;padding:clamp(1rem,.96rem + .18vw,1.125rem);background:linear-gradient(to right,#fafafa 30%,rgba(255,255,255,0)),linear-gradient(to right,rgba(255,255,255,0),#fafafa 70%)0 100%,radial-gradient(farthest-side at 0 50%,rgba(0,0,0,.2),transparent),radial-gradient(farthest-side at 100% 50%,rgba(0,0,0,.2),transparent)0 100%;background-repeat:no-repeat;background-size:40px 100%,40px 100%,14px 100%,14px 100%;background-position:0 0,100%,0 0,100%;background-attachment:local,local,scroll,scroll}.example.exerr pre{background:linear-gradient(to right,#fff6f6 30%,rgba(255,255,255,0)),linear-gradient(to right,rgba(255,255,255,0),#fff6f6 70%)0 100%,radial-gradient(farthest-side at 0 50%,rgba(0,0,0,.2),transparent),radial-gradient(farthest-side at 100% 50%,rgba(0,0,0,.2),transparent)0 100%;background-repeat:no-repeat;background-size:40px 100%,40px 100%,14px 100%,14px 100%;background-position:0 0,100%,0 0,100%;background-attachment:local,local,scroll,scroll}code{border-radius:4px;background:#f3f3f3;padding:2px 6px 4px}.example code{padding:0;background-color:initial;position:initial;top:0;box-shadow:none;color:#1e2d35;background:initial}.example{border-radius:6px;overflow:hidden;margin:clamp(1.375rem,1.2rem + .89vw,2rem)0;background-color:#fafafa;border:1px solid #d2d3d7;font-size:clamp(1rem,.96rem + .18vw,1.125rem)}.example,.example .excode,.example .extable{position:relative}li code,p code{font-size:.92em}.example.exerr{background:#fff6f6;border:1px solid #ffe0e0}.simple-note .example .excode code{background:0 0}.example p{margin:15px auto}.excode code>span.com:first-of-type{position:relative;top:-3px}.prm{color:#0d904f;font-family:Consolas,Monaco,"Courier New",monospace;letter-spacing:-.03em;font-size:.92em;padding:0 2px}.example pre::-webkit-scrollbar,.sqltable::-webkit-scrollbar{height:5px;width:5px}.example pre::-webkit-scrollbar-thumb,.sqltable::-webkit-scrollbar-thumb{border-radius:10px;background-color:#ddd}.example pre::-webkit-scrollbar-track,.sqltable::-webkit-scrollbar-track{border-radius:10px;background-color:#fafafa}.example span.inlin{display:inline-block;margin-left:5px}
+.arw:before{content:"";background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 5.7 10.4'%3E%3Cpath fill='none' stroke='%23333' stroke-linecap='round' stroke-linejoin='round' stroke-miterlimit='10' d='M.5.5l4.6 4.7L.5 9.9'/%3E%3C/svg%3E");display:block;height:8px;background-repeat:no-repeat}.pls:before{content:"+";color:#666;display:block;height:8px;position:relative;left:-2px}.arw,.pls{display:inline-block;width:20px;position:relative;top:-1px}
+.syntx{font-family:Consolas,Monaco,"Courier New",monospace;font-size:clamp(1rem,1.25rem + .18vw,1.45rem);margin:clamp(2.2rem,1.7rem + 1.96vw,3rem)0;text-align:center;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word;padding:0}.syntx .fun{color:#4285f4}.syntx .arg{color:#34a852}.syntx span{display:inline-block}.syntx .sql{text-align:left;line-height:1.5em}.syntx .sql .arg{font-style:normal}
+.simple-note,.special-block{background:#e8f0fe;border:1px solid #d3e3f1;border-radius:8px;color:#32516b;position:relative;margin:clamp(2.2rem,1.7rem + 1.96vw,3rem)0;padding:clamp(1.375rem,1.2rem + .89vw,1.5rem);padding-left:60px}.simple-note:before,.special-block:before{width:25px;height:25px;content:"";background-image:url("data:image/svg+xml,%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' x='0' y='0' viewBox='0 0 25 25' style='enable-background:new 0 0 25 25' xml:space='preserve'%3E%3Cstyle%3E.st0%7Bfill:%2332516b%7D%3C/style%3E%3Cpath class='st0' d='M14.3 16.5h-.5v-5.6c0-.3-.3-.6-.6-.6h-2.4c-.3 0-.6.3-.6.6v1.2c0 .3.3.6.6.6h.5v3.8h-.5c-.3 0-.6.3-.6.6v1.2c0 .3.3.6.6.6h3.5c.3 0 .6-.3.6-.6v-1.2c0-.3-.3-.6-.6-.6z'/%3E%3Ccircle class='st0' cx='12.5' cy='7.6' r='1.5'/%3E%3Cpath class='st0' d='M12.5 0C5.6 0 0 5.6 0 12.5S5.6 25 12.5 25 25 19.4 25 12.5 19.4 0 12.5 0zm0 23.4c-6 0-10.9-4.9-10.9-10.9S6.5 1.6 12.5 1.6s10.9 4.9 10.9 10.9-4.9 10.9-10.9 10.9z'/%3E%3C/svg%3E");background-repeat:no-repeat;position:absolute;top:28px;left:19px;opacity:.8}.simple-note p,.special-block p{margin-top:1rem;margin-bottom:0}.simple-note p:first-child{margin-top:0}.simple-note h3,.special-block h3{margin:10px 0;line-height:1.76em;font-size:17px;color:#32516b;font-weight:500}.simple-note code,.special-block code{background:#ffffff70;color:#32516b;padding:0 6px 2px}.simple-note .example{box-shadow:none;margin: clamp(1.375rem,1.2rem + 0.89vw,2rem)0;margin-top:1rem;padding:0;background:0 0;border-width:0}.simple-note .example .excode{background:#ffffff80;border-width:0}.simple-note b,.simple-note p,.special-block b{color:#32516b}.simple-note .example code{padding:0}.simple-note img{margin:2rem auto;display:block}.simple-note .example pre{background:0}
+.nav-sidebar-wrapper{z-index:2;flex-basis:300px;flex-grow:1;max-width:300px}@media (max-width:767px){.nav-sidebar-wrapper{z-index:2001}}@media (max-width:1470px) and (min-width:768px){.nav-sidebar-wrapper{display:none}}@media (max-width:1470px){.nav-sidebar-wrapper{width:0}}.nav-sidebar-wrapper .nav-sidebar{position:sticky;width:100%;padding-top:20px;padding-bottom:30px;top:0;height:100vh;z-index:4;-webkit-transition:transform .3s cubic-bezier(.55,0,.1,1) 0s;-moz-transition:transform .3s cubic-bezier(.55,0,.1,1) 0s;-o-transition:transform .3s cubic-bezier(.55,0,.1,1) 0s;transition:transform .3s cubic-bezier(.55,0,.1,1) 0s;overflow-y:auto;overflow-x:hidden;border-right:1px solid #d2d3d7;border-bottom:1px solid #d2d3d7;transform:translate3d(-260px,0,0);-webkit-transform:translate3d(-265px,0,0);-moz-transform:translate3d(-265px,0,0);-ms-transform:translate3d(-265px,0,0);-o-transform:translate3d(-265px,0,0);overscroll-behavior:contain}@media (min-width:768px){.nav-sidebar-wrapper .nav-sidebar{transform:translate3d(0,0,0);-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0)}}.nav-sidebar-wrapper .nav-sidebar::-webkit-scrollbar,.story-highlights::-webkit-scrollbar{width:4px;background-color:#fff}.nav-sidebar-wrapper .nav-sidebar::-webkit-scrollbar-thumb,.story-highlights::-webkit-scrollbar-thumb{border-radius:10px;background-color:#ddd}.nav-sidebar-wrapper .nav-sidebar::-webkit-scrollbar-track,.story-highlights::-webkit-scrollbar-track{border-radius:10px;background-color:#fff}.nav-sidebar a{line-height:1.45em;display:block;padding:6px 0 6px 40px;color:#585b63;position:relative;font-size:15px}.nav-sidebar a:hover{text-decoration:none;background-color:#f3f3f3;border-top-right-radius:17px;border-bottom-right-radius:17px;margin-right:20px}.nav-sidebar a.current-chapter{background:#e8f0fe;color:#3e7de7;font-weight:500;border:1px solid #d2e3fc;border-top-right-radius:17px;border-bottom-right-radius:17px;margin-right:20px;border-left:4px solid #3e7de7}.highlighter-strip h2:after,.highlighter-strip h2:before,.nav-sidebar-label,.story-highlights input{display:none}.hide-checkbox,.sidebar-overlay{position:absolute;opacity:0;visibility:hidden}.sidebar-overlay{width:100vw;height:100vh;background:rgba(0,0,0,.4);backdrop-filter:blur(5px);position:fixed;top:0;left:0;z-index:3;-webkit-transition:all .3s cubic-bezier(.55,0,.1,1) 0s;-moz-transition:all .3s cubic-bezier(.55,0,.1,1) 0s;-o-transition:all .3s cubic-bezier(.55,0,.1,1) 0s;transition:all .3s cubic-bezier(.55,0,.1,1) 0s}@media (max-width:767px){.nav-sidebar-wrapper{z-index:2001}.nav-sidebar-wrapper .nav-sidebar{background:#fff;position:fixed;width:260px;left:0}.site-main input:checked~.nav-sidebar-wrapper .nav-sidebar{transform:translate3d(0,0,0);-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0)}.site-main input:checked~.nav-sidebar-wrapper .sidebar-overlay{opacity:1;visibility:visible}.nav-sidebar-label{display:block;position:absolute;top:0;left:0;padding:22px 20px}}.nav-title{font-size:18px;font-weight:500;padding:9px 0 9px 18px;line-height:30px;margin:0}
+.nav-rightbar-wrapper{flex:auto;flex-basis:300px;flex-grow:1;max-width:300px;display:revert}.story-highlights{padding-left:20px;padding-right:6px;margin-top:50px;width:100%;background:linear-gradient(to bottom,#fff 30%,rgba(255,255,255,0)),linear-gradient(to bottom,rgba(255,255,255,0),#fff 70%)0 100%,radial-gradient(farthest-side at 50%0,rgba(0,0,0,.2),transparent),radial-gradient(farthest-side at 50% 100%,rgba(0,0,0,.2),transparent);background-repeat:no-repeat;background-size:100% 40px,100% 40px,100% 14px,100% 14px;background-position:100%0,0 100%,100%0,0 100%;background-attachment:local,local,scroll,scroll;overscroll-behavior:contain}.story-highlights-title{font-size:17px;font-weight:500;margin:6px 0 16px;line-height:27px}.story-highlights .tab-content{margin:0}.story-highlights .tab-content li{list-style:none;padding:1px 0;font-size:16px;line-height:22px;margin:8px 0 0}.story-highlights .tab-content li a{color:#585b63}.story-highlights .tab-content li a:hover{color:#1a73e8}.story-highlights .main-tab .tab .tab-content{padding-left:20px;border-left:1px solid #d2d3d7;margin-left:20px}@media (max-width:767px){.nav-rightbar-wrapper{display:none}}@media (max-width:1024px){.nav-rightbar-wrapper{max-width:200px;flex-basis:200px}}
+.social-sharing a{height:21px;width:21px}.social-sharing{margin:0 auto;display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:22px}.bottom-sharing{border-top:1px solid #e6e6e6;text-align:center;padding:50px 0 30px;font-size:17px;line-height:16px;margin:54px auto 0;max-width:fit-content;gap:30px}.share-text{letter-spacing:1.5px;font-weight:500;color:#585b63;font-size:16px}.bottom-sharing a{height:25px;width:25px}a.facebook:hover svg{fill:#1877f2}a.twitter:hover svg{fill:#38a1f3}a.pinterest:hover svg{fill:#bd081c}a.linkedin:hover svg{fill:#0077b5}.social-sharing a svg{fill:#333}.top-sharing a svg{fill:#888}.top-sharing a.pinterest{height:23px;width:23px}.bottom-sharing a.pinterest{height:27px;width:27px}
+#post-19,#post-457,#post-459{padding:20px;max-width:730px;margin:0 auto}br,.quote{display:none}h2#usage+p a,h2#usage+p+p a,h2#usage+p+p+p a{color:inherit}.copied,.ctext{display:none}
+@media print{article{position:fixed}.social-sharing,footer{display:none}}
+@media only screen and (min-width:1025px){.nav-rightbar-wrapper{margin-right:5px!important}}@media only screen and (max-width:359px){.entry-content{padding-right:10px!important;padding-left:10px!important}}
+</style>
+</head>
+<body class="post-template-default single single-post postid-807 single-format-standard no-sidebar">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0 0.49803921568627" /><feFuncG type="table" tableValues="0 0.49803921568627" /><feFuncB type="table" tableValues="0 0.49803921568627" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 0.27843137254902" /><feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0 0" /><feFuncG type="table" tableValues="0 0.64705882352941" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0.78039215686275 1" /><feFuncG type="table" tableValues="0 0.94901960784314" /><feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.44705882352941 0.4" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0.098039215686275 1" /><feFuncG type="table" tableValues="0 0.66274509803922" /><feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg>
+<svg class="svg-assets" xmlns="http://www.w3.org/2000/svg">
+<symbol id="social-twitter" viewBox="0 0 18 18">
+<path d="M16.5,4.3c-0.6,0.2-1.1,0.4-1.8,0.5c0.6-0.4,1.1-1,1.4-1.7c-0.6,0.4-1.3,0.6-2,0.8c-0.6-0.6-1.4-1-2.2-1 c-1.7,0-3.1,1.4-3.1,3.1c0,0.2,0,0.5,0.1,0.7C6.3,6.5,4.1,5.3,2.5,3.4C2.3,3.9,2.1,4.4,2.1,5c0,1.1,0.5,2,1.4,2.6 c-0.5,0-1-0.2-1.4-0.4c0,0,0,0,0,0c0,1.5,1.1,2.8,2.5,3.1c-0.3,0.1-0.5,0.1-0.8,0.1c-0.2,0-0.4,0-0.6-0.1c0.4,1.2,1.5,2.1,2.9,2.2 c-1.1,0.8-2.4,1.3-3.8,1.3c-0.2,0-0.5,0-0.7,0c1.4,0.9,3,1.4,4.7,1.4c5.7,0,8.8-4.7,8.8-8.9c0-0.1,0-0.3,0-0.4 C15.6,5.5,16.1,4.9,16.5,4.3"></path>
+</symbol>
+<symbol id="social-facebook" viewBox="0 0 18 18">
+<path d="M15.7,1.5H2.3c-0.5,0-0.8,0.4-0.8,0.8v13.3c0,0.5,0.4,0.8,0.8,0.8h7.2v-5.8h-2V8.4h2V6.8c0-1.9,1.2-3,2.9-3 c0.8,0,1.5,0.1,1.7,0.1v2l-1.2,0c-0.9,0-1.1,0.4-1.1,1.1v1.4h2.2l-0.3,2.3h-1.9v5.8h3.8c0.5,0,0.8-0.4,0.8-0.8V2.3 C16.5,1.9,16.1,1.5,15.7,1.5z"></path>
+</symbol>
+<symbol id="social-linkedin" viewBox="0 0 18 18">
+<path d="M15.4,1.5H2.6C2,1.5,1.5,2,1.5,2.6v12.8c0,0.6,0.5,1.1,1.1,1.1h12.8c0.6,0,1.1-0.5,1.1-1.1V2.6C16.5,2,16,1.5,15.4,1.5z M3.8,7.1H6v7.2H3.8V7.1z M4.9,6.1c-0.7,0-1.3-0.6-1.3-1.3c0-0.7,0.6-1.3,1.3-1.3c0.7,0,1.3,0.6,1.3,1.3C6.2,5.6,5.6,6.1,4.9,6.1z M14.5,14.3h-2.3v-3.5c0-0.8,0-1.9-1.2-1.9c-1.2,0-1.4,0.9-1.4,1.8v3.5H7.4V7.1h2.2v1h0c0.3-0.6,1-1.2,2.1-1.2 c2.3,0,2.7,1.5,2.7,3.4V14.3z"></path>
+</symbol>
+<symbol version="1.1" id="social-pinterest" viewBox="0 0 40 40">
+<path d="M20 3C11.7 3 5 9.7 5 18c0 6.4 4 11.8 9.5 14-.1-1.2-.3-3 .1-4.3.3-1.2 1.8-7.5 1.8-7.5s-.4-.9-.4-2.2c0-2.1 1.2-3.6 2.7-3.6 1.3 0 1.9 1 1.9 2.1 0 1.3-.8 3.2-1.2 5-.4 1.5.7 2.7 2.2 2.7 2.7 0 4.7-2.8 4.7-6.9 0-3.6-2.6-6.1-6.3-6.1-4.3 0-6.8 3.2-6.8 6.5 0 1.3.5 2.7 1.1 3.4.1.1.1.3.1.4-.2.5-.4 1.5-.5 1.7-.1.3-.2.3-.5.2-1.9-.9-3-3.6-3-5.8 0-4.7 3.4-9.1 9.9-9.1 5.2 0 9.2 3.7 9.2 8.7 0 5.2-3.3 9.3-7.8 9.3-1.5 0-2.9-.8-3.4-1.7 0 0-.8 2.9-.9 3.6-.3 1.3-1.3 2.9-1.9 3.9 1.4.4 2.9.7 4.4.7 8.3 0 15-6.7 15-15C35 9.7 28.3 3 20 3z" /></path>
+</symbol>
+</svg>
+<div id="page" class="site">
+<header id="masthead" class="site-header">
+<div class="sitelogo">
+<a href="https://www.learnbyexample.org/" rel="home">
+<svg xmlns="http://www.w3.org/2000/svg" width="191.9" height="54"><path fill="#373737" d="M8.88 31.97l-.4 1.89H0L3.48 17.7h2.04L2.43 31.97h6.45zM14 34.16a4.6 4.6 0 0 1-1.85-.34 3.63 3.63 0 0 1-2.07-2.32 5.5 5.5 0 0 1-.26-1.68c0-1.08.15-2.13.44-3.14a9 9 0 0 1 1.26-2.69 6.32 6.32 0 0 1 2-1.85 5.18 5.18 0 0 1 4.14-.44c.41.16.75.38 1 .66s.46.6.59.97a4.33 4.33 0 0 1-.17 2.98 3.84 3.84 0 0 1-2.32 2.07 14.1 14.1 0 0 1-3.36.67l-1.65.1-.02.3v.19c0 .35.04.7.12 1.01a1.95 1.95 0 0 0 1.3 1.41c.37.14.86.21 1.46.21a6.56 6.56 0 0 0 2.77-.8l.17 1.85a7.51 7.51 0 0 1-3.55.84zm-2-6.67a25.2 25.2 0 0 0 2.23-.17 6.5 6.5 0 0 0 1.74-.45c.5-.2.87-.49 1.14-.85a2.24 2.24 0 0 0 .34-1.84c-.05-.16-.13-.3-.25-.43a1.33 1.33 0 0 0-.5-.33 2.08 2.08 0 0 0-.77-.13c-.49 0-.95.12-1.38.35-.42.24-.8.54-1.14.92s-.62.83-.86 1.33c-.24.51-.42 1.04-.55 1.6zM27.32 34a9.15 9.15 0 0 1-.37-1.24c-.31.31-.72.63-1.24.94-.52.3-1.15.46-1.91.46-.62 0-1.14-.1-1.58-.32s-.8-.53-1.09-.91a4 4 0 0 1-.61-1.38 7.16 7.16 0 0 1-.2-1.75c0-1.04.15-2.06.47-3.05.31-1 .79-1.88 1.42-2.66a7.17 7.17 0 0 1 2.37-1.9 7.3 7.3 0 0 1 4.66-.57c.5.09.93.25 1.3.46l-1.62 7.32-.18 1.03a6.9 6.9 0 0 0 .3 3.29l-1.71.28zm-3.12-1.68c.59 0 1.09-.14 1.5-.42a5 5 0 0 0 1.1-.98 12.16 12.16 0 0 1 .21-1.7l1.26-5.78a4.7 4.7 0 0 0-4.58 1.78c-.46.57-.81 1.23-1.05 1.98a7.61 7.61 0 0 0-.29 3.36c.06.33.16.63.3.89.15.25.35.46.6.63s.56.24.95.24zM37.19 21.48a8.06 8.06 0 0 1 1.74.22c.17.04.3.08.38.12l-.57 1.9c-.28-.13-.6-.22-.96-.29a6.25 6.25 0 0 0-1.92-.02c-.3.05-.54.11-.75.19L32.9 33.86h-1.96l2.52-11.66a11.15 11.15 0 0 1 3.74-.72zM40.36 33.86H38.4l2.51-11.66a14.22 14.22 0 0 1 4.1-.72c.62 0 1.17.1 1.62.29a2.88 2.88 0 0 1 1.72 2c.14.48.2 1 .2 1.55 0 .36-.03.74-.08 1.13l-.21 1.2-1.35 6.2h-1.95l1.24-5.73c.1-.43.2-.87.28-1.33.1-.45.14-.87.14-1.28 0-.62-.15-1.14-.46-1.55-.3-.41-.88-.62-1.72-.62a7.4 7.4 0 0 0-1.87.26l-2.22 10.26zM58.62 22.22c.32-.22.69-.4 1.1-.56.43-.15.88-.23 1.35-.23.6 0 1.13.1 1.58.33.46.21.83.51 1.13.9.3.37.51.83.66 1.36.15.53.22 1.1.22 1.7 0 1.07-.15 2.11-.46 3.11a8 8 0 0 1-1.4 2.69 7.01 7.01 0 0 1-6.39 2.56 5.4 5.4 0 0 1-2.16-.69l3.71-17.25 2.04-.38-1.38 6.46zm1.97 1.05c-.42 0-.84.08-1.25.25-.41.16-.8.39-1.17.68l-1.7 7.9c.14.04.3.07.49.1a4.46 4.46 0 0 0 2.7-.48 5.12 5.12 0 0 0 1.64-1.4c.45-.58.8-1.24 1.04-2a7.61 7.61 0 0 0 .27-3.37 2.41 2.41 0 0 0-.33-.86 1.77 1.77 0 0 0-.65-.6 2.14 2.14 0 0 0-1.04-.22zM69.6 31.9c.53-.93 1-1.9 1.44-2.9a48.32 48.32 0 0 0 1.97-5.41c.23-.77.39-1.4.49-1.86h2.03a44.07 44.07 0 0 1-1.67 5.05c-.4 1.02-.84 2.06-1.34 3.13a33.66 33.66 0 0 1-2.97 5.13c-.45.64-.93 1.2-1.44 1.67-.5.48-1.07.85-1.69 1.12-.61.28-1.3.41-2.07.41-.4 0-.76-.05-1.1-.16-.33-.11-.57-.23-.73-.35l.67-1.77c.14.12.33.23.57.31a3.3 3.3 0 0 0 2.86-.52 7.82 7.82 0 0 0 1.6-1.73 54.3 54.3 0 0 1-1.86-12.29h2a48.97 48.97 0 0 0 .34 4.89c.1.89.23 1.79.38 2.69s.32 1.77.51 2.59z" /><path fill="#474848" d="M94.92 29.41c0-1.08.16-2.14.48-3.15a8.78 8.78 0 0 1 1.35-2.7c.6-.8 1.31-1.42 2.14-1.9a5.6 5.6 0 0 1 2.8-.7c1.12 0 1.98.32 2.6.95.6.63.92 1.45.92 2.44 0 1.02-.23 1.85-.68 2.48s-1.05 1.13-1.77 1.49c-.72.35-1.54.6-2.45.73s-1.84.2-2.78.24a.22.22 0 0 0-.02.1v.24c0 1.48.84 2.22 2.52 2.22 1 0 1.99-.23 2.98-.68l.22 2.38a8.36 8.36 0 0 1-3.68.8c-.82 0-1.52-.12-2.1-.38A3.85 3.85 0 0 1 96 32.9c-.37-.46-.65-.98-.82-1.57s-.27-1.23-.27-1.92zm6.38-6.04c-.43 0-.85.1-1.25.3s-.74.46-1.05.8a5.8 5.8 0 0 0-1.3 2.7c1.76-.06 3.04-.3 3.83-.7.8-.4 1.2-1.02 1.2-1.83 0-.33-.1-.62-.32-.88-.21-.26-.58-.39-1.1-.39zM109.66 21.28l1.83 4.3a59.1 59.1 0 0 0 1.56-2.2c.48-.72.92-1.42 1.32-2.1h2.72a52.07 52.07 0 0 1-4.48 6.24 74.86 74.86 0 0 1 1.45 3.29c.44 1.06.83 2.13 1.16 3.2h-2.66c-.23-.76-.5-1.52-.8-2.28-.3-.76-.6-1.49-.92-2.17l-3.49 4.46h-2.89l5.15-6.62-2.74-6.12h2.79zM126.62 29.07a10.65 10.65 0 0 0-.09 3.4c.08.45.2.9.36 1.35l-2.37.4c-.18-.4-.32-.81-.42-1.25-.36.36-.81.68-1.35.96a3.8 3.8 0 0 1-1.8.43c-.7 0-1.28-.13-1.77-.38a3.2 3.2 0 0 1-1.2-1.05c-.3-.44-.53-.97-.67-1.57a9.44 9.44 0 0 1 .35-5.26 7.45 7.45 0 0 1 8.8-4.9c.57.1 1.15.3 1.74.6l-1.58 7.27zm-1.44-5.5c-.28-.07-.6-.1-.94-.1-.66 0-1.27.16-1.82.48-.56.31-1.04.74-1.44 1.26-.4.53-.71 1.14-.93 1.82a6.94 6.94 0 0 0-.25 3.19c.06.32.16.6.3.85.14.25.33.44.56.59.23.14.53.22.9.22.47 0 .88-.11 1.24-.33.35-.22.69-.52 1-.9a11.7 11.7 0 0 1 .3-2.3l1.08-4.78zM131.47 21.81c.58-.2 1.24-.37 1.97-.54s1.53-.26 2.41-.26c.66 0 1.21.1 1.66.32.44.2.82.5 1.12.9.43-.28.94-.55 1.55-.82.6-.27 1.3-.4 2.07-.4.67 0 1.24.1 1.71.32.47.2.85.5 1.14.87.3.38.5.82.64 1.33.13.51.2 1.07.2 1.67 0 .66-.09 1.37-.25 2.12l-1.44 6.7h-2.65l1.35-6.39c.08-.3.15-.64.21-1 .07-.37.1-.74.1-1.12 0-.26-.03-.51-.08-.76a1.65 1.65 0 0 0-.27-.65c-.13-.18-.31-.32-.54-.44s-.51-.17-.86-.17c-.38 0-.76.08-1.12.25-.37.16-.67.33-.92.5.06.32.09.65.09 1a8.57 8.57 0 0 1-.24 2.08l-1.45 6.7h-2.65l1.36-6.39c.07-.29.14-.63.2-1 .07-.39.1-.77.1-1.14 0-.54-.11-1-.34-1.4-.22-.4-.65-.6-1.28-.6a5.55 5.55 0 0 0-1.56.22l-2.2 10.3h-2.66l2.63-12.2zM158.6 25.86c0 1.15-.16 2.23-.49 3.25a7.95 7.95 0 0 1-1.45 2.67 6.96 6.96 0 0 1-2.32 1.81 7.08 7.08 0 0 1-4.4.55l-.96 4.38h-2.65l3.62-16.73a11.44 11.44 0 0 1 4.23-.8c.76 0 1.42.12 1.98.37.56.26 1.02.6 1.38 1.04s.63.95.8 1.54c.18.6.26 1.23.26 1.92zm-8.16 5.87a8.65 8.65 0 0 0 .94.07c.71 0 1.34-.15 1.9-.45.57-.3 1.05-.7 1.44-1.22.4-.5.7-1.1.91-1.8.21-.69.32-1.42.32-2.2 0-.36-.04-.7-.1-1.01-.08-.32-.2-.6-.37-.84-.17-.25-.4-.44-.68-.59a2.37 2.37 0 0 0-1.09-.22 5.55 5.55 0 0 0-1.53.22l-1.74 8.04zM164.04 34.26c-.69-.02-1.27-.11-1.74-.3s-.86-.41-1.14-.72-.5-.68-.62-1.1a4.88 4.88 0 0 1-.18-1.39c0-.52.05-1.06.16-1.64.11-.58.23-1.15.36-1.72l2.54-11.79 2.77-.48a3438.63 3438.63 0 0 1-3 13.7c-.07.33-.12.66-.12.98l.01.77c.01.24.07.44.18.6.11.18.27.32.5.44.21.1.5.18.85.21l-.57 2.44zM166.52 29.41c0-1.08.15-2.14.47-3.15a8.8 8.8 0 0 1 1.36-2.7c.59-.8 1.3-1.42 2.13-1.9a5.6 5.6 0 0 1 2.81-.7c1.11 0 1.97.32 2.59.95.61.63.92 1.45.92 2.44 0 1.02-.23 1.85-.68 2.48s-1.04 1.13-1.77 1.49-1.54.6-2.45.73-1.84.2-2.78.24a.22.22 0 0 0-.02.1v.24c0 1.48.84 2.22 2.53 2.22.99 0 1.98-.23 2.98-.68l.22 2.38a8.4 8.4 0 0 1-3.69.8c-.82 0-1.52-.12-2.1-.38a3.85 3.85 0 0 1-1.44-1.07 4.44 4.44 0 0 1-.82-1.57 6.61 6.61 0 0 1-.26-1.92zm6.38-6.04c-.44 0-.86.1-1.25.3s-.75.46-1.06.8a5.87 5.87 0 0 0-1.3 2.7c1.76-.06 3.04-.3 3.84-.7.8-.4 1.19-1.02 1.19-1.83 0-.33-.1-.62-.32-.88-.2-.26-.58-.39-1.1-.39z" /><path fill="#4285F4" d="M179.03 38.88h6.52l6.26-10.2c.12-.2.12-.74 0-.95l-2.82-4.9-9.96 16.05z" /><path fill="#EA4335" d="M184.94 16.42h-6.7l6.51 11.15 3.44-5.53z" /><path fill="#34A853" d="M92.7 16.34h-6.52l-6.26 10.2c-.13.2-.12.74 0 .94l2.82 4.9 9.96-16.05z" /><path fill="#FBBC05" d="M86.78 38.8h6.71l-6.52-11.15-3.44 5.52z" /></svg>
+</a>
+</div>
+<label for="menu-checkbox" class="menu-checkbox-label"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19"><path fill="#454545" d="M6.561 0H2.197A2.2 2.2 0 0 0 0 2.197V6.56a2.2 2.2 0 0 0 2.197 2.197H6.56A2.2 2.2 0 0 0 8.757 6.56V2.197A2.198 2.198 0 0 0 6.561 0zm.712 6.561c0 .394-.32.713-.713.713H2.197a.713.713 0 0 1-.713-.713V2.197c0-.394.32-.713.713-.713H6.56c.393 0 .713.319.713.713v4.364zM16.773 0h-4.305a2.23 2.23 0 0 0-2.227 2.227v4.305a2.23 2.23 0 0 0 2.227 2.227h4.305A2.231 2.231 0 0 0 19 6.531V2.227A2.23 2.23 0 0 0 16.773 0zm.743 6.531a.743.743 0 0 1-.742.742h-4.305a.743.743 0 0 1-.742-.742V2.227c0-.409.333-.742.742-.742h4.305c.409 0 .742.333.742.742v4.304zM6.561 10.242H2.197A2.2 2.2 0 0 0 0 12.439v4.363A2.2 2.2 0 0 0 2.197 19H6.56a2.2 2.2 0 0 0 2.197-2.197V12.44a2.199 2.199 0 0 0-2.196-2.198zm.712 6.561c0 .393-.32.713-.713.713H2.197a.714.714 0 0 1-.713-.713V12.44c0-.393.32-.713.713-.713H6.56c.393 0 .713.32.713.713v4.363zM16.773 10.242h-4.305a2.23 2.23 0 0 0-2.227 2.227v4.305a2.23 2.23 0 0 0 2.227 2.227h4.305A2.231 2.231 0 0 0 19 16.773v-4.305a2.23 2.23 0 0 0-2.227-2.226zm.743 6.531a.743.743 0 0 1-.742.742h-4.305a.743.743 0 0 1-.742-.742v-4.305c0-.409.333-.742.742-.742h4.305c.409 0 .742.333.742.742v4.305z"></path></svg></label>
+<input id="menu-checkbox" type="checkbox" name="msc" class="hide-checkbox">
+<div class="menu-search-wrapper">
+<div class="search-box">
+<form role="search" method="get" class="search-form" action="https://www.learnbyexample.org/">
+<span><input type="search" class="search-field" placeholder="Search" value name="s"></span>
+</form>
+</div>
+<nav class="header-nav">
+<b>Learn By Example</b>
+<div class="dropdown">
+<a href="https://www.learnbyexample.org/python/">Python</a>
+<a href="https://www.learnbyexample.org/r/">R</a>
+<a href="https://www.learnbyexample.org/sql/">SQL</a>
+</div>
+</nav>
+</div>
+<label for="menu-checkbox" class="sidebar-overlay"></label>
+<label for="nav-sidebar-checkbox" class="nav-sidebar-label"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="15"><path fill="#454545" d="M19.999 1.034c0 .571-.463 1.035-1.033 1.035H1.034a1.033 1.033 0 1 1 0-2.069h17.932c.57 0 1.033.463 1.033 1.034zM19.999 7.5c0 .571-.463 1.034-1.033 1.034H1.034a1.034 1.034 0 0 1 0-2.068h17.932c.57 0 1.033.464 1.033 1.034zM20 13.966c0 .571-.464 1.034-1.034 1.034H1.034a1.033 1.033 0 1 1 0-2.068h17.932c.57 0 1.034.463 1.034 1.034z" /></svg></label>
+</header>
+<div class="site-main">
+<input id="nav-sidebar-checkbox" type="checkbox" name="lfs" class="hide-checkbox">
+<nav class="nav-sidebar-wrapper">
+<div id="nav-sidebar" class="nav-sidebar">
+<div class="textwidget custom-html-widget"><div id="chapters">
+<p class="nav-title">Python Tutorials</p>
+<div class="nav-section">
+<a href="../python-introduction/index.html">Introduction</a>
+<a href="../python-numbers/index.html">Numbers</a>
+<a href="../python-operators/index.html">Operators</a>
+<a href="../python-list/index.html">List</a>
+<a href="../python-nested-list/index.html">Nested List</a>
+<a href="../python-list-slicing/index.html">List Slicing</a>
+<a href="../python-list-comprehension/index.html">List Comprehension</a>
+<a href="../python-tuple/index.html">Tuple</a>
+<a href="../python-set/index.html">Set</a>
+<a href="../python-dictionary/index.html">Dictionary</a>
+<a href="../python-nested-dictionary/index.html">Nested Dictionary</a>
+<a href="../python-dictionary-comprehension/index.html">Dict Comprehension</a>
+<a href="../python-string/index.html">String</a>
+<a href="../python-string-slicing/index.html">String Slicing</a>
+<a href="../python-if-else-elif-statement/index.html">If...Else...Elif</a>
+<a href="../python-while-loop/index.html">While Loop</a>
+<a href="../python-for-loop/index.html">for Loop</a>
+<a href="../python-functions/index.html">Functions</a>
+<a href="../python-variables-scope/index.html">Variables Scope</a>
+<a href="../python-lambda-function/index.html">Lambda Function</a>
+<a href="../python-classes-and-objects/index.html">Classes and Objects</a>
+<a href="../python-inheritance/index.html">Inheritance</a>
+<a href="index.html">Decorators</a>
+<a href="../python-properties/index.html">@Property</a>
+<a href="../python-exceptions-try-except/index.html">Exception Handling</a>
+<a href="../python-file-handling/index.html">Read/Write Txt Files</a>
+<a href="../reading-and-writing-csv-files-in-python/index.html">Read/Write CSV Files</a>
+</div>
+<p class="nav-title">Built-in Methods</p>
+<div class="nav-section">
+<a href="../python-abs-function/index.html">abs() Function</a>
+<a href="../python-all-function/index.html">all() Function</a>
+<a href="../python-any-function/index.html">any() Function</a>
+<a href="../python-ascii-function/index.html">ascii() Function</a>
+<a href="../python-bin-function/index.html">bin() Function</a>
+<a href="../python-bool-function/index.html">bool() Function</a>
+<a href="../python-chr-function/index.html">chr() Function</a>
+<a href="../python-complex-function/index.html">complex() Function</a>
+<a href="../python-divmod-function/index.html">divmod() Function</a>
+<a href="../python-enumerate-function/index.html">enumerate() Function</a>
+<a href="../python-globals-function/index.html">globals() Function</a>
+<a href="../python-id-function/index.html">id() Function</a>
+<a href="../python-int-function/index.html">int() Function</a>
+<a href="../python-len-function/index.html">len() Function</a>
+<a href="../python-list-function/index.html">list() Function</a>
+<a href="../python-locals-function/index.html">locals() Function</a>
+<a href="../python-max-function/index.html">max() Function</a>
+<a href="../python-min-function/index.html">min() Function</a>
+<a href="../python-open-function/index.html">open() Function</a>
+<a href="../python-pow-function/index.html">pow() Function</a>
+<a href="../python-print-function/index.html">print() Function</a>
+<a href="../python-property-function/index.html">property() Function</a>
+<a href="../python-range-function/index.html">range() Function</a>
+<a href="../python-round-function/index.html">round() Function</a>
+<a href="../python-slice-function/index.html">slice() Function</a>
+<a href="../python-sorted-function/index.html">sorted() Function</a>
+<a href="../python-sum-function/index.html">sum() Function</a>
+<a href="../python-tuple-function/index.html">tuple() Function</a>
+<a href="../python-type-function/index.html">type() Function</a>
+<a href="../python-zip-function/index.html">zip() Function</a>
+</div>
+<p class="nav-title">List Methods</p>
+<div class="nav-section">
+<a href="../python-list-append-method/index.html">List append() Method</a>
+<a href="../python-list-clear-method/index.html">List clear() Method</a>
+<a href="../python-list-copy-method/index.html">List copy() Method</a>
+<a href="../python-list-count-method/index.html">List count() Method</a>
+<a href="../python-list-extend-method/index.html">List extend() Method</a>
+<a href="../python-list-index-method/index.html">List index() Method</a>
+<a href="../python-list-insert-method/index.html">List insert() Method</a>
+<a href="../python-list-pop-method/index.html">List pop() Method</a>
+<a href="../python-list-remove-method/index.html">List remove() Method</a>
+<a href="../python-list-reverse-method/index.html">List reverse() Method</a>
+<a href="../python-list-sort-method/index.html">List sort() Method</a>
+</div>
+<p class="nav-title">Tuple Methods</p>
+<div class="nav-section">
+<a href="../python-tuple-count-method/index.html">Tuple count() Method</a>
+<a href="../python-tuple-index-method/index.html">Tuple index() Method</a>
+</div>
+<p class="nav-title">Set Methods</p>
+<div class="nav-section">
+<a href="../python-set-add-method/index.html">Set add() Method</a>
+<a href="../python-set-clear-method/index.html">Set clear() Method</a>
+<a href="../python-set-copy-method/index.html">Set copy() Method</a>
+<a href="../python-set-difference-method/index.html">Set difference() Method</a>
+<a href="../python-set-difference_update-method/index.html">Set difference_update() Method</a>
+<a href="../python-set-discard-method/index.html">Set discard() Method</a>
+<a href="../python-set-intersection-method/index.html">Set intersection() Method</a>
+<a href="../python-set-intersection_update-method/index.html">Set intersection_update() Method</a>
+<a href="../python-set-isdisjoint-method/index.html">Set isdisjoint() Method</a>
+<a href="../python-set-issubset-method/index.html">Set issubset() Method</a>
+<a href="../python-set-issuperset-method/index.html">Set issuperset() Method</a>
+<a href="../python-set-pop-method/index.html">Set pop() Method</a>
+<a href="../python-set-remove-method/index.html">Set remove() Method</a>
+<a href="../python-set-symmetric_difference-method/index.html">Set symmetric_difference() Method</a>
+<a href="../python-set-symmetric_difference_update-method/index.html">Set symmetric_difference_update() Method</a>
+<a href="../python-set-union-method/index.html">Set union() Method</a>
+<a href="../python-set-update-method/index.html">Set update() Method</a>
+</div>
+<p class="nav-title">Dictionary Methods</p>
+<div class="nav-section">
+<a href="../python-dictionary-clear-method/index.html">Dictionary clear() Method</a>
+<a href="../python-dictionary-copy-method/index.html">Dictionary copy() Method</a>
+<a href="../python-dictionary-fromkeys-method/index.html">Dictionary fromkeys() Method</a>
+<a href="../python-dictionary-get-method/index.html">Dictionary get() Method</a>
+<a href="../python-dictionary-items-method/index.html">Dictionary items() Method</a>
+<a href="../python-dictionary-keys-method/index.html">Dictionary keys() Method</a>
+<a href="../python-dictionary-pop-method/index.html">Dictionary pop() Method</a>
+<a href="../python-dictionary-popitem-method/index.html">Dictionary popitem() Method</a>
+<a href="../python-dictionary-setdefault-method/index.html">Dictionary setdefault() Method</a>
+<a href="../python-dictionary-update-method/index.html">Dictionary update() Method</a>
+<a href="../python-dictionary-values-method/index.html">Dictionary values() Method</a>
+</div>
+<p class="nav-title">String Methods</p>
+<div class="nav-section">
+<a href="../python-string-capitalize-method/index.html">String capitalize() Method</a>
+<a href="../python-string-casefold-method/index.html">String casefold() Method</a>
+<a href="../python-string-center-method/index.html">String center() Method</a>
+<a href="../python-string-count-method/index.html">String count() Method</a>
+<a href="../python-string-encode-method/index.html">String encode() Method</a>
+<a href="../python-string-endswith-method/index.html">String endswith() Method</a>
+<a href="../python-string-expandtabs-method/index.html">String expandtabs() Method</a>
+<a href="../python-string-find-method/index.html">String find() Method</a>
+<a href="../python-string-format-method/index.html">String format() Method</a>
+<a href="../python-string-index-method/index.html">String index() Method</a>
+<a href="../python-string-isalnum-method/index.html">String isalnum() Method</a>
+<a href="../python-string-isalpha-method/index.html">String isalpha() Method</a>
+<a href="../python-string-isdecimal-method/index.html">String isdecimal() Method</a>
+<a href="../python-string-isdigit-method/index.html">String isdigit() Method</a>
+<a href="../python-string-isidentifier-method/index.html">String isidentifier() Method</a>
+<a href="../python-string-islower-method/index.html">String islower() Method</a>
+<a href="../python-string-isnumeric-method/index.html">String isnumeric() Method</a>
+<a href="../python-string-isprintable-method/index.html">String isprintable() Method</a>
+<a href="../python-string-isspace-method/index.html">String isspace() Method</a>
+<a href="../python-string-istitle-method/index.html">String istitle() Method</a>
+<a href="../python-string-isupper-method/index.html">String isupper() Method</a>
+<a href="../python-string-join-method/index.html">String join() Method</a>
+<a href="../python-string-ljust-method/index.html">String ljust() Method</a>
+<a href="../python-string-lower-method/index.html">String lower() Method</a>
+<a href="../python-string-lstrip-method/index.html">String lstrip() Method</a>
+<a href="../python-string-partition-method/index.html">String partition() Method</a>
+<a href="../python-string-replace-method/index.html">String replace() Method</a>
+<a href="../python-string-rfind-method/index.html">String rfind() Method</a>
+<a href="../python-string-rindex-method/index.html">String rindex() Method</a>
+<a href="../python-string-rjust-method/index.html">String rjust() Method</a>
+<a href="../python-string-rpartition-method/index.html">String rpartition() Method</a>
+<a href="../python-string-rsplit-method/index.html">String rsplit() Method</a>
+<a href="../python-string-rstrip-method/index.html">String rstrip() Method</a>
+<a href="../python-string-split-method/index.html">String split() Method</a>
+<a href="../python-string-splitlines-method/index.html">String splitlines() Method</a>
+<a href="../python-string-startswith-method/index.html">String startswith() Method</a>
+<a href="../python-string-strip-method/index.html">String strip() Method</a>
+<a href="../python-string-swapcase-method/index.html">String swapcase() Method</a>
+<a href="../python-string-title-method/index.html">String title() Method</a>
+<a href="../python-string-upper-method/index.html">String upper() Method</a>
+<a href="../python-string-zfill-method/index.html">String zfill() Method</a>
+</div>
+<p class="nav-title">Python Keywords</p>
+<div class="nav-section">
+<a href="../python-continue-statement/index.html">Continue</a>
+<a href="../python-break-statement/index.html">Break</a>
+<a href="../python-global-keyword/index.html">Global</a>
+<a href="../python-nonlocal-keyword/index.html">Nonlocal</a>
+</div>
+</div></div> </div>
+<label for="nav-sidebar-checkbox" class="sidebar-overlay"></label>
+</nav>
+<div class="post-wrapper">
+<div class="main-wrapper">
+<div class="nav-rightbar-wrapper">
+<nav class="nav-rightbar">
+<div class="story-highlights" id="navigation"><div class="tab"><label for="tab-title" class="story-highlights-title">Table Of Contents</label><input id="tab-title" type="checkbox" name="tabs"><label class="main-tab-icon tabicon" for="tab-title"></label><ul class="main-tab tab-content"><li><a href="index.html#python-functions">Python Functions</a></li><li><a href="index.html#simple-decorator">Simple Decorator</a></li><li><a href="index.html#syntactic-sugar">Syntactic Sugar</a></li><li><a href="index.html#decorating-functions-that-takes-arguments">Decorating Functions that Takes Arguments</a></li><li><a href="index.html#returning-values-from-decorated-functions">Returning Values from Decorated Functions</a></li><li><a href="index.html#preserving-function-metadata">Preserving Function Metadata</a></li><li><a href="index.html#unwrapping-a-decorator">Unwrapping a Decorator</a></li><li><a href="index.html#nesting-decorators">Nesting Decorators</a></li><li><a href="index.html#applying-decorators-to-builtin-functions">Applying Decorators to Built-in Functions</a></li><li><a href="index.html#real-world-examples">Real World Examples</a></li></ul></div></div> </nav>
+</div>
+<main id="main">
+<div class="post-807 post type-post status-publish format-standard has-post-thumbnail hentry category-python mv-content-wrapper">
+<article id="post-807">
+<div class="post-header">
+<a class="article-tag" href="https://www.learnbyexample.org/python/" aria-hidden="true">Python</a>
+<h1 class="entry-title">Python Decorators</h1>
+<div class="social-sharing top-sharing">
+<a class="facebook" href="https://www.facebook.com/sharer/sharer.php?caption=Python+Decorators&u=https%3A%2F%2Fwww.learnbyexample.org%2Fpython-decorators%2F">
+<svg height="21px" width="21px" aria-hidden="true" viewBox="0 0 30 30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#social-facebook"></use>
+</svg>
+</a>
+<a class="twitter" href="https://twitter.com/intent/tweet?text=Python+Decorators&url=https%3A%2F%2Fwww.learnbyexample.org%2Fpython-decorators%2F&via=Learn+By+Example">
+<svg height="21px" width="21px" aria-hidden="true" viewBox="0 0 30 30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#social-twitter"></use>
+</svg>
+</a>
+<a class="pinterest" href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.learnbyexample.org%2Fpython-decorators%2F&amp;media=https://www.learnbyexample.org/wp-content/uploads/2019/06/Learn-Python-Programming.png&description=Python+Decorators">
+<svg height="23px" width="23px" aria-hidden="true" viewBox="0 0 30 30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#social-pinterest"></use>
+</svg>
+</a>
+<a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.learnbyexample.org%2Fpython-decorators%2F&title=Python+Decorators">
+<svg height="21px" width="21px" aria-hidden="true" viewBox="0 0 30 30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#social-linkedin"></use>
+</svg>
+</a>
+</div>
+</div>
+<div class="entry-content">
+<p>Sometimes you want to modify an existing function without changing its source code. A common example is adding extra processing (e.g. logging, timing, etc.) to the function.</p>
+<p>That&#8217;s where decorators come in.</p>
+<p>A decorator is a function that accepts a function as input and returns a new function as output, allowing you to extend the behavior of the function without explicitly modifying it.</p>
+<div class="simple-note"><p>Every decorator is a form of <b>metaprogramming</b>.</p><p>Metaprogramming is about creating functions and classes whose main goal is to manipulate code (e.g., modifying, generating, or wrapping existing code).</p></div>
+<h2 id="python-functions">Python Functions</h2>
+<p>Before you can understand decorators, you must first know how functions work.</p>
+<h3>Pass Function as Arguments</h3>
+<p>In Python, functions are <strong>first-class objects</strong>. This means that they can be passed as arguments, just like any other object (string, int, float, list etc.). </p>
+<p>If you have used functions like <a>map</a> or <a>filter</a> before, then you already know about it.</p>
+<p>Consider the following example.</p>
+<div class="example"><div class="excode"><pre><code><span class="kwd">def</span> hello1():
+    <span class="kwd">print</span>(<span class="str">"Hello World"</span>)
+
+<span class="kwd">def</span> hello2():
+    <span class="kwd">print</span>(<span class="str">"Hello Universe"</span>)
+
+<span class="kwd">def</span> greet(func):
+    func()
+
+greet(hello1)
+<span class="com"># Prints Hello World</span>
+greet(hello2)
+<span class="com"># Prints Hello Universe</span></code></pre></div></div>
+<p>Here, <code>hello1()</code> and <code>hello2()</code> are two regular functions and are passed to the <code>greet()</code> function.</p>
+<p>Note that these functions are passed without parentheses. This means that you are just passing their reference to <code>greet()</code> function.</p>
+<h3>Inner Functions</h3>
+<p>Functions can be defined inside other functions. Such functions are called <strong>Inner functions</strong>. Here&#8217;s an example of a function with an inner function.</p>
+<div class="example"><div class="excode"><pre><code><span class="kwd">def</span> outer_func():
+    <span class="kwd">def</span> inner_func():
+        <span class="kwd">print</span>(<span class="str">"Running inner"</span>)
+    inner_func()
+
+outer_func()
+<span class="com"># Prints Running inner</span></code></pre></div></div>
+<h3>Returning a Function</h3>
+<p>Python also allows you to return a function. Here is an example.</p>
+<div class="example"><div class="excode"><pre><code><span class="kwd">def</span> greet():
+    <span class="kwd">def</span> hello(name):
+        <span class="kwd">print</span>(<span class="str">"Hello"</span>, name)
+    <span class="kwd">return</span> hello
+
+greet_user = greet()
+
+greet_user(<span class="str">"Bob"</span>)
+<span class="com"># Prints Hello Bob</span></code></pre></div></div>
+<p>Again, the <code>hello()</code> function is returned without parentheses. This means that you are just returning its reference.</p>
+<p>And this reference is assigned to <code>greet_user</code>, due to which you can call <code>greet_user</code> as if it were a regular function.</p>
+<h2 id="simple-decorator">Simple Decorator</h2>
+<p>Now that you&#8217;ve learned that functions are just like any other object in Python, you are now ready to learn decorators.</p>
+<p>Let&#8217;s see how decorators can be created in Python. Here is a simple example decorator that does not modify the function it decorates, but rather prints a message before and after the function call.</p>
+<div class="example"><div class="excode"><pre><code><span class="kwd">def</span> decorate_it(func):
+    <span class="kwd">def</span> wrapper():
+        <span class="kwd">print</span>(<span class="str">"Before function call"</span>)
+        func()
+        <span class="kwd">print</span>(<span class="str">"After function call"</span>)
+    <span class="kwd">return</span><span class="pln"> wrapper
+
+</span><span class="kwd">def</span> hello():
+    <span class="kwd">print</span>(<span class="str">"Hello world"</span>)<span class="pln">
+
+hello </span>= decorate_it(hello)<span class="pln">
+
+hello</span>()
+<span class="com"># Prints Before function call
+# Prints Hello world
+# Prints After function call</span></code></pre></div></div>
+<p>Whatever function you pass to <code>decorate_it()</code>, you get a new function that includes the extra statements that <code>decorate_it()</code> adds. A decorator doesn’t actually have to run any code from <code>func</code>, but <code>decorate_it()</code> calls <code>func</code> part way through so that you get the results of <code>func</code> as well as all the extras.</p>
+<p>Simply put, a decorator is a function that takes a function as input, modifies its behavior and returns it.</p>
+<p>The so-called decoration happens when you call the decorator and pass the name of the function as an argument.</p>
+<div class="example"><div class="excode"><pre><code>hello = decorate_it(hello)</code></pre></div></div>
+<p>Here you applied the decorator manually.</p>
+<h2 id="syntactic-sugar">Syntactic Sugar</h2>
+<p>As an alternative to the manual decorator assignment above, just add <strong>@decorator_name</strong> before the function that you want to decorate.</p>
+<p>The following example does the exact same thing as the first decorator example:</p>
+<div class="example"><div class="excode"><pre><code><span class="kwd">def</span> decorate_it(func):
+    <span class="kwd">def</span> wrapper():
+        <span class="kwd">print</span>(<span class="str">"Before function call"</span>)
+        func()
+        <span class="kwd">print</span>(<span class="str">"After function call"</span>)
+    <span class="kwd">return</span><span class="pln"> wrapper
+
+</span><span class="lit">@decorate_it</span>
+<span class="kwd">def</span> hello():
+    <span class="kwd">print</span>(<span class="str">"Hello world"</span>)<span class="pln">
+
+hello</span>()
+<span class="com"># Prints Before function call
+# Prints Hello world
+# Prints After function call</span></code></pre></div></div>
+<p>So, <strong>@decorate_it</strong> is just an easier way of saying <strong>hello = decorate_it(hello)</strong>.</p>
+<h2 id="decorating-functions-that-takes-arguments">Decorating Functions that Takes Arguments</h2>
+<p>Let&#8217;s say you have a function <code>hello()</code> that accepts an argument and you want to decorate it.</p>
+<div class="example exerr"><div class="excode"><pre><code><span class="kwd">def</span> decorate_it(func):
+    <span class="kwd">def</span> wrapper():
+        <span class="kwd">print</span>(<span class="str">"Before function call"</span>)
+        func()
+        <span class="kwd">print</span>(<span class="str">"After function call"</span>)
+    <span class="kwd">return</span><span class="pln"> wrapper
+
+</span><span class="lit">@decorate_it</span>
+<span class="kwd">def</span> hello(name):
+    <span class="kwd">print</span>(<span class="str">"Hello"</span>, name)<span class="pln">
+
+hello</span>(<span class="str">"Bob"</span>)
+<span class="com"># Prints _wrapper() takes 0 positional arguments but 1 was given</span></code></pre></div></div>
+<p>Unfortunately, running this code raises an error. Because, the inner function <code>wrapper()</code> does not take any arguments, but we passed one argument.</p>
+<p>The solution is to include *args and **kwargs in the inner wrapper function. The use of <a>*args and **kwargs</a> is there to make sure that any number of input arguments can be accepted. </p>
+<p>Let&#8217;s rewrite the above example.</p>
+<div class="example"><div class="excode"><pre><code><span class="kwd">def</span> decorate_it(func):
+    <span class="kwd">def</span> wrapper(*args, **kwargs):
+        <span class="kwd">print</span>(<span class="str">"Before function call"</span>)
+        func(*args, **kwargs)
+        <span class="kwd">print</span>(<span class="str">"After function call"</span>)
+    <span class="kwd">return</span><span class="pln"> wrapper
+
+</span><span class="lit">@decorate_it</span>
+<span class="kwd">def</span> hello(name):
+    <span class="kwd">print</span>(<span class="str">"Hello"</span>, name)<span class="pln">
+
+hello</span>(<span class="str">"Bob"</span>)
+<span class="com"># Prints Before function call
+# Prints Hello Bob
+# Prints After function call</span></code></pre></div></div>
+<h2 id="returning-values-from-decorated-functions">Returning Values from Decorated Functions</h2>
+<p>What if the function you are decorating returns a value? Let&#8217;s try that quickly:</p>
+<div class="example"><div class="excode"><pre><code><span class="kwd">def</span> decorate_it(func):
+    <span class="kwd">def</span> wrapper(*args, **kwargs):
+        <span class="kwd">print</span>(<span class="str">"Before function call"</span>)
+        func(*args, **kwargs)
+        <span class="kwd">print</span>(<span class="str">"After function call"</span>)
+    <span class="kwd">return</span><span class="pln"> wrapper
+
+</span><span class="lit">@decorate_it</span>
+<span class="kwd">def</span> hello(name):
+    <span class="kwd">return</span> <span class="str">"Hello "</span> +<span class="pln"> name
+
+result </span>= hello(<span class="str">"Bob"</span>)<span class="pln">
+
+</span><span class="kwd">print</span>(result)
+<span class="com"># Prints Before function call
+# Prints After function call
+# Prints None</span></code></pre></div></div>
+<p>Because the <code>decorate_it()</code> doesn’t explicitly return a value, the call <code>hello("Bob")</code> ended up returning <strong>None</strong>.</p>
+<p>To fix this, you need to make sure the wrapper function returns the return value of the inner function.</p>
+<p>Let&#8217;s rewrite the above example.</p>
+<div class="example"><div class="excode"><pre><code><span class="kwd">def</span> decorate_it(func):
+    <span class="kwd">def</span> wrapper(*args, **kwargs):
+        <span class="kwd">print</span>(<span class="str">"Before function call"</span>)
+        result = func(*args, **kwargs)
+        <span class="kwd">print</span>(<span class="str">"After function call"</span>)
+        <span class="kwd">return</span><span class="pln"> result
+    </span><span class="kwd">return</span><span class="pln"> wrapper
+
+</span><span class="lit">@decorate_it</span>
+<span class="kwd">def</span> hello(name):
+    <span class="kwd">return</span> <span class="str">"Hello "</span> +<span class="pln"> name
+
+result </span>= hello(<span class="str">"Bob"</span>)<span class="pln">
+
+</span><span class="kwd">print</span>(result)
+<span class="com"># Prints Before function call
+# Prints After function call
+# Prints Hello Bob</span></code></pre></div></div>
+<h2 id="preserving-function-metadata">Preserving Function Metadata</h2>
+<p>Copying decorator metadata is an important part of writing decorators.</p>
+<p>When you apply a decorator to a function, important metadata such as the name, doc string, annotations, and calling signature are lost.</p>
+<p>For example, the metadata in our example would look like this:</p>
+<div class="example"><div class="excode"><pre><code><span class="kwd">def</span> decorate_it(func):
+    <span class="kwd">def</span> wrapper():
+        <span class="kwd">print</span>(<span class="str">"Before function call"</span>)
+        func()
+        <span class="kwd">print</span>(<span class="str">"After function call"</span>)
+    <span class="kwd">return</span><span class="pln"> wrapper
+
+</span><span class="lit">@decorate_it</span>
+<span class="kwd">def</span> hello():
+    <span class="str">'''function that greets'''</span>
+    <span class="kwd">print</span>(<span class="str">"Hello world"</span>)<span class="pln">
+
+</span><span class="kwd">print</span>(hello.__name__)
+<span class="com"># Prints wrapper</span>
+<span class="kwd">print</span>(hello.__doc__)
+<span class="com"># Prints None</span>
+<span class="kwd">print</span>(hello)
+<span class="com"># Prints &lt;function decorate_it.&lt;locals&gt;.wrapper at 0x02E15078&gt;</span></code></pre></div></div>
+<p>To fix this, apply the <strong>@wraps</strong> decorator from the <a href="https://docs.python.org/2/library/functools.html">functools library</a> to the underlying wrapper function.</p>
+<div class="example"><div class="excode"><pre><code><span class="kwd">from</span> functools <span class="kwd">import</span><span class="pln"> wraps
+
+</span><span class="kwd">def</span> decorate_it(func):
+    <span class="lit">@wraps</span>(func)
+    <span class="kwd">def</span> wrapper():
+        <span class="kwd">print</span>(<span class="str">"Before function call"</span>)
+        func()
+        <span class="kwd">print</span>(<span class="str">"After function call"</span>)
+    <span class="kwd">return</span><span class="pln"> wrapper
+
+</span><span class="lit">@decorate_it</span>
+<span class="kwd">def</span> hello():
+    <span class="str">'''function that greets'''</span>
+    <span class="kwd">print</span>(<span class="str">"Hello world"</span>)<span class="pln">
+
+</span><span class="kwd">print</span>(hello.__name__)
+<span class="com"># Prints hello</span>
+<span class="kwd">print</span>(hello.__doc__)
+<span class="com"># Prints function that greets</span>
+<span class="kwd">print</span>(hello)
+<span class="com"># Prints &lt;function hello at 0x02DC5BB8&gt;</span></code></pre></div></div>
+<p>Whenever you define a decorator, do not forget to use <strong>@wraps</strong>, otherwise the decorated function will lose all sorts of useful information.</p>
+<h2 id="unwrapping-a-decorator">Unwrapping a Decorator</h2>
+<p>Even if you&#8217;ve applied a decorator to a function, you sometimes need to gain access to the original unwrapped function, especially for debugging or introspection.</p>
+<p>Assuming that the decorator has been implemented using <strong>@wraps</strong>, you can usually gain access to the original function by accessing the <code>__wrapped__</code> attribute.</p>
+<p>For example,</p>
+<div class="example"><div class="excode"><pre><code><span class="kwd">from</span> functools <span class="kwd">import</span><span class="pln"> wraps
+
+</span><span class="kwd">def</span> decorate_it(func):
+    <span class="lit">@wraps</span>(func)
+    <span class="kwd">def</span> wrapper():
+        <span class="kwd">print</span>(<span class="str">"Before function call"</span>)
+        func()
+        <span class="kwd">print</span>(<span class="str">"After function call"</span>)
+    <span class="kwd">return</span><span class="pln"> wrapper
+
+</span><span class="lit">@decorate_it</span>
+<span class="kwd">def</span> hello():
+    <span class="kwd">print</span>(<span class="str">"Hello world"</span>)<span class="pln">
+
+original_hello </span>= hello.<span class="pln">__wrapped__
+
+original_hello</span>()
+<span class="com"># Prints Hello world</span></code></pre></div></div>
+<h2 id="nesting-decorators">Nesting Decorators</h2>
+<p>You can have more than one decorator for a function. To demonstrate this let’s write two decorators:</p>
+<ul><li>double_it() that doubles the result</li><li>square_it() that squares the result</li></ul>
+<div class="example"><div class="excode"><pre><code><span class="kwd">from</span> functools <span class="kwd">import</span> wraps
+
+<span class="kwd">def</span> double_it(func):
+    <span class="lit">@wraps</span>(func)
+    <span class="kwd">def</span> wrapper(*args, **kwargs):
+        result = func(*args, **kwargs)
+        <span class="kwd">return</span> result * <span class="lit">2</span>
+    <span class="kwd">return</span> wrapper
+
+<span class="kwd">def</span> square_it(func):
+    <span class="lit">@wraps</span>(func)
+    <span class="kwd">def</span> wrapper(*args, **kwargs):
+        result = func(*args, **kwargs)
+        <span class="kwd">return</span> result * result
+    <span class="kwd">return</span> wrapper</code></pre></div></div>
+<p>You can apply several decorators to a function by stacking them on top of each other.</p>
+<div class="example"><div class="excode"><pre><code><span class="lit">@double_it</span>
+<span class="lit">@square_it</span>
+<span class="kwd">def</span> <span class="kwd">add</span>(a,b):
+    <span class="kwd">return</span> a +<span class="pln"> b
+
+</span><span class="kwd">print</span>(<span class="kwd">add</span>(<span class="lit">2</span>,<span class="lit">3</span>))
+<span class="com"># Prints 50</span></code></pre></div></div>
+<p>Here, the addition of 2 and 3 was squared first then doubled. So you got the result 50.</p>
+<pre class="calc"><code>result = ((<span class="lit">2</span>+<span class="lit">3</span>)^<span class="lit">2</span>)*<span class="lit">2</span>
+       = (<span class="lit">5</span>^<span class="lit">2</span>)*<span class="lit">2</span>
+       = <span class="lit">25</span>*<span class="lit">2</span>
+       = <span class="lit">50</span></code></pre>
+<div class="simple-note"><h3><b>Execution order of decorators</b></h3><p>The decorator closest to the function (just above the def) runs first and then the one above it.</p></div>
+<p>Let’s try reversing the decorator order:</p>
+<div class="example"><div class="excode"><pre><code><span class="lit">@square_it</span>
+<span class="lit">@double_it</span>
+<span class="kwd">def</span> <span class="kwd">add</span>(a,b):
+    <span class="kwd">return</span> a +<span class="pln"> b
+
+</span><span class="kwd">print</span>(<span class="kwd">add</span>(<span class="lit">2</span>,<span class="lit">3</span>))
+<span class="com"># Prints 100</span></code></pre></div></div>
+<p>Here, the addition of 2 and 3 was doubled first then squared. So you got the result 100.</p>
+<pre class="calc"><code>result = ((<span class="lit">2</span>+<span class="lit">3</span>)*<span class="lit">2</span>)^<span class="lit">2</span>
+       = (<span class="lit">5</span>*<span class="lit">2</span>)^<span class="lit">2</span>
+       = <span class="lit">10</span>^<span class="lit">2</span>
+       = <span class="lit">100</span></code></pre>
+<h2 id="applying-decorators-to-builtin-functions">Applying Decorators to Built-in Functions</h2>
+<p>You can apply decorators not only to the custom functions but also to the built-in functions.</p>
+<p>The following example applies the <code>double_it()</code> decorator to the built-in <a href="../python-sum-function/index.html">sum()</a> function.</p>
+<div class="example"><div class="excode"><pre><code><span class="kwd">from</span> functools <span class="kwd">import</span><span class="pln"> wraps
+
+</span><span class="kwd">def</span> double_it(func):
+    <span class="lit">@wraps</span>(func)
+    <span class="kwd">def</span> wrapper(*args, **kwargs):
+        result = func(*args, **kwargs)
+        <span class="kwd">return</span> result * <span class="lit">2</span>
+    <span class="kwd">return</span><span class="pln"> wrapper
+
+double_the_sum </span>= double_it(sum)<span class="pln">
+
+</span><span class="kwd">print</span>(double_the_sum([<span class="lit">1</span>,<span class="lit">2</span>]))
+<span class="com"># Prints 6</span></code></pre></div></div>
+<h2 id="real-world-examples">Real World Examples</h2>
+<p>Let&#8217;s look at some real world examples that will give you an idea of how decorators can be used.</p>
+<h3>Debugger</h3>
+<p>Let&#8217;s create a @debug decorator that will do the following, whenever the function is called.</p>
+<ul><li>Print the function&#8217;s name</li><li>Print the values of its arguments</li><li>Run the function with the arguments</li><li>Print the result</li><li>Return the modified function for use</li></ul>
+<div class="example"><div class="excode"><pre><code><span class="kwd">from</span> functools <span class="kwd">import</span> wraps
+
+<span class="kwd">def</span> debug(func):
+    <span class="lit">@wraps</span>(func)
+    <span class="kwd">def</span> wrapper(*args, **kwargs):
+        <span class="kwd">print</span>(<span class="str">'Running function:'</span>, func.__name__)
+        <span class="kwd">print</span>(<span class="str">'Positional arguments:'</span>, args)
+        <span class="kwd">print</span>(<span class="str">'keyword arguments:'</span>, kwargs)
+        result = func(*args, **kwargs)
+        <span class="kwd">print</span>(<span class="str">'Result:'</span>, result)
+        <span class="kwd">return</span> result
+    <span class="kwd">return</span> wrapper</code></pre></div></div>
+<p>Let&#8217;s apply our @debug decorator to a function and see how this decorator actually works.</p>
+<div class="example"><div class="excode"><pre><code><span class="lit">@debug</span>
+<span class="kwd">def</span> hello(name):
+    <span class="kwd">return</span> <span class="str">"Hello "</span> +<span class="pln"> name
+
+hello</span>(<span class="str">"Bob"</span>)
+<span class="com"># Prints Running function: hello
+# Prints Positional arguments: ('Bob',)
+# Prints keyword arguments: {}
+# Prints Result: Hello Bob</span></code></pre></div></div>
+<p>You can also apply this decorator to any built-in function like this:</p>
+<div class="example"><div class="excode"><pre><code>sum = debug(sum)
+sum([<span class="lit">1</span>, <span class="lit">2</span>, <span class="lit">3</span>])
+<span class="com"># Prints Running function: sum
+# Prints Positional arguments: ([1, 2, 3],)
+# Prints keyword arguments: {}
+# Prints Result: 6</span></code></pre></div></div>
+<h3>Timer</h3>
+<p>The following @timer decorator reports the execution time of a function. It will do the following:</p>
+<ul><li>Store the time just before the function execution (Start Time)</li><li>Run the function</li><li>Store the time just after the function execution (End Time)</li><li>Print the difference between two time intervals</li><li>Return the modified function for use</li></ul>
+<div class="example"><div class="excode"><pre><code><span class="kwd">import</span> time
+<span class="kwd">from</span> functools <span class="kwd">import</span> wraps
+
+<span class="kwd">def</span> timer(func):
+    <span class="lit">@wraps</span>(func)
+    <span class="kwd">def</span> wrapper(*args, **kwargs):
+        start = time.time()
+        result = func(*args, **kwargs)
+        <span class="kwd">end</span> = time.time()
+        <span class="kwd">print</span>(<span class="str">"Finished in {:.3f} secs"</span>.format(<span class="kwd">end</span>-start))
+        <span class="kwd">return</span> result
+    <span class="kwd">return</span> wrapper</code></pre></div></div>
+<p>Let&#8217;s apply this @timer decorator to a function.</p>
+<div class="example"><div class="excode"><pre><code><span class="lit">@timer</span>
+<span class="kwd">def</span> countdown(n):
+    <span class="kwd">while</span> n &gt; <span class="lit">0</span>:
+        n -= <span class="lit">1</span>
+
+countdown(<span class="lit">10000</span>)
+<span class="com"># Prints Finished in 0.005 secs</span>
+countdown(<span class="lit">1000000</span>)
+<span class="com"># Prints Finished in 0.178 secs</span></code></pre></div></div>
+</div>
+</article>
+<div class="social-sharing bottom-sharing">
+<div class="share-text">SHARE</div>
+<a class="facebook" href="https://www.facebook.com/sharer/sharer.php?caption=Python+Decorators&u=https%3A%2F%2Fwww.learnbyexample.org%2Fpython-decorators%2F">
+<svg height="25px" width="25px" aria-hidden="true" viewBox="0 0 30 30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#social-facebook"></use>
+</svg>
+</a>
+<a class="twitter" href="https://twitter.com/intent/tweet?text=Python+Decorators&url=https%3A%2F%2Fwww.learnbyexample.org%2Fpython-decorators%2F&via=Learn+By+Example">
+<svg height="25px" width="25px" aria-hidden="true" viewBox="0 0 30 30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#social-twitter"></use>
+</svg>
+</a>
+<a class="pinterest" href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.learnbyexample.org%2Fpython-decorators%2F&amp;media=https://www.learnbyexample.org/wp-content/uploads/2019/06/Learn-Python-Programming.png&description=Python+Decorators">
+<svg height="27px" width="27px" aria-hidden="true" viewBox="0 0 30 30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#social-pinterest"></use>
+</svg>
+</a>
+<a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.learnbyexample.org%2Fpython-decorators%2F&title=Python+Decorators">
+<svg height="25px" width="25px" aria-hidden="true" viewBox="0 0 30 30">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#social-linkedin"></use>
+</svg>
+</a>
+</div>
+</div>
+</main>
+</div>
+</div>
+</div>
+<style type="text/css" media="screen">.calc code{background:#fff;padding:0}</style>
+<script type="text/javascript">for(var navLinks=document.getElementById("nav-sidebar").getElementsByTagName("a"),i=0;i<navLinks.length;i++)navLinks[i].href===document.URL&&(navLinks[i].classList.add("current-chapter"),navLinks[i].scrollIntoView({block:"center",inline:"center"}),document.querySelector("header").scrollIntoView(!0))</script>
+<footer id="colophon" class="site-footer">
+<div class="container">
+<ul class="footer-menu">
+<li><a href="https://www.learnbyexample.org/disclaimer/">Disclaimer</a></li>
+<li><a href="https://www.learnbyexample.org/privacy-policy/">Privacy Policy</a></li>
+<li><a href="https://www.learnbyexample.org/contact/">Contact Us</a></li>
+</ul>
+<div class="copyright">Copyright &copy; 2022 LearnByExample.org All rights reserved.</div>
+</div>
+</footer>
+</div>
+</body>
+</html>
+
