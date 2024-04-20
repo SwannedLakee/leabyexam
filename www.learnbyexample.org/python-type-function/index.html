@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="profile" href="https://gmpg.org/xfn/11" />
 <meta name="robots" content="max-image-preview:large" />
-<script type="application/ld+json">{"@context":"http:\/\/schema.org","publisher":{"@type":"Organization","name":"Learn By Example","logo":{"@type":"ImageObject","url":"https:\/\/www.learnbyexample.org\/wp-content\/themes\/siddhai-child\/logo\/logo.png","height":90,"width":193}},"@type":"BlogPosting","mainEntityOfPage":"https:\/\/www.learnbyexample.org\/python-type-function\/","headline":"Python type() Function","datePublished":"2019-06-12T11:39:46+00:00","dateModified":"2020-04-20T12:57:39+00:00","author":{"@type":"Person","name":"learnbyexample"},"image":{"@type":"ImageObject","url":"https:\/\/www.learnbyexample.org\/wp-content\/uploads\/2019\/06\/Learn-Python-Programming.png","width":763,"height":436}}</script>
+<script type="application/ld+json">{"@context":"http:\/\/schema.org","publisher":{"@type":"Organization","name":"Learn By Example","logo":{"@type":"ImageObject","url":"https:\/\/www.learnbyexample.org\/wp-content\/themes\/siddhai-child\/logo\/logo.png","height":90,"width":193}},"@type":"BlogPosting","mainEntityOfPage":"https:\/\/www.learnbyexample.org\/python-type-function\/","headline":"Python type() Function","datePublished":"2019-06-12T11:39:46+00:00","dateModified":"2024-04-17T04:54:28+00:00","author":{"@type":"Person","name":"learnbyexample"},"image":{"@type":"ImageObject","url":"https:\/\/www.learnbyexample.org\/wp-content\/uploads\/2019\/06\/Learn-Python-Programming.png","width":763,"height":436}}</script>
 
 <title>Python type() Function - Learn By Example</title>
 <meta name="description" content="With one argument, the type() function returns the type of the specified object. With three arguments, this function returns a new type object." />
@@ -18,7 +18,7 @@
 <meta property="og:url" content="https://www.learnbyexample.org/python-type-function/" />
 <meta property="og:site_name" content="Learn By Example" />
 <meta property="article:published_time" content="2019-06-12T11:39:46+00:00" />
-<meta property="article:modified_time" content="2020-04-20T12:57:39+00:00" />
+<meta property="article:modified_time" content="2024-04-17T04:54:28+00:00" />
 <meta property="og:image" content="https://www.learnbyexample.org/wp-content/uploads/2019/06/Learn-Python-Programming.png" />
 <meta property="og:image:width" content="763" />
 <meta property="og:image:height" content="436" />
@@ -26,7 +26,7 @@
 <meta name="twitter:label1" value="Written by">
 <meta name="twitter:data1" value="learnbyexample">
 <meta name="twitter:label2" value="Est. reading time">
-<meta name="twitter:data2" value="1 minute">
+<meta name="twitter:data2" value="3 minutes">
 
 <link rel="dns-prefetch" href="https://scripts.mediavine.com/" />
 <link rel="dns-prefetch" href="https://s.w.org/" />
@@ -289,7 +289,7 @@ pre .com{color:#65798c}pre .dec,pre .lit{color:#c53929}pre .atv,pre .str{color:#
 <div class="main-wrapper">
 <div class="nav-rightbar-wrapper">
 <nav class="nav-rightbar">
-<div class="story-highlights" id="navigation"><div class="tab"><label for="tab-title" class="story-highlights-title">Table Of Contents</label><input id="tab-title" type="checkbox" name="tabs"><label class="main-tab-icon tabicon" for="tab-title"></label><ul class="main-tab tab-content"><li><a href="index.html#usage">Usage</a></li><li><a href="index.html#syntax">Syntax</a></li><li><a href="index.html#type-object">type(object)</a></li><li><a href="index.html#type-name-bases-dict">type(name, bases, dict)</a></li><li><a href="index.html#type-vs-isinstance">type() vs isinstance()</a></li></ul></div></div> </nav>
+<div class="story-highlights"><div class="tab"><label for="tab-title" class="story-highlights-title">Table Of Contents</label><ul class="main-tab tab-content"><li><a href="index.html#usage">Usage</a></li><li><a href="index.html#syntax">Syntax</a></li><li><a href="index.html#determining-the-type-of-an-object">Determining the Type of an Object</a></li><li><a href="index.html#checking-the-type-of-an-object">Checking the Type of an Object</a></li><li><a href="index.html#dynamically-creating-classes">Dynamically Creating Classes</a></li><li><a href="index.html#type-vs-isinstance">type() vs isinstance()</a></li></ul></div></div> </nav>
 </div>
 <main id="main">
 <div class="post-367 post type-post status-publish format-standard has-post-thumbnail hentry category-python mv-content-wrapper">
@@ -321,70 +321,104 @@ pre .com{color:#65798c}pre .dec,pre .lit{color:#c53929}pre .atv,pre .str{color:#
 </div>
 </div>
 <div class="entry-content">
-<p class="quote">Returns the type of an object</p>
 <h2 id="usage">Usage</h2>
-<p>With one argument, the <code>type()</code> function returns the type of the specified <span class="prm">object</span>.</p>
-<p>With three arguments, this function returns a new type object.</p>
+<p>The <code>type()</code> function in Python is a built-in function primarily used to determine the type of an object, but it can also be used to dynamically create new classes.</p>
 <h2 id="syntax">Syntax</h2>
+<p>The <code>type()</code> function can be used in two different ways.</p>
+<p>To find out the type of an object:</p>
 <p class="syntx"><span class="fun">type</span>(<span class="arg">object</span>)</p>
-<table class="tabler parametertabler"><caption class="wp-caption-text">Python type() function parameters</caption><tbody><tr class="tabler-header"><td>Parameter</td><td>Condition</td><td>Description</td></tr><tr><td>object</td><td>Required</td><td>Any object (<a href="../python-numbers/index.html">number</a>, <a href="../python-string/index.html">string</a>, <a href="../python-list/index.html">list</a>, <a href="../python-classes-and-objects/index.html">custom object</a> etc.)</td></tr></tbody></table>
+<div class="tablescroll"><table class="tabler parametertabler"><tbody><tr class="tabler-header"><td>Parameter</td><td>Condition</td><td>Description</td></tr><tr><td>object</td><td>Required</td><td>Any object (number, string, list, custom object etc.)</td></tr></tbody></table></div>
 <p class="align-center">&#8211; OR &#8211;</p>
-<p class="syntx"><span class="fun">type</span>(<span class="arg">name</span>,<span class="arg">bases</span>,<span class="arg">dict</span>)</p>
-<table class="tabler parametertabler"><caption class="wp-caption-text">Python type() function parameters</caption><tbody><tr class="tabler-header"><td>Parameter</td><td>Condition</td><td>Description</td></tr><tr><td>name</td><td>Required</td><td>Specifies the class name</td></tr><tr><td>bases</td><td>Optional</td><td>Specifies the base classes</td></tr><tr><td>dict</td><td>Optional</td><td>Specifies the namespace containing definitions for the class</td></tr></tbody></table>
-<h2 id="type-object">type(object)</h2>
-<p>With one argument, the <code>type()</code> function returns the type of the specified object.</p>
-<div class="example"><div class="excode"><pre><code><span class="com"># Find type of below objects</span>
+<p>To create a new type (essentially, dynamically creating classes):</p>
+<p class="syntx"><span class="fun">type</span>(<span class="arg">name</span>, <span class="arg">bases</span>, <span class="arg">dict</span>)</p>
+<div class="tablescroll"><table class="tabler parametertabler"><tbody><tr class="tabler-header"><td>Parameter</td><td>Condition</td><td>Description</td></tr><tr><td>name</td><td>Required</td><td>The name of the new class</td></tr><tr><td>bases</td><td>Optional</td><td>A tuple of base classes from which the new class will inherit.</td></tr><tr><td>dict</td><td>Optional</td><td>A dictionary containing class attributes and methods</td></tr></tbody></table></div>
+<h2 id="determining-the-type-of-an-object">Determining the Type of an Object</h2>
+<p>When you use <code>type()</code> with a single argument, it returns the type object of that argument.</p>
+<p>Let&#8217;s see some examples:</p>
+<div class="example"><div class="excode"><pre><code><span class="kwd">print</span>(type(<span class="lit">42</span>))
+<span class="com"># Output: &lt;class "int"&gt;</span>
 
-x = type(<span class="lit">42</span>)
-<span class="kwd">print</span>(x)
-<span class="com"># Prints &lt;class 'int'&gt;</span>
+<span class="kwd">print</span>(type(<span class="lit">3.14</span>))
+<span class="com"># Output: &lt;class 'float'&gt;</span>
 
-x = type(<span class="str">'Hello'</span>)
-<span class="kwd">print</span>(x)
-<span class="com"># Prints &lt;class 'str'&gt;</span>
+<span class="kwd">print</span>(type(<span class="str">"Hello"</span>))
+<span class="com"># Output: &lt;class "str"&gt;</span>
 
-x = type([<span class="str">'red'</span>, <span class="str">'green'</span>, <span class="str">'blue'</span>])
-<span class="kwd">print</span>(x)
-<span class="com"># Prints &lt;class 'list'&gt;</span>
+<span class="kwd">print</span>(type(<span class="kwd">False</span>))
+<span class="com"># Output: &lt;class 'bool'&gt;</span>
 
-x = type({<span class="str">'name'</span>: <span class="str">'Bob'</span>, <span class="str">'age'</span>: <span class="lit">25</span>})
-<span class="kwd">print</span>(x)
-<span class="com"># Prints &lt;class 'dict'&gt;</span></code></pre></div></div>
-<p>Let&#8217;s try <code>type()</code> on a custom object.</p>
+<span class="kwd">print</span>(type([<span class="str">"red"</span>, <span class="str">"green"</span>, <span class="str">"blue"</span>]))
+<span class="com"># Output: &lt;class "list"&gt;</span>
+
+<span class="kwd">print</span>(type({<span class="str">"name"</span>: <span class="str">"Bob"</span>, <span class="str">"age"</span>: <span class="lit">25</span>}))
+<span class="com"># Output: &lt;class "dict"&gt;</span></code></pre></div></div>
+<p>Now, let&#8217;s test <code>type()</code> on a custom object:</p>
 <div class="example"><div class="excode"><pre><code><span class="kwd">class</span> fruit:
-  <span class="kwd">pass</span><span class="pln">
+  <span class="kwd">pass</span>
 
-apple </span>= fruit()
+apple = fruit()
 <span class="kwd">print</span>(type(apple))
-<span class="com"># Prints &lt;class '__main__.fruit'&gt;</span></code></pre></div></div>
-<p>You get &#8216;__main__.&#8217; before the class name because it is local to the current module.</p>
-<h2 id="type-name-bases-dict">type(name, bases, dict)</h2>
-<p>With three arguments, this function returns a new type object. For example, the following two statements create identical type objects.</p>
-<div class="example"><div class="excode"><pre><code><span class="com"># The usual way</span>
-<span class="kwd">class</span> X:
-	a = <span class="lit">1</span>
+<span class="com"># Output: &lt;class '__main__.fruit'&gt;</span></code></pre></div></div>
+<p>Notice the <code>__main__</code> before the class name. This indicates that the <code>Fruit</code> class is local to the current module.</p>
+<p>You can even use <code>type()</code> on special objects like functions and modules:</p>
+<div class="example"><div class="excode"><pre><code><span class="com"># Functions</span>
+<span class="kwd">def</span> greet(name):
+    <span class="kwd">print</span>(<span class="str">"Hello,"</span>, name)
+<span class="kwd">print</span>(type(greet))    <span class="com"># Output: &lt;class 'function'&gt;</span>
 
-<span class="com"># With type function</span>
-X = type(<span class="str">'X'</span>, (<span class="kwd">object</span>,), dict(a=<span class="lit">1</span>))</code></pre></div></div>
+<span class="com"># Modules</span>
+<span class="kwd">import</span> math
+<span class="kwd">print</span>(type(math))     <span class="com"># Output: &lt;class 'module'&gt;</span></code></pre></div></div>
+<h2 id="checking-the-type-of-an-object">Checking the Type of an Object</h2>
+<p>Once you&#8217;ve obtained the type, you might want to check if an object is of a certain type. You can do this by comparing the output of the <code>type()</code> function directly to the <code>type</code> object you&#8217;re interested in.</p>
+<div class="example"><div class="excode"><pre><code><span class="kwd">print</span>(type(<span class="lit">5</span>) <span class="kwd">is</span> <span class="kwd">int</span>)         <span class="com"># Output: True</span>
+<span class="kwd">print</span>(type(<span class="lit">5</span>) <span class="kwd">is</span> <span class="kwd">float</span>)       <span class="com"># Output: False</span>
+<span class="kwd">print</span>(type(<span class="str">"Hello"</span>) <span class="kwd">is</span> str)   <span class="com"># Output: True</span></code></pre></div></div>
+<p>To check if the type of an object is among multiple possible types, use the <code>in</code> operator with a tuple of potential types:</p>
+<div class="example"><div class="excode"><pre><code><span class="kwd">print</span>(type(<span class="str">"Hello"</span>) <span class="kwd">in</span> (<span class="kwd">int</span>, <span class="kwd">float</span>, str))  <span class="com"># Output: True</span>
+<span class="kwd">print</span>(type(<span class="lit">3.14</span>) <span class="kwd">in</span> (<span class="kwd">int</span>, <span class="kwd">float</span>))          <span class="com"># Output: True</span></code></pre></div></div>
+<p>To reverse the logic of your type checks, use the <code>not</code> operator:</p>
+<div class="example"><div class="excode"><pre><code><span class="kwd">print</span>(type(<span class="lit">3.14</span>) <span class="kwd">is</span> <span class="kwd">not</span> <span class="kwd">int</span>)                     <span class="com"># Output: True</span>
+<span class="kwd">print</span>(type([<span class="lit">1</span>, <span class="lit">2</span>, <span class="lit">3</span>]) <span class="kwd">not</span> <span class="kwd">in</span> (<span class="kwd">int</span>, <span class="kwd">float</span>, str))  <span class="com"># Output: True</span></code></pre></div></div>
+<h2 id="dynamically-creating-classes">Dynamically Creating Classes</h2>
+<p>Although not commonly used in everyday programming, using <code>type()</code> with three arguments allows you to create new classes on the fly.</p>
+<p>This is a form of metaprogramming, allowing you to generate new classes during the execution of your program, rather than having them all rigidly defined beforehand.</p>
+<p>Here’s how you can use <code>type()</code> in this manner:</p>
+<div class="example"><div class="excode"><pre><code><span class="typ">Car</span> = type(<span class="str">"Car"</span>, (), {<span class="str">"wheels"</span>: <span class="lit">4</span>,
+                       <span class="str">"color"</span>: <span class="str">"Black"</span>,
+                       <span class="str">"style"</span>: <span class="str">"Sedan"</span>,
+                       <span class="str">"showDescription"</span>: <span class="kwd">lambda</span> <span class="kwd">self</span>: <span class="kwd">print</span>(<span class="str">"This is a"</span>, <span class="kwd">self</span>.color, <span class="kwd">self</span>.style)})
+
+new_car = <span class="typ">Car</span>()
+<span class="kwd">print</span>(new_car.wheels)       <span class="com"># Output: "4"</span>
+<span class="kwd">print</span>(new_car.style)        <span class="com"># Output: "Sedan"</span>
+new_car.showDescription()   <span class="com"># Output: "This is a Black Sedan"</span></code></pre></div></div>
+<p>In this example, a <code>Car</code> class is created dynamically. This class has attributes like <code>wheels</code>, <code>color</code>, and <code>style</code>. It also includes a method called <code>showDescription</code> to print information about the car. A <code>new_car</code> object is then instantiated from this class, and its attributes and methods are accessed.</p>
 <h2 id="type-vs-isinstance">type() vs isinstance()</h2>
-<p>The <a>isinstance()</a> method takes subclasses into account; <code>type()</code> doesn&#8217;t.</p>
-<div class="example"><div class="excode"><pre><code><span class="kwd">class</span> fruit:
-    <span class="kwd">pass</span><span class="pln">
+<p>While <code>type()</code> is used to determine the type of an object, Python also offers the <code>isinstance()</code> function to check if an object is an instance of a specific class or a tuple of classes. The difference between them is subtle but important:</p>
+<p>The <code>type()</code> function focuses on the exact type of an object. It will only return True if the object&#8217;s type directly matches the class you&#8217;re comparing against, ignoring inheritance.</p>
+<p>On the other hand, <code>isinstance()</code> takes inheritance into account. It checks if an object is an instance of a particular class or any of its subclasses. This means if an object belongs to a derived class (a subclass), <code>isinstance()</code> will still recognize it as being an instance of the parent class.</p>
+<p>Let&#8217;s illustrate this with an example:</p>
+<div class="example"><div class="excode"><pre><code><span class="kwd">class</span> <span class="typ">Fruit</span>:
+    <span class="kwd">pass</span>
 
-</span><span class="kwd">class</span> apple(fruit):
-    <span class="kwd">pass</span><span class="pln">
+<span class="kwd">class</span> <span class="typ">Apple</span>(<span class="typ">Fruit</span>):
+    <span class="kwd">pass</span>
 
-</span><span class="kwd">print</span>(isinstance(fruit(), fruit))
-<span class="com"># Prints True</span><span class="pln">
+apple = <span class="typ">Apple</span>()
 
-</span><span class="kwd">print</span>(type(fruit()) == fruit)
-<span class="com"># Prints True</span><span class="pln">
+<span class="kwd">print</span>(isinstance(apple, <span class="typ">Apple</span>))   <span class="com"># Output: True</span>
+<span class="kwd">print</span>(type(apple) <span class="kwd">is</span> <span class="typ">Apple</span>)       <span class="com"># Output: True</span>
 
-</span><span class="kwd">print</span>(isinstance(apple(), fruit))
-<span class="com"># Prints True</span><span class="pln">
+<span class="kwd">print</span>(isinstance(apple, <span class="typ">Fruit</span>))   <span class="com"># Output: True</span>
+<span class="kwd">print</span>(type(apple) <span class="kwd">is</span> <span class="typ">Fruit</span>)       <span class="com"># Output: False (probably won't be what you want)</span></code></pre></div></div>
+<p>Another interesting example is that booleans (True and False) in Python are a subclass of integers. Therefore, a boolean object will return True when checked with <code>isinstance()</code> against both the <code>bool</code> and <code>int</code> types. . However, because <code>type()</code> does not consider class inheritance, the check will return False for <code>int</code>.</p>
+<div class="example"><div class="excode"><pre><code><span class="kwd">print</span>(isinstance(<span class="kwd">True</span>, <span class="kwd">bool</span>))   <span class="com"># Output: True</span>
+<span class="kwd">print</span>(type(<span class="kwd">True</span>) <span class="kwd">is</span> <span class="kwd">bool</span>)       <span class="com"># Output: True</span>
 
-</span><span class="kwd">print</span>(type(apple()) == fruit)
-<span class="com"># Prints False, and this probably won't be what you want.</span></code></pre></div></div>
+<span class="kwd">print</span>(isinstance(<span class="kwd">True</span>, <span class="kwd">int</span>))    <span class="com"># Output: True</span>
+<span class="kwd">print</span>(type(<span class="kwd">True</span>) <span class="kwd">is</span> <span class="kwd">int</span>)        <span class="com"># Output: False</span></code></pre></div></div>
+<p>Therefore, for most common programming scenarios, <code>isinstance()</code> is the preferred choice. This is because it aligns well with object-oriented programming principles where you often want to treat objects of subclasses as if they belong to the parent class itself. You usually would want to be able to use an <code>Apple</code> object in any place where the code expects a <code>Fruit</code>. However, there might be specific situations where you need to strictly identify an object&#8217;s exact type without considering inheritance. In these rarer cases, <code>type()</code> is the right tool.</p>
 </div>
 </article>
 <div class="social-sharing bottom-sharing">

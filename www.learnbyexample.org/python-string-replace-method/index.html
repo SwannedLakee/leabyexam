@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="profile" href="https://gmpg.org/xfn/11" />
 <meta name="robots" content="max-image-preview:large" />
-<script type="application/ld+json">{"@context":"http:\/\/schema.org","publisher":{"@type":"Organization","name":"Learn By Example","logo":{"@type":"ImageObject","url":"https:\/\/www.learnbyexample.org\/wp-content\/themes\/siddhai-child\/logo\/logo.png","height":90,"width":193}},"@type":"BlogPosting","mainEntityOfPage":"https:\/\/www.learnbyexample.org\/python-string-replace-method\/","headline":"Python String replace() Method","datePublished":"2019-06-12T08:46:42+00:00","dateModified":"2020-04-20T11:58:46+00:00","author":{"@type":"Person","name":"learnbyexample"},"image":{"@type":"ImageObject","url":"https:\/\/www.learnbyexample.org\/wp-content\/uploads\/2019\/06\/Learn-Python-Programming.png","width":763,"height":436}}</script>
+<script type="application/ld+json">{"@context":"http:\/\/schema.org","publisher":{"@type":"Organization","name":"Learn By Example","logo":{"@type":"ImageObject","url":"https:\/\/www.learnbyexample.org\/wp-content\/themes\/siddhai-child\/logo\/logo.png","height":90,"width":193}},"@type":"BlogPosting","mainEntityOfPage":"https:\/\/www.learnbyexample.org\/python-string-replace-method\/","headline":"Python String replace() Method","datePublished":"2019-06-12T08:46:42+00:00","dateModified":"2024-04-16T09:43:57+00:00","author":{"@type":"Person","name":"learnbyexample"},"image":{"@type":"ImageObject","url":"https:\/\/www.learnbyexample.org\/wp-content\/uploads\/2019\/06\/Learn-Python-Programming.png","width":763,"height":436}}</script>
 
 <title>Python String replace() Method - Learn By Example</title>
 <meta name="description" content="The replace() method replaces old substring with new. By default, all occurrences of the substring are removed. Use parameter count to limit the number of replacements." />
@@ -18,7 +18,7 @@
 <meta property="og:url" content="https://www.learnbyexample.org/python-string-replace-method/" />
 <meta property="og:site_name" content="Learn By Example" />
 <meta property="article:published_time" content="2019-06-12T08:46:42+00:00" />
-<meta property="article:modified_time" content="2020-04-20T11:58:46+00:00" />
+<meta property="article:modified_time" content="2024-04-16T09:43:57+00:00" />
 <meta property="og:image" content="https://www.learnbyexample.org/wp-content/uploads/2019/06/Learn-Python-Programming.png" />
 <meta property="og:image:width" content="763" />
 <meta property="og:image:height" content="436" />
@@ -26,7 +26,7 @@
 <meta name="twitter:label1" value="Written by">
 <meta name="twitter:data1" value="learnbyexample">
 <meta name="twitter:label2" value="Est. reading time">
-<meta name="twitter:data2" value="1 minute">
+<meta name="twitter:data2" value="2 minutes">
 
 <link rel="dns-prefetch" href="https://scripts.mediavine.com/" />
 <link rel="dns-prefetch" href="https://s.w.org/" />
@@ -289,7 +289,7 @@ pre .com{color:#65798c}pre .dec,pre .lit{color:#c53929}pre .atv,pre .str{color:#
 <div class="main-wrapper">
 <div class="nav-rightbar-wrapper">
 <nav class="nav-rightbar">
-<div class="story-highlights" id="navigation"><div class="tab"><label for="tab-title" class="story-highlights-title">Table Of Contents</label><input id="tab-title" type="checkbox" name="tabs"><label class="main-tab-icon tabicon" for="tab-title"></label><ul class="main-tab tab-content"><li><a href="index.html#usage">Usage</a></li><li><a href="index.html#syntax">Syntax</a></li><li><a href="index.html#examples">Examples</a></li></ul></div></div> </nav>
+<div class="story-highlights"><div class="tab"><label for="tab-title" class="story-highlights-title">Table Of Contents</label><ul class="main-tab tab-content"><li><a href="index.html#usage">Usage</a></li><li><a href="index.html#syntax">Syntax</a></li><li><a href="index.html#basic-example">Basic Example</a></li><li><a href="index.html#limiting-removals">Limiting Removals</a></li><li><a href="index.html#replace-always-returns-a-new-string">replace() Always Returns a New String</a></li><li><a href="index.html#removing-multiple-substrings">Removing Multiple Substrings</a></li></ul></div></div> </nav>
 </div>
 <main id="main">
 <div class="post-193 post type-post status-publish format-standard has-post-thumbnail hentry category-python mv-content-wrapper">
@@ -321,31 +321,57 @@ pre .com{color:#65798c}pre .dec,pre .lit{color:#c53929}pre .atv,pre .str{color:#
 </div>
 </div>
 <div class="entry-content">
-<p class="quote">Replaces occurrences of a substring within a string</p>
 <h2 id="usage">Usage</h2>
 <p>The <code>replace()</code> method returns a copy of&nbsp;<a href="../python-string/index.html">string</a>&nbsp;with all occurrences of&nbsp;<span class="prm">old</span>&nbsp;substring replaced by&nbsp;<span class="prm">new</span>.</p>
 <p>By default, all occurrences of the substring are removed. However, you can limit the number of replacements by specifying optional parameter <span class="prm">count</span>.</p>
 <h2 id="syntax">Syntax</h2>
 <p class="syntx">string.<span class="fun">replace</span>(<span class="arg">old</span>,<span class="arg">new</span>,<span class="arg">count</span>)</p>
 <table class="tabler parametertabler"><caption class="wp-caption-text">Python string replace() method parameters</caption><tbody><tr class="tabler-header"><td>Parameter</td><td>Condition</td><td>Description</td></tr><tr><td>old</td><td>Required</td><td>A string you want to replace</td></tr><tr><td>new</td><td>Required</td><td>A string you want to replace old string with</td></tr><tr><td>count</td><td>Optional</td><td>An integer specifying number of replacements to perform<br>Default is all occurrences</td></tr></tbody></table>
-<h2 id="examples">Examples</h2>
-<div class="example"><div class="excode"><pre><code><span class="com"># Replace substring 'World' with 'Universe'</span>
-S = <span class="str">'Hello, World!'</span>
-x = S.replace(<span class="str">'World'</span>,<span class="str">'Universe'</span>)
-<span class="kwd">print</span>(x)
-<span class="com"># Prints Hello, Universe!</span></code></pre></div></div>
-<p>By default, the method replaces all occurrences of the specified substring.</p>
-<div class="example"><div class="excode"><pre><code><span class="com"># Replace all occurrence of the substring 'Long'</span>
-S = <span class="str">'Long, Longer, Longest'</span>
-x = S.replace(<span class="str">'Long'</span>,<span class="str">'Small'</span>)
-<span class="kwd">print</span>(x)
-<span class="com"># Prints Small, Smaller, Smallest</span></code></pre></div></div>
-<p>If the optional argument <span class="prm">count</span> is specified, only the first <span class="prm">count</span> occurrences are replaced.</p>
-<div class="example"><div class="excode"><pre><code><span class="com"># Replace first two occurrence of the substring 'Long'</span>
-S = <span class="str">'Long, Longer, Longest'</span>
-x = S.replace(<span class="str">'Long'</span>,<span class="str">'Small'</span>, <span class="lit">2</span>)
-<span class="kwd">print</span>(x)
-<span class="com"># Prints Small, Smaller, Longest</span></code></pre></div></div>
+<h2 id="basic-example">Basic Example</h2>
+<p>Let’s say you want to remove all occurrences of the word &#8220;Hello&#8221; in the string:</p>
+<div class="example"><div class="excode"><pre><code>text = <span class="str">"Hello? Hello, can you hear me? Hello...?"</span>
+
+new_text = text.replace(<span class="str">"Hello"</span>, <span class="str">""</span>)
+<span class="kwd">print</span>(new_text)
+<span class="com"># Output: "? , can you hear me? ...?"</span></code></pre></div></div>
+<h2 id="limiting-removals">Limiting Removals</h2>
+<p>Note that <code>replace()</code> removes all occurrences of the substring by default. You can limit the number of replacements by specifying the <code>count</code> parameter.</p>
+<p>For example, to remove only the first occurrence of the substring &#8220;Hello&#8221;:</p>
+<div class="example"><div class="excode"><pre><code>text = <span class="str">"Hello? Hello, can you hear me? Hello...?"</span>
+
+new_text = text.replace(<span class="str">"Hello"</span>, <span class="str">""</span>, <span class="lit">1</span>)
+<span class="kwd">print</span>(new_text)
+<span class="com"># Output: "? Hello, can you hear me? Hello...?"</span></code></pre></div></div>
+<h2 id="replace-always-returns-a-new-string">replace() Always Returns a New String</h2>
+<p>It&#8217;s important to remember that the <code>replace()</code> method doesn&#8217;t modify the original string. Instead, it always returns a new string with the changes you&#8217;ve made. If you want to keep the modified version, you need to assign it back to a variable (or a new variable).</p>
+<div class="example"><div class="excode"><pre><code>text = <span class="str">"Hello? Hello, can you hear me? Hello...?"</span>
+
+text.replace(<span class="str">"Hello"</span>, <span class="str">""</span>)  <span class="com"># This change isn't saved anywhere</span>
+<span class="kwd">print</span>(text)
+<span class="com"># Output: "Hello? Hello, can you hear me? Hello...?" (still the original)</span>
+
+<span class="com"># To save the change:</span>
+text = text.replace(<span class="str">"Hello"</span>, <span class="str">""</span>) 
+<span class="kwd">print</span>(text)
+<span class="com"># Output: "? , can you hear me? ...?"</span></code></pre></div></div>
+<h2 id="removing-multiple-substrings">Removing Multiple Substrings</h2>
+<p>Here are a couple of ways you can remove multiple substrings from a piece of text:</p>
+<p>For a small number of removals, you can chain multiple <code>replace()</code> calls together.</p>
+<div class="example"><div class="excode"><pre><code>text = <span class="str">"Hello? Hello, can you hear me? Hello...?"</span>
+
+new_text = text.replace(<span class="str">"Hello"</span>, <span class="str">""</span>).replace(<span class="str">"?"</span>, <span class="str">""</span>)
+<span class="kwd">print</span>(new_text)
+<span class="com"># Output: " , can you hear me ..."</span></code></pre></div></div>
+<p>If you have many substrings to remove, chaining <code>replace()</code> calls can become cumbersome. A more organized approach is to define a list of the substrings you want to remove and loop through it:</p>
+<div class="example"><div class="excode"><pre><code>text = <span class="str">"Hello? Hello, can you hear me? Hello...?"</span>
+
+replacements = [<span class="str">"Hello"</span>, <span class="str">"?"</span>, <span class="str">"can"</span>]
+
+<span class="kwd">for</span> x <span class="kwd">in</span> replacements:
+    text = text.replace(x, <span class="str">""</span>)
+
+<span class="kwd">print</span>(text)
+<span class="com"># Output: ",  you hear me ..."</span></code></pre></div></div>
 </div>
 </article>
 <div class="social-sharing bottom-sharing">
