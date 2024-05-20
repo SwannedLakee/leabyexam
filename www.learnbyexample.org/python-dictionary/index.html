@@ -4,43 +4,42 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="profile" href="https://gmpg.org/xfn/11" />
-<meta name="robots" content="max-image-preview:large" />
+
+<meta name='robots' content='max-image-preview:large' />
 <script type="application/ld+json">{"@context":"http:\/\/schema.org","publisher":{"@type":"Organization","name":"Learn By Example","logo":{"@type":"ImageObject","url":"https:\/\/www.learnbyexample.org\/wp-content\/themes\/siddhai-child\/logo\/logo.png","height":90,"width":193}},"@type":"BlogPosting","mainEntityOfPage":"https:\/\/www.learnbyexample.org\/python-dictionary\/","headline":"Python Dictionary","datePublished":"2019-06-12T06:18:11+00:00","dateModified":"2020-04-20T11:37:11+00:00","author":{"@type":"Person","name":"learnbyexample"},"image":{"@type":"ImageObject","url":"https:\/\/www.learnbyexample.org\/wp-content\/uploads\/2019\/06\/Learn-Python-Programming.png","width":763,"height":436}}</script>
+	<!-- This site is optimized with the Yoast SEO plugin v15.2 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Python Dictionary - Learn By Example</title>
+	<meta name="description" content="Learn to create a Dictionary in Python, add remove access and change dictionary items, merge dictionaries, iterate through a dictionary, check if key exists, find dictionary length and much more" />
+	<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="index.html" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Python Dictionary - Learn By Example" />
+	<meta property="og:description" content="Learn to create a Dictionary in Python, add remove access and change dictionary items, merge dictionaries, iterate through a dictionary, check if key exists, find dictionary length and much more" />
+	<meta property="og:url" content="https://www.learnbyexample.org/python-dictionary/" />
+	<meta property="og:site_name" content="Learn By Example" />
+	<meta property="article:published_time" content="2019-06-12T06:18:11+00:00" />
+	<meta property="article:modified_time" content="2020-04-20T11:37:11+00:00" />
+	<meta property="og:image" content="https://www.learnbyexample.org/wp-content/uploads/2019/06/Learn-Python-Programming.png" />
+	<meta property="og:image:width" content="763" />
+	<meta property="og:image:height" content="436" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" value="Written by">
+	<meta name="twitter:data1" value="learnbyexample">
+	<meta name="twitter:label2" value="Est. reading time">
+	<meta name="twitter:data2" value="6 minutes">
+	<!-- / Yoast SEO plugin. -->
 
-<title>Python Dictionary - Learn By Example</title>
-<meta name="description" content="Learn to create a Dictionary in Python, add remove access and change dictionary items, merge dictionaries, iterate through a dictionary, check if key exists, find dictionary length and much more" />
-<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-<link rel="canonical" href="index.html" />
-<meta property="og:locale" content="en_US" />
-<meta property="og:type" content="article" />
-<meta property="og:title" content="Python Dictionary - Learn By Example" />
-<meta property="og:description" content="Learn to create a Dictionary in Python, add remove access and change dictionary items, merge dictionaries, iterate through a dictionary, check if key exists, find dictionary length and much more" />
-<meta property="og:url" content="https://www.learnbyexample.org/python-dictionary/" />
-<meta property="og:site_name" content="Learn By Example" />
-<meta property="article:published_time" content="2019-06-12T06:18:11+00:00" />
-<meta property="article:modified_time" content="2020-04-20T11:37:11+00:00" />
-<meta property="og:image" content="https://www.learnbyexample.org/wp-content/uploads/2019/06/Learn-Python-Programming.png" />
-<meta property="og:image:width" content="763" />
-<meta property="og:image:height" content="436" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:label1" value="Written by">
-<meta name="twitter:data1" value="learnbyexample">
-<meta name="twitter:label2" value="Est. reading time">
-<meta name="twitter:data2" value="6 minutes">
 
-<link rel="dns-prefetch" href="https://scripts.mediavine.com/" />
-<link rel="dns-prefetch" href="https://s.w.org/" />
+<link rel='dns-prefetch' href='https://scripts.mediavine.com/' />
+<style id='classic-theme-styles-inline-css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+</style>
 <script async="async" data-noptimize="1" data-cfasync="false" src="https://scripts.mediavine.com/tags/learn-by-example.js" id="mv-script-wrapper-js"></script>
-<link rel="icon" type="image/png" href="../wp-content/themes/siddhai-child/logo/favicon.png"><script async src="https://www.googletagmanager.com/gtag/js?id=UA-142181689-1"></script>
-<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
-
-		  gtag('config', 'UA-142181689-1');
-		</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QGDW35GZW0"></script>
-<script>
+<link rel="icon" type="image/png" href="../wp-content/themes/siddhai-child/logo/favicon.png"><!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-QGDW35GZW0"></script>
+		<script>
 		  window.dataLayer = window.dataLayer || [];
 		  function gtag(){dataLayer.push(arguments);}
 		  gtag('js', new Date());
@@ -66,55 +65,61 @@ pre .com{color:#65798c}pre .dec,pre .lit{color:#c53929}pre .atv,pre .str{color:#
 @media print{article{position:fixed}.social-sharing,footer{display:none}}
 @media only screen and (min-width:1025px){.nav-rightbar-wrapper{margin-right:5px!important}}@media only screen and (max-width:359px){.entry-content{padding-right:10px!important;padding-left:10px!important}}
 </style>
+
 </head>
+
 <body class="post-template-default single single-post postid-58 single-format-standard no-sidebar">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0 0.49803921568627" /><feFuncG type="table" tableValues="0 0.49803921568627" /><feFuncB type="table" tableValues="0 0.49803921568627" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 0.27843137254902" /><feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0 0" /><feFuncG type="table" tableValues="0 0.64705882352941" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0.78039215686275 1" /><feFuncG type="table" tableValues="0 0.94901960784314" /><feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.44705882352941 0.4" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="table" tableValues="0.098039215686275 1" /><feFuncG type="table" tableValues="0 0.66274509803922" /><feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg>
-<svg class="svg-assets" xmlns="http://www.w3.org/2000/svg">
-<symbol id="social-twitter" viewBox="0 0 18 18">
-<path d="M16.5,4.3c-0.6,0.2-1.1,0.4-1.8,0.5c0.6-0.4,1.1-1,1.4-1.7c-0.6,0.4-1.3,0.6-2,0.8c-0.6-0.6-1.4-1-2.2-1 c-1.7,0-3.1,1.4-3.1,3.1c0,0.2,0,0.5,0.1,0.7C6.3,6.5,4.1,5.3,2.5,3.4C2.3,3.9,2.1,4.4,2.1,5c0,1.1,0.5,2,1.4,2.6 c-0.5,0-1-0.2-1.4-0.4c0,0,0,0,0,0c0,1.5,1.1,2.8,2.5,3.1c-0.3,0.1-0.5,0.1-0.8,0.1c-0.2,0-0.4,0-0.6-0.1c0.4,1.2,1.5,2.1,2.9,2.2 c-1.1,0.8-2.4,1.3-3.8,1.3c-0.2,0-0.5,0-0.7,0c1.4,0.9,3,1.4,4.7,1.4c5.7,0,8.8-4.7,8.8-8.9c0-0.1,0-0.3,0-0.4 C15.6,5.5,16.1,4.9,16.5,4.3"></path>
-</symbol>
-<symbol id="social-facebook" viewBox="0 0 18 18">
-<path d="M15.7,1.5H2.3c-0.5,0-0.8,0.4-0.8,0.8v13.3c0,0.5,0.4,0.8,0.8,0.8h7.2v-5.8h-2V8.4h2V6.8c0-1.9,1.2-3,2.9-3 c0.8,0,1.5,0.1,1.7,0.1v2l-1.2,0c-0.9,0-1.1,0.4-1.1,1.1v1.4h2.2l-0.3,2.3h-1.9v5.8h3.8c0.5,0,0.8-0.4,0.8-0.8V2.3 C16.5,1.9,16.1,1.5,15.7,1.5z"></path>
-</symbol>
-<symbol id="social-linkedin" viewBox="0 0 18 18">
-<path d="M15.4,1.5H2.6C2,1.5,1.5,2,1.5,2.6v12.8c0,0.6,0.5,1.1,1.1,1.1h12.8c0.6,0,1.1-0.5,1.1-1.1V2.6C16.5,2,16,1.5,15.4,1.5z M3.8,7.1H6v7.2H3.8V7.1z M4.9,6.1c-0.7,0-1.3-0.6-1.3-1.3c0-0.7,0.6-1.3,1.3-1.3c0.7,0,1.3,0.6,1.3,1.3C6.2,5.6,5.6,6.1,4.9,6.1z M14.5,14.3h-2.3v-3.5c0-0.8,0-1.9-1.2-1.9c-1.2,0-1.4,0.9-1.4,1.8v3.5H7.4V7.1h2.2v1h0c0.3-0.6,1-1.2,2.1-1.2 c2.3,0,2.7,1.5,2.7,3.4V14.3z"></path>
-</symbol>
-<symbol version="1.1" id="social-pinterest" viewBox="0 0 40 40">
-<path d="M20 3C11.7 3 5 9.7 5 18c0 6.4 4 11.8 9.5 14-.1-1.2-.3-3 .1-4.3.3-1.2 1.8-7.5 1.8-7.5s-.4-.9-.4-2.2c0-2.1 1.2-3.6 2.7-3.6 1.3 0 1.9 1 1.9 2.1 0 1.3-.8 3.2-1.2 5-.4 1.5.7 2.7 2.2 2.7 2.7 0 4.7-2.8 4.7-6.9 0-3.6-2.6-6.1-6.3-6.1-4.3 0-6.8 3.2-6.8 6.5 0 1.3.5 2.7 1.1 3.4.1.1.1.3.1.4-.2.5-.4 1.5-.5 1.7-.1.3-.2.3-.5.2-1.9-.9-3-3.6-3-5.8 0-4.7 3.4-9.1 9.9-9.1 5.2 0 9.2 3.7 9.2 8.7 0 5.2-3.3 9.3-7.8 9.3-1.5 0-2.9-.8-3.4-1.7 0 0-.8 2.9-.9 3.6-.3 1.3-1.3 2.9-1.9 3.9 1.4.4 2.9.7 4.4.7 8.3 0 15-6.7 15-15C35 9.7 28.3 3 20 3z" /></path>
-</symbol>
-</svg>
-<div id="page" class="site">
-<header id="masthead" class="site-header">
-<div class="sitelogo">
-<a href="https://www.learnbyexample.org/" rel="home">
-<svg xmlns="http://www.w3.org/2000/svg" width="191.9" height="54"><path fill="#373737" d="M8.88 31.97l-.4 1.89H0L3.48 17.7h2.04L2.43 31.97h6.45zM14 34.16a4.6 4.6 0 0 1-1.85-.34 3.63 3.63 0 0 1-2.07-2.32 5.5 5.5 0 0 1-.26-1.68c0-1.08.15-2.13.44-3.14a9 9 0 0 1 1.26-2.69 6.32 6.32 0 0 1 2-1.85 5.18 5.18 0 0 1 4.14-.44c.41.16.75.38 1 .66s.46.6.59.97a4.33 4.33 0 0 1-.17 2.98 3.84 3.84 0 0 1-2.32 2.07 14.1 14.1 0 0 1-3.36.67l-1.65.1-.02.3v.19c0 .35.04.7.12 1.01a1.95 1.95 0 0 0 1.3 1.41c.37.14.86.21 1.46.21a6.56 6.56 0 0 0 2.77-.8l.17 1.85a7.51 7.51 0 0 1-3.55.84zm-2-6.67a25.2 25.2 0 0 0 2.23-.17 6.5 6.5 0 0 0 1.74-.45c.5-.2.87-.49 1.14-.85a2.24 2.24 0 0 0 .34-1.84c-.05-.16-.13-.3-.25-.43a1.33 1.33 0 0 0-.5-.33 2.08 2.08 0 0 0-.77-.13c-.49 0-.95.12-1.38.35-.42.24-.8.54-1.14.92s-.62.83-.86 1.33c-.24.51-.42 1.04-.55 1.6zM27.32 34a9.15 9.15 0 0 1-.37-1.24c-.31.31-.72.63-1.24.94-.52.3-1.15.46-1.91.46-.62 0-1.14-.1-1.58-.32s-.8-.53-1.09-.91a4 4 0 0 1-.61-1.38 7.16 7.16 0 0 1-.2-1.75c0-1.04.15-2.06.47-3.05.31-1 .79-1.88 1.42-2.66a7.17 7.17 0 0 1 2.37-1.9 7.3 7.3 0 0 1 4.66-.57c.5.09.93.25 1.3.46l-1.62 7.32-.18 1.03a6.9 6.9 0 0 0 .3 3.29l-1.71.28zm-3.12-1.68c.59 0 1.09-.14 1.5-.42a5 5 0 0 0 1.1-.98 12.16 12.16 0 0 1 .21-1.7l1.26-5.78a4.7 4.7 0 0 0-4.58 1.78c-.46.57-.81 1.23-1.05 1.98a7.61 7.61 0 0 0-.29 3.36c.06.33.16.63.3.89.15.25.35.46.6.63s.56.24.95.24zM37.19 21.48a8.06 8.06 0 0 1 1.74.22c.17.04.3.08.38.12l-.57 1.9c-.28-.13-.6-.22-.96-.29a6.25 6.25 0 0 0-1.92-.02c-.3.05-.54.11-.75.19L32.9 33.86h-1.96l2.52-11.66a11.15 11.15 0 0 1 3.74-.72zM40.36 33.86H38.4l2.51-11.66a14.22 14.22 0 0 1 4.1-.72c.62 0 1.17.1 1.62.29a2.88 2.88 0 0 1 1.72 2c.14.48.2 1 .2 1.55 0 .36-.03.74-.08 1.13l-.21 1.2-1.35 6.2h-1.95l1.24-5.73c.1-.43.2-.87.28-1.33.1-.45.14-.87.14-1.28 0-.62-.15-1.14-.46-1.55-.3-.41-.88-.62-1.72-.62a7.4 7.4 0 0 0-1.87.26l-2.22 10.26zM58.62 22.22c.32-.22.69-.4 1.1-.56.43-.15.88-.23 1.35-.23.6 0 1.13.1 1.58.33.46.21.83.51 1.13.9.3.37.51.83.66 1.36.15.53.22 1.1.22 1.7 0 1.07-.15 2.11-.46 3.11a8 8 0 0 1-1.4 2.69 7.01 7.01 0 0 1-6.39 2.56 5.4 5.4 0 0 1-2.16-.69l3.71-17.25 2.04-.38-1.38 6.46zm1.97 1.05c-.42 0-.84.08-1.25.25-.41.16-.8.39-1.17.68l-1.7 7.9c.14.04.3.07.49.1a4.46 4.46 0 0 0 2.7-.48 5.12 5.12 0 0 0 1.64-1.4c.45-.58.8-1.24 1.04-2a7.61 7.61 0 0 0 .27-3.37 2.41 2.41 0 0 0-.33-.86 1.77 1.77 0 0 0-.65-.6 2.14 2.14 0 0 0-1.04-.22zM69.6 31.9c.53-.93 1-1.9 1.44-2.9a48.32 48.32 0 0 0 1.97-5.41c.23-.77.39-1.4.49-1.86h2.03a44.07 44.07 0 0 1-1.67 5.05c-.4 1.02-.84 2.06-1.34 3.13a33.66 33.66 0 0 1-2.97 5.13c-.45.64-.93 1.2-1.44 1.67-.5.48-1.07.85-1.69 1.12-.61.28-1.3.41-2.07.41-.4 0-.76-.05-1.1-.16-.33-.11-.57-.23-.73-.35l.67-1.77c.14.12.33.23.57.31a3.3 3.3 0 0 0 2.86-.52 7.82 7.82 0 0 0 1.6-1.73 54.3 54.3 0 0 1-1.86-12.29h2a48.97 48.97 0 0 0 .34 4.89c.1.89.23 1.79.38 2.69s.32 1.77.51 2.59z" /><path fill="#474848" d="M94.92 29.41c0-1.08.16-2.14.48-3.15a8.78 8.78 0 0 1 1.35-2.7c.6-.8 1.31-1.42 2.14-1.9a5.6 5.6 0 0 1 2.8-.7c1.12 0 1.98.32 2.6.95.6.63.92 1.45.92 2.44 0 1.02-.23 1.85-.68 2.48s-1.05 1.13-1.77 1.49c-.72.35-1.54.6-2.45.73s-1.84.2-2.78.24a.22.22 0 0 0-.02.1v.24c0 1.48.84 2.22 2.52 2.22 1 0 1.99-.23 2.98-.68l.22 2.38a8.36 8.36 0 0 1-3.68.8c-.82 0-1.52-.12-2.1-.38A3.85 3.85 0 0 1 96 32.9c-.37-.46-.65-.98-.82-1.57s-.27-1.23-.27-1.92zm6.38-6.04c-.43 0-.85.1-1.25.3s-.74.46-1.05.8a5.8 5.8 0 0 0-1.3 2.7c1.76-.06 3.04-.3 3.83-.7.8-.4 1.2-1.02 1.2-1.83 0-.33-.1-.62-.32-.88-.21-.26-.58-.39-1.1-.39zM109.66 21.28l1.83 4.3a59.1 59.1 0 0 0 1.56-2.2c.48-.72.92-1.42 1.32-2.1h2.72a52.07 52.07 0 0 1-4.48 6.24 74.86 74.86 0 0 1 1.45 3.29c.44 1.06.83 2.13 1.16 3.2h-2.66c-.23-.76-.5-1.52-.8-2.28-.3-.76-.6-1.49-.92-2.17l-3.49 4.46h-2.89l5.15-6.62-2.74-6.12h2.79zM126.62 29.07a10.65 10.65 0 0 0-.09 3.4c.08.45.2.9.36 1.35l-2.37.4c-.18-.4-.32-.81-.42-1.25-.36.36-.81.68-1.35.96a3.8 3.8 0 0 1-1.8.43c-.7 0-1.28-.13-1.77-.38a3.2 3.2 0 0 1-1.2-1.05c-.3-.44-.53-.97-.67-1.57a9.44 9.44 0 0 1 .35-5.26 7.45 7.45 0 0 1 8.8-4.9c.57.1 1.15.3 1.74.6l-1.58 7.27zm-1.44-5.5c-.28-.07-.6-.1-.94-.1-.66 0-1.27.16-1.82.48-.56.31-1.04.74-1.44 1.26-.4.53-.71 1.14-.93 1.82a6.94 6.94 0 0 0-.25 3.19c.06.32.16.6.3.85.14.25.33.44.56.59.23.14.53.22.9.22.47 0 .88-.11 1.24-.33.35-.22.69-.52 1-.9a11.7 11.7 0 0 1 .3-2.3l1.08-4.78zM131.47 21.81c.58-.2 1.24-.37 1.97-.54s1.53-.26 2.41-.26c.66 0 1.21.1 1.66.32.44.2.82.5 1.12.9.43-.28.94-.55 1.55-.82.6-.27 1.3-.4 2.07-.4.67 0 1.24.1 1.71.32.47.2.85.5 1.14.87.3.38.5.82.64 1.33.13.51.2 1.07.2 1.67 0 .66-.09 1.37-.25 2.12l-1.44 6.7h-2.65l1.35-6.39c.08-.3.15-.64.21-1 .07-.37.1-.74.1-1.12 0-.26-.03-.51-.08-.76a1.65 1.65 0 0 0-.27-.65c-.13-.18-.31-.32-.54-.44s-.51-.17-.86-.17c-.38 0-.76.08-1.12.25-.37.16-.67.33-.92.5.06.32.09.65.09 1a8.57 8.57 0 0 1-.24 2.08l-1.45 6.7h-2.65l1.36-6.39c.07-.29.14-.63.2-1 .07-.39.1-.77.1-1.14 0-.54-.11-1-.34-1.4-.22-.4-.65-.6-1.28-.6a5.55 5.55 0 0 0-1.56.22l-2.2 10.3h-2.66l2.63-12.2zM158.6 25.86c0 1.15-.16 2.23-.49 3.25a7.95 7.95 0 0 1-1.45 2.67 6.96 6.96 0 0 1-2.32 1.81 7.08 7.08 0 0 1-4.4.55l-.96 4.38h-2.65l3.62-16.73a11.44 11.44 0 0 1 4.23-.8c.76 0 1.42.12 1.98.37.56.26 1.02.6 1.38 1.04s.63.95.8 1.54c.18.6.26 1.23.26 1.92zm-8.16 5.87a8.65 8.65 0 0 0 .94.07c.71 0 1.34-.15 1.9-.45.57-.3 1.05-.7 1.44-1.22.4-.5.7-1.1.91-1.8.21-.69.32-1.42.32-2.2 0-.36-.04-.7-.1-1.01-.08-.32-.2-.6-.37-.84-.17-.25-.4-.44-.68-.59a2.37 2.37 0 0 0-1.09-.22 5.55 5.55 0 0 0-1.53.22l-1.74 8.04zM164.04 34.26c-.69-.02-1.27-.11-1.74-.3s-.86-.41-1.14-.72-.5-.68-.62-1.1a4.88 4.88 0 0 1-.18-1.39c0-.52.05-1.06.16-1.64.11-.58.23-1.15.36-1.72l2.54-11.79 2.77-.48a3438.63 3438.63 0 0 1-3 13.7c-.07.33-.12.66-.12.98l.01.77c.01.24.07.44.18.6.11.18.27.32.5.44.21.1.5.18.85.21l-.57 2.44zM166.52 29.41c0-1.08.15-2.14.47-3.15a8.8 8.8 0 0 1 1.36-2.7c.59-.8 1.3-1.42 2.13-1.9a5.6 5.6 0 0 1 2.81-.7c1.11 0 1.97.32 2.59.95.61.63.92 1.45.92 2.44 0 1.02-.23 1.85-.68 2.48s-1.04 1.13-1.77 1.49-1.54.6-2.45.73-1.84.2-2.78.24a.22.22 0 0 0-.02.1v.24c0 1.48.84 2.22 2.53 2.22.99 0 1.98-.23 2.98-.68l.22 2.38a8.4 8.4 0 0 1-3.69.8c-.82 0-1.52-.12-2.1-.38a3.85 3.85 0 0 1-1.44-1.07 4.44 4.44 0 0 1-.82-1.57 6.61 6.61 0 0 1-.26-1.92zm6.38-6.04c-.44 0-.86.1-1.25.3s-.75.46-1.06.8a5.87 5.87 0 0 0-1.3 2.7c1.76-.06 3.04-.3 3.84-.7.8-.4 1.19-1.02 1.19-1.83 0-.33-.1-.62-.32-.88-.2-.26-.58-.39-1.1-.39z" /><path fill="#4285F4" d="M179.03 38.88h6.52l6.26-10.2c.12-.2.12-.74 0-.95l-2.82-4.9-9.96 16.05z" /><path fill="#EA4335" d="M184.94 16.42h-6.7l6.51 11.15 3.44-5.53z" /><path fill="#34A853" d="M92.7 16.34h-6.52l-6.26 10.2c-.13.2-.12.74 0 .94l2.82 4.9 9.96-16.05z" /><path fill="#FBBC05" d="M86.78 38.8h6.71l-6.52-11.15-3.44 5.52z" /></svg>
-</a>
-</div>
-<label for="menu-checkbox" class="menu-checkbox-label"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19"><path fill="#454545" d="M6.561 0H2.197A2.2 2.2 0 0 0 0 2.197V6.56a2.2 2.2 0 0 0 2.197 2.197H6.56A2.2 2.2 0 0 0 8.757 6.56V2.197A2.198 2.198 0 0 0 6.561 0zm.712 6.561c0 .394-.32.713-.713.713H2.197a.713.713 0 0 1-.713-.713V2.197c0-.394.32-.713.713-.713H6.56c.393 0 .713.319.713.713v4.364zM16.773 0h-4.305a2.23 2.23 0 0 0-2.227 2.227v4.305a2.23 2.23 0 0 0 2.227 2.227h4.305A2.231 2.231 0 0 0 19 6.531V2.227A2.23 2.23 0 0 0 16.773 0zm.743 6.531a.743.743 0 0 1-.742.742h-4.305a.743.743 0 0 1-.742-.742V2.227c0-.409.333-.742.742-.742h4.305c.409 0 .742.333.742.742v4.304zM6.561 10.242H2.197A2.2 2.2 0 0 0 0 12.439v4.363A2.2 2.2 0 0 0 2.197 19H6.56a2.2 2.2 0 0 0 2.197-2.197V12.44a2.199 2.199 0 0 0-2.196-2.198zm.712 6.561c0 .393-.32.713-.713.713H2.197a.714.714 0 0 1-.713-.713V12.44c0-.393.32-.713.713-.713H6.56c.393 0 .713.32.713.713v4.363zM16.773 10.242h-4.305a2.23 2.23 0 0 0-2.227 2.227v4.305a2.23 2.23 0 0 0 2.227 2.227h4.305A2.231 2.231 0 0 0 19 16.773v-4.305a2.23 2.23 0 0 0-2.227-2.226zm.743 6.531a.743.743 0 0 1-.742.742h-4.305a.743.743 0 0 1-.742-.742v-4.305c0-.409.333-.742.742-.742h4.305c.409 0 .742.333.742.742v4.305z"></path></svg></label>
-<input id="menu-checkbox" type="checkbox" name="msc" class="hide-checkbox">
-<div class="menu-search-wrapper">
-<div class="search-box">
-<form role="search" method="get" class="search-form" action="https://www.learnbyexample.org/">
-<span><input type="search" class="search-field" placeholder="Search" value name="s"></span>
-</form>
-</div>
-<nav class="header-nav">
-<b>Learn By Example</b>
-<div class="dropdown">
-<a href="https://www.learnbyexample.org/python/">Python</a>
-<a href="https://www.learnbyexample.org/r/">R</a>
-<a href="https://www.learnbyexample.org/sql/">SQL</a>
-</div>
-</nav>
-</div>
-<label for="menu-checkbox" class="sidebar-overlay"></label>
-<label for="nav-sidebar-checkbox" class="nav-sidebar-label"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="15"><path fill="#454545" d="M19.999 1.034c0 .571-.463 1.035-1.033 1.035H1.034a1.033 1.033 0 1 1 0-2.069h17.932c.57 0 1.033.463 1.033 1.034zM19.999 7.5c0 .571-.463 1.034-1.033 1.034H1.034a1.034 1.034 0 0 1 0-2.068h17.932c.57 0 1.033.464 1.033 1.034zM20 13.966c0 .571-.464 1.034-1.034 1.034H1.034a1.033 1.033 0 1 1 0-2.068h17.932c.57 0 1.034.463 1.034 1.034z" /></svg></label>
-</header>
+
+	<svg class="svg-assets" xmlns="http://www.w3.org/2000/svg">
+		<symbol id="social-twitter" viewBox="0 0 18 18">
+		<path d="M16.5,4.3c-0.6,0.2-1.1,0.4-1.8,0.5c0.6-0.4,1.1-1,1.4-1.7c-0.6,0.4-1.3,0.6-2,0.8c-0.6-0.6-1.4-1-2.2-1 c-1.7,0-3.1,1.4-3.1,3.1c0,0.2,0,0.5,0.1,0.7C6.3,6.5,4.1,5.3,2.5,3.4C2.3,3.9,2.1,4.4,2.1,5c0,1.1,0.5,2,1.4,2.6 c-0.5,0-1-0.2-1.4-0.4c0,0,0,0,0,0c0,1.5,1.1,2.8,2.5,3.1c-0.3,0.1-0.5,0.1-0.8,0.1c-0.2,0-0.4,0-0.6-0.1c0.4,1.2,1.5,2.1,2.9,2.2 c-1.1,0.8-2.4,1.3-3.8,1.3c-0.2,0-0.5,0-0.7,0c1.4,0.9,3,1.4,4.7,1.4c5.7,0,8.8-4.7,8.8-8.9c0-0.1,0-0.3,0-0.4 C15.6,5.5,16.1,4.9,16.5,4.3"></path>
+		</symbol>
+		<symbol id="social-facebook" viewBox="0 0 18 18">
+		<path d="M15.7,1.5H2.3c-0.5,0-0.8,0.4-0.8,0.8v13.3c0,0.5,0.4,0.8,0.8,0.8h7.2v-5.8h-2V8.4h2V6.8c0-1.9,1.2-3,2.9-3 c0.8,0,1.5,0.1,1.7,0.1v2l-1.2,0c-0.9,0-1.1,0.4-1.1,1.1v1.4h2.2l-0.3,2.3h-1.9v5.8h3.8c0.5,0,0.8-0.4,0.8-0.8V2.3 C16.5,1.9,16.1,1.5,15.7,1.5z"></path>
+		</symbol>
+		<symbol id="social-linkedin" viewBox="0 0 18 18">
+		<path d="M15.4,1.5H2.6C2,1.5,1.5,2,1.5,2.6v12.8c0,0.6,0.5,1.1,1.1,1.1h12.8c0.6,0,1.1-0.5,1.1-1.1V2.6C16.5,2,16,1.5,15.4,1.5z M3.8,7.1H6v7.2H3.8V7.1z M4.9,6.1c-0.7,0-1.3-0.6-1.3-1.3c0-0.7,0.6-1.3,1.3-1.3c0.7,0,1.3,0.6,1.3,1.3C6.2,5.6,5.6,6.1,4.9,6.1z M14.5,14.3h-2.3v-3.5c0-0.8,0-1.9-1.2-1.9c-1.2,0-1.4,0.9-1.4,1.8v3.5H7.4V7.1h2.2v1h0c0.3-0.6,1-1.2,2.1-1.2 c2.3,0,2.7,1.5,2.7,3.4V14.3z"></path>
+		</symbol>
+		<symbol version="1.1" id="social-pinterest" viewBox="0 0 40 40">
+		<path d="M20 3C11.7 3 5 9.7 5 18c0 6.4 4 11.8 9.5 14-.1-1.2-.3-3 .1-4.3.3-1.2 1.8-7.5 1.8-7.5s-.4-.9-.4-2.2c0-2.1 1.2-3.6 2.7-3.6 1.3 0 1.9 1 1.9 2.1 0 1.3-.8 3.2-1.2 5-.4 1.5.7 2.7 2.2 2.7 2.7 0 4.7-2.8 4.7-6.9 0-3.6-2.6-6.1-6.3-6.1-4.3 0-6.8 3.2-6.8 6.5 0 1.3.5 2.7 1.1 3.4.1.1.1.3.1.4-.2.5-.4 1.5-.5 1.7-.1.3-.2.3-.5.2-1.9-.9-3-3.6-3-5.8 0-4.7 3.4-9.1 9.9-9.1 5.2 0 9.2 3.7 9.2 8.7 0 5.2-3.3 9.3-7.8 9.3-1.5 0-2.9-.8-3.4-1.7 0 0-.8 2.9-.9 3.6-.3 1.3-1.3 2.9-1.9 3.9 1.4.4 2.9.7 4.4.7 8.3 0 15-6.7 15-15C35 9.7 28.3 3 20 3z"/></path>
+		</symbol>
+	</svg>
+
+	<div id="page" class="site">
+		<header id="masthead" class="site-header">
+			<div class="sitelogo">
+				<a href="https://www.learnbyexample.org/" rel="home">
+					<svg xmlns="http://www.w3.org/2000/svg" width="191.9" height="54"><path fill="#373737" d="M8.88 31.97l-.4 1.89H0L3.48 17.7h2.04L2.43 31.97h6.45zM14 34.16a4.6 4.6 0 0 1-1.85-.34 3.63 3.63 0 0 1-2.07-2.32 5.5 5.5 0 0 1-.26-1.68c0-1.08.15-2.13.44-3.14a9 9 0 0 1 1.26-2.69 6.32 6.32 0 0 1 2-1.85 5.18 5.18 0 0 1 4.14-.44c.41.16.75.38 1 .66s.46.6.59.97a4.33 4.33 0 0 1-.17 2.98 3.84 3.84 0 0 1-2.32 2.07 14.1 14.1 0 0 1-3.36.67l-1.65.1-.02.3v.19c0 .35.04.7.12 1.01a1.95 1.95 0 0 0 1.3 1.41c.37.14.86.21 1.46.21a6.56 6.56 0 0 0 2.77-.8l.17 1.85a7.51 7.51 0 0 1-3.55.84zm-2-6.67a25.2 25.2 0 0 0 2.23-.17 6.5 6.5 0 0 0 1.74-.45c.5-.2.87-.49 1.14-.85a2.24 2.24 0 0 0 .34-1.84c-.05-.16-.13-.3-.25-.43a1.33 1.33 0 0 0-.5-.33 2.08 2.08 0 0 0-.77-.13c-.49 0-.95.12-1.38.35-.42.24-.8.54-1.14.92s-.62.83-.86 1.33c-.24.51-.42 1.04-.55 1.6zM27.32 34a9.15 9.15 0 0 1-.37-1.24c-.31.31-.72.63-1.24.94-.52.3-1.15.46-1.91.46-.62 0-1.14-.1-1.58-.32s-.8-.53-1.09-.91a4 4 0 0 1-.61-1.38 7.16 7.16 0 0 1-.2-1.75c0-1.04.15-2.06.47-3.05.31-1 .79-1.88 1.42-2.66a7.17 7.17 0 0 1 2.37-1.9 7.3 7.3 0 0 1 4.66-.57c.5.09.93.25 1.3.46l-1.62 7.32-.18 1.03a6.9 6.9 0 0 0 .3 3.29l-1.71.28zm-3.12-1.68c.59 0 1.09-.14 1.5-.42a5 5 0 0 0 1.1-.98 12.16 12.16 0 0 1 .21-1.7l1.26-5.78a4.7 4.7 0 0 0-4.58 1.78c-.46.57-.81 1.23-1.05 1.98a7.61 7.61 0 0 0-.29 3.36c.06.33.16.63.3.89.15.25.35.46.6.63s.56.24.95.24zM37.19 21.48a8.06 8.06 0 0 1 1.74.22c.17.04.3.08.38.12l-.57 1.9c-.28-.13-.6-.22-.96-.29a6.25 6.25 0 0 0-1.92-.02c-.3.05-.54.11-.75.19L32.9 33.86h-1.96l2.52-11.66a11.15 11.15 0 0 1 3.74-.72zM40.36 33.86H38.4l2.51-11.66a14.22 14.22 0 0 1 4.1-.72c.62 0 1.17.1 1.62.29a2.88 2.88 0 0 1 1.72 2c.14.48.2 1 .2 1.55 0 .36-.03.74-.08 1.13l-.21 1.2-1.35 6.2h-1.95l1.24-5.73c.1-.43.2-.87.28-1.33.1-.45.14-.87.14-1.28 0-.62-.15-1.14-.46-1.55-.3-.41-.88-.62-1.72-.62a7.4 7.4 0 0 0-1.87.26l-2.22 10.26zM58.62 22.22c.32-.22.69-.4 1.1-.56.43-.15.88-.23 1.35-.23.6 0 1.13.1 1.58.33.46.21.83.51 1.13.9.3.37.51.83.66 1.36.15.53.22 1.1.22 1.7 0 1.07-.15 2.11-.46 3.11a8 8 0 0 1-1.4 2.69 7.01 7.01 0 0 1-6.39 2.56 5.4 5.4 0 0 1-2.16-.69l3.71-17.25 2.04-.38-1.38 6.46zm1.97 1.05c-.42 0-.84.08-1.25.25-.41.16-.8.39-1.17.68l-1.7 7.9c.14.04.3.07.49.1a4.46 4.46 0 0 0 2.7-.48 5.12 5.12 0 0 0 1.64-1.4c.45-.58.8-1.24 1.04-2a7.61 7.61 0 0 0 .27-3.37 2.41 2.41 0 0 0-.33-.86 1.77 1.77 0 0 0-.65-.6 2.14 2.14 0 0 0-1.04-.22zM69.6 31.9c.53-.93 1-1.9 1.44-2.9a48.32 48.32 0 0 0 1.97-5.41c.23-.77.39-1.4.49-1.86h2.03a44.07 44.07 0 0 1-1.67 5.05c-.4 1.02-.84 2.06-1.34 3.13a33.66 33.66 0 0 1-2.97 5.13c-.45.64-.93 1.2-1.44 1.67-.5.48-1.07.85-1.69 1.12-.61.28-1.3.41-2.07.41-.4 0-.76-.05-1.1-.16-.33-.11-.57-.23-.73-.35l.67-1.77c.14.12.33.23.57.31a3.3 3.3 0 0 0 2.86-.52 7.82 7.82 0 0 0 1.6-1.73 54.3 54.3 0 0 1-1.86-12.29h2a48.97 48.97 0 0 0 .34 4.89c.1.89.23 1.79.38 2.69s.32 1.77.51 2.59z"/><path fill="#474848" d="M94.92 29.41c0-1.08.16-2.14.48-3.15a8.78 8.78 0 0 1 1.35-2.7c.6-.8 1.31-1.42 2.14-1.9a5.6 5.6 0 0 1 2.8-.7c1.12 0 1.98.32 2.6.95.6.63.92 1.45.92 2.44 0 1.02-.23 1.85-.68 2.48s-1.05 1.13-1.77 1.49c-.72.35-1.54.6-2.45.73s-1.84.2-2.78.24a.22.22 0 0 0-.02.1v.24c0 1.48.84 2.22 2.52 2.22 1 0 1.99-.23 2.98-.68l.22 2.38a8.36 8.36 0 0 1-3.68.8c-.82 0-1.52-.12-2.1-.38A3.85 3.85 0 0 1 96 32.9c-.37-.46-.65-.98-.82-1.57s-.27-1.23-.27-1.92zm6.38-6.04c-.43 0-.85.1-1.25.3s-.74.46-1.05.8a5.8 5.8 0 0 0-1.3 2.7c1.76-.06 3.04-.3 3.83-.7.8-.4 1.2-1.02 1.2-1.83 0-.33-.1-.62-.32-.88-.21-.26-.58-.39-1.1-.39zM109.66 21.28l1.83 4.3a59.1 59.1 0 0 0 1.56-2.2c.48-.72.92-1.42 1.32-2.1h2.72a52.07 52.07 0 0 1-4.48 6.24 74.86 74.86 0 0 1 1.45 3.29c.44 1.06.83 2.13 1.16 3.2h-2.66c-.23-.76-.5-1.52-.8-2.28-.3-.76-.6-1.49-.92-2.17l-3.49 4.46h-2.89l5.15-6.62-2.74-6.12h2.79zM126.62 29.07a10.65 10.65 0 0 0-.09 3.4c.08.45.2.9.36 1.35l-2.37.4c-.18-.4-.32-.81-.42-1.25-.36.36-.81.68-1.35.96a3.8 3.8 0 0 1-1.8.43c-.7 0-1.28-.13-1.77-.38a3.2 3.2 0 0 1-1.2-1.05c-.3-.44-.53-.97-.67-1.57a9.44 9.44 0 0 1 .35-5.26 7.45 7.45 0 0 1 8.8-4.9c.57.1 1.15.3 1.74.6l-1.58 7.27zm-1.44-5.5c-.28-.07-.6-.1-.94-.1-.66 0-1.27.16-1.82.48-.56.31-1.04.74-1.44 1.26-.4.53-.71 1.14-.93 1.82a6.94 6.94 0 0 0-.25 3.19c.06.32.16.6.3.85.14.25.33.44.56.59.23.14.53.22.9.22.47 0 .88-.11 1.24-.33.35-.22.69-.52 1-.9a11.7 11.7 0 0 1 .3-2.3l1.08-4.78zM131.47 21.81c.58-.2 1.24-.37 1.97-.54s1.53-.26 2.41-.26c.66 0 1.21.1 1.66.32.44.2.82.5 1.12.9.43-.28.94-.55 1.55-.82.6-.27 1.3-.4 2.07-.4.67 0 1.24.1 1.71.32.47.2.85.5 1.14.87.3.38.5.82.64 1.33.13.51.2 1.07.2 1.67 0 .66-.09 1.37-.25 2.12l-1.44 6.7h-2.65l1.35-6.39c.08-.3.15-.64.21-1 .07-.37.1-.74.1-1.12 0-.26-.03-.51-.08-.76a1.65 1.65 0 0 0-.27-.65c-.13-.18-.31-.32-.54-.44s-.51-.17-.86-.17c-.38 0-.76.08-1.12.25-.37.16-.67.33-.92.5.06.32.09.65.09 1a8.57 8.57 0 0 1-.24 2.08l-1.45 6.7h-2.65l1.36-6.39c.07-.29.14-.63.2-1 .07-.39.1-.77.1-1.14 0-.54-.11-1-.34-1.4-.22-.4-.65-.6-1.28-.6a5.55 5.55 0 0 0-1.56.22l-2.2 10.3h-2.66l2.63-12.2zM158.6 25.86c0 1.15-.16 2.23-.49 3.25a7.95 7.95 0 0 1-1.45 2.67 6.96 6.96 0 0 1-2.32 1.81 7.08 7.08 0 0 1-4.4.55l-.96 4.38h-2.65l3.62-16.73a11.44 11.44 0 0 1 4.23-.8c.76 0 1.42.12 1.98.37.56.26 1.02.6 1.38 1.04s.63.95.8 1.54c.18.6.26 1.23.26 1.92zm-8.16 5.87a8.65 8.65 0 0 0 .94.07c.71 0 1.34-.15 1.9-.45.57-.3 1.05-.7 1.44-1.22.4-.5.7-1.1.91-1.8.21-.69.32-1.42.32-2.2 0-.36-.04-.7-.1-1.01-.08-.32-.2-.6-.37-.84-.17-.25-.4-.44-.68-.59a2.37 2.37 0 0 0-1.09-.22 5.55 5.55 0 0 0-1.53.22l-1.74 8.04zM164.04 34.26c-.69-.02-1.27-.11-1.74-.3s-.86-.41-1.14-.72-.5-.68-.62-1.1a4.88 4.88 0 0 1-.18-1.39c0-.52.05-1.06.16-1.64.11-.58.23-1.15.36-1.72l2.54-11.79 2.77-.48a3438.63 3438.63 0 0 1-3 13.7c-.07.33-.12.66-.12.98l.01.77c.01.24.07.44.18.6.11.18.27.32.5.44.21.1.5.18.85.21l-.57 2.44zM166.52 29.41c0-1.08.15-2.14.47-3.15a8.8 8.8 0 0 1 1.36-2.7c.59-.8 1.3-1.42 2.13-1.9a5.6 5.6 0 0 1 2.81-.7c1.11 0 1.97.32 2.59.95.61.63.92 1.45.92 2.44 0 1.02-.23 1.85-.68 2.48s-1.04 1.13-1.77 1.49-1.54.6-2.45.73-1.84.2-2.78.24a.22.22 0 0 0-.02.1v.24c0 1.48.84 2.22 2.53 2.22.99 0 1.98-.23 2.98-.68l.22 2.38a8.4 8.4 0 0 1-3.69.8c-.82 0-1.52-.12-2.1-.38a3.85 3.85 0 0 1-1.44-1.07 4.44 4.44 0 0 1-.82-1.57 6.61 6.61 0 0 1-.26-1.92zm6.38-6.04c-.44 0-.86.1-1.25.3s-.75.46-1.06.8a5.87 5.87 0 0 0-1.3 2.7c1.76-.06 3.04-.3 3.84-.7.8-.4 1.19-1.02 1.19-1.83 0-.33-.1-.62-.32-.88-.2-.26-.58-.39-1.1-.39z"/><path fill="#4285F4" d="M179.03 38.88h6.52l6.26-10.2c.12-.2.12-.74 0-.95l-2.82-4.9-9.96 16.05z"/><path fill="#EA4335" d="M184.94 16.42h-6.7l6.51 11.15 3.44-5.53z"/><path fill="#34A853" d="M92.7 16.34h-6.52l-6.26 10.2c-.13.2-.12.74 0 .94l2.82 4.9 9.96-16.05z"/><path fill="#FBBC05" d="M86.78 38.8h6.71l-6.52-11.15-3.44 5.52z"/></svg>
+				</a>
+			</div>
+			<label for="menu-checkbox" class="menu-checkbox-label"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19"><path fill="#454545" d="M6.561 0H2.197A2.2 2.2 0 0 0 0 2.197V6.56a2.2 2.2 0 0 0 2.197 2.197H6.56A2.2 2.2 0 0 0 8.757 6.56V2.197A2.198 2.198 0 0 0 6.561 0zm.712 6.561c0 .394-.32.713-.713.713H2.197a.713.713 0 0 1-.713-.713V2.197c0-.394.32-.713.713-.713H6.56c.393 0 .713.319.713.713v4.364zM16.773 0h-4.305a2.23 2.23 0 0 0-2.227 2.227v4.305a2.23 2.23 0 0 0 2.227 2.227h4.305A2.231 2.231 0 0 0 19 6.531V2.227A2.23 2.23 0 0 0 16.773 0zm.743 6.531a.743.743 0 0 1-.742.742h-4.305a.743.743 0 0 1-.742-.742V2.227c0-.409.333-.742.742-.742h4.305c.409 0 .742.333.742.742v4.304zM6.561 10.242H2.197A2.2 2.2 0 0 0 0 12.439v4.363A2.2 2.2 0 0 0 2.197 19H6.56a2.2 2.2 0 0 0 2.197-2.197V12.44a2.199 2.199 0 0 0-2.196-2.198zm.712 6.561c0 .393-.32.713-.713.713H2.197a.714.714 0 0 1-.713-.713V12.44c0-.393.32-.713.713-.713H6.56c.393 0 .713.32.713.713v4.363zM16.773 10.242h-4.305a2.23 2.23 0 0 0-2.227 2.227v4.305a2.23 2.23 0 0 0 2.227 2.227h4.305A2.231 2.231 0 0 0 19 16.773v-4.305a2.23 2.23 0 0 0-2.227-2.226zm.743 6.531a.743.743 0 0 1-.742.742h-4.305a.743.743 0 0 1-.742-.742v-4.305c0-.409.333-.742.742-.742h4.305c.409 0 .742.333.742.742v4.305z"></path></svg></label>
+			<input id="menu-checkbox" type="checkbox" name="msc" class="hide-checkbox">
+			<div class="menu-search-wrapper">
+				<div class="search-box">
+					<form role="search" method="get" class="search-form" action="https://www.learnbyexample.org/">
+						<span><input type="search" class="search-field" placeholder="Search" value="" name="s"></span>
+					</form>
+				</div>
+				<nav class="header-nav">
+					<b>Learn By Example</b>
+					<div class="dropdown">
+						<a href="https://www.learnbyexample.org/python/">Python</a>
+						<a href="https://www.learnbyexample.org/r/">R</a>
+						<a href="https://www.learnbyexample.org/sql/">SQL</a>
+					</div>
+				</nav>
+			</div>
+			<label for="menu-checkbox" class="sidebar-overlay"></label>
+			 			<label for="nav-sidebar-checkbox" class="nav-sidebar-label"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="15"><path fill="#454545" d="M19.999 1.034c0 .571-.463 1.035-1.033 1.035H1.034a1.033 1.033 0 1 1 0-2.069h17.932c.57 0 1.033.463 1.033 1.034zM19.999 7.5c0 .571-.463 1.034-1.033 1.034H1.034a1.034 1.034 0 0 1 0-2.068h17.932c.57 0 1.033.464 1.033 1.034zM20 13.966c0 .571-.464 1.034-1.034 1.034H1.034a1.033 1.033 0 1 1 0-2.068h17.932c.57 0 1.034.463 1.034 1.034z"/></svg></label>
+					</header>
+
+
 <div class="site-main">
-<input id="nav-sidebar-checkbox" type="checkbox" name="lfs" class="hide-checkbox">
-<nav class="nav-sidebar-wrapper">
-<div id="nav-sidebar" class="nav-sidebar">
-<div class="textwidget custom-html-widget"><div id="chapters">
+		
+	<input id="nav-sidebar-checkbox" type="checkbox" name="lfs" class="hide-checkbox">
+	<nav class="nav-sidebar-wrapper">
+		<div id="nav-sidebar" class="nav-sidebar">
+				<div class="textwidget custom-html-widget"><div id="chapters">
 <p class="nav-title">Python Tutorials</p>
 <div class="nav-section">
 <a href="../python-introduction/index.html">Introduction</a>
@@ -282,60 +287,104 @@ pre .com{color:#65798c}pre .dec,pre .lit{color:#c53929}pre .atv,pre .str{color:#
 <a href="../python-global-keyword/index.html">Global</a>
 <a href="../python-nonlocal-keyword/index.html">Nonlocal</a>
 </div>
-</div></div> </div>
-<label for="nav-sidebar-checkbox" class="sidebar-overlay"></label>
-</nav>
-<div class="post-wrapper">
-<div class="main-wrapper">
-<div class="nav-rightbar-wrapper">
-<nav class="nav-rightbar">
-<div class="story-highlights" id="navigation"><div class="tab"><label for="tab-title" class="story-highlights-title">Table Of Contents</label><input id="tab-title" type="checkbox" name="tabs"><label class="main-tab-icon tabicon" for="tab-title"></label><ul class="main-tab tab-content"><li><a href="index.html#what-is-python-dictionary">What is Python dictionary?</a></li><li><a href="index.html#create-a-dictionary">Create a Dictionary</a></li><li><a href="index.html#the-dict-constructor">The dict() Constructor</a></li><li><a href="index.html#other-ways-to-create-dictionaries">Other Ways to Create Dictionaries</a></li><li><a href="index.html#important-properties-of-a-dictionary">Important Properties of a Dictionary</a></li><li><a href="index.html#access-dictionary-items">Access Dictionary Items</a></li><li><a href="index.html#add-or-update-dictionary-items">Add or Update Dictionary Items</a></li><li><a href="index.html#merge-two-dictionaries">Merge Two Dictionaries</a></li><li><a href="index.html#remove-dictionary-items">Remove Dictionary Items</a></li><li><a href="index.html#get-all-keys-values-and-key-value-pairs">Get All Keys, Values and Key:Value Pairs</a></li><li><a href="index.html#iterate-through-a-dictionary">Iterate Through a Dictionary</a></li><li><a href="index.html#check-if-a-key-or-value-exists">Check if a Key or Value Exists</a></li><li><a href="index.html#find-dictionary-length">Find Dictionary Length</a></li><li><a href="index.html#python-dictionary-methods">Python Dictionary Methods</a></li><li><a href="index.html#builtin-functions-with-dictionary">Built-in Functions with Dictionary</a></li></ul></div></div> </nav>
-</div>
-<main id="main">
-<div class="post-58 post type-post status-publish format-standard has-post-thumbnail hentry category-python mv-content-wrapper">
-<article id="post-58">
-<div class="post-header">
-<a class="article-tag" href="https://www.learnbyexample.org/python/" aria-hidden="true">Python</a>
-<h1 class="entry-title">Python Dictionary</h1>
-<div class="social-sharing top-sharing">
-<a class="facebook" href="https://www.facebook.com/sharer/sharer.php?caption=Python+Dictionary&u=https%3A%2F%2Fwww.learnbyexample.org%2Fpython-dictionary%2F">
-<svg height="21px" width="21px" aria-hidden="true" viewBox="0 0 30 30">
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#social-facebook"></use>
-</svg>
-</a>
-<a class="twitter" href="https://twitter.com/intent/tweet?text=Python+Dictionary&url=https%3A%2F%2Fwww.learnbyexample.org%2Fpython-dictionary%2F&via=Learn+By+Example">
-<svg height="21px" width="21px" aria-hidden="true" viewBox="0 0 30 30">
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#social-twitter"></use>
-</svg>
-</a>
-<a class="pinterest" href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.learnbyexample.org%2Fpython-dictionary%2F&amp;media=https://www.learnbyexample.org/wp-content/uploads/2019/06/Learn-Python-Programming.png&description=Python+Dictionary">
-<svg height="23px" width="23px" aria-hidden="true" viewBox="0 0 30 30">
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#social-pinterest"></use>
-</svg>
-</a>
-<a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.learnbyexample.org%2Fpython-dictionary%2F&title=Python+Dictionary">
-<svg height="21px" width="21px" aria-hidden="true" viewBox="0 0 30 30">
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#social-linkedin"></use>
-</svg>
-</a>
-</div>
-</div>
-<div class="entry-content">
-<h2 class="invisi" id="what-is-python-dictionary">What is Python dictionary?</h2>
+</div></div>		</div>
+		<label for="nav-sidebar-checkbox" class="sidebar-overlay"></label>
+	</nav>
+	
+	<div class="post-wrapper">
+		<div class="main-wrapper">
+			
+			<div class="nav-rightbar-wrapper">
+				<nav class="nav-rightbar">
+					<div class="story-highlights" id="navigation"><div class="tab"><label for="tab-title" class="story-highlights-title">Table Of Contents</label><input id="tab-title" type="checkbox" name="tabs"><label class="main-tab-icon tabicon" for="tab-title"></label><ul class="main-tab tab-content"><li><a href="index.html#what-is-python-dictionary">What is Python dictionary?</a></li><li><a href="index.html#create-a-dictionary">Create a Dictionary</a></li><li><a href="index.html#the-dict-constructor">The dict() Constructor</a></li><li><a href="index.html#other-ways-to-create-dictionaries">Other Ways to Create Dictionaries</a></li><li><a href="index.html#important-properties-of-a-dictionary">Important Properties of a Dictionary</a></li><li><a href="index.html#access-dictionary-items">Access Dictionary Items</a></li><li><a href="index.html#add-or-update-dictionary-items">Add or Update Dictionary Items</a></li><li><a href="index.html#merge-two-dictionaries">Merge Two Dictionaries</a></li><li><a href="index.html#remove-dictionary-items">Remove Dictionary Items</a></li><li><a href="index.html#get-all-keys-values-and-key-value-pairs">Get All Keys, Values and Key:Value Pairs</a></li><li><a href="index.html#iterate-through-a-dictionary">Iterate Through a Dictionary</a></li><li><a href="index.html#check-if-a-key-or-value-exists">Check if a Key or Value Exists</a></li><li><a href="index.html#find-dictionary-length">Find Dictionary Length</a></li><li><a href="index.html#python-dictionary-methods">Python Dictionary Methods</a></li><li><a href="index.html#builtin-functions-with-dictionary">Built-in Functions with Dictionary</a></li></ul></div></div>				</nav>
+			</div>
+			
+			<main id="main">
+				<div class="post-58 post type-post status-publish format-standard has-post-thumbnail hentry category-python mv-content-wrapper">
+					<article id="post-58">
+						<div class="post-header">
+						
+							<a class="article-tag" href="https://www.learnbyexample.org/python/" aria-hidden="true">Python</a>
+							
+							<h1 class="entry-title">Python Dictionary</h1>							
+							<div class="social-sharing top-sharing">
+								<a class="facebook" href="https://www.facebook.com/sharer/sharer.php?caption=Python+Dictionary&u=https%3A%2F%2Fwww.learnbyexample.org%2Fpython-dictionary%2F">
+									<svg height="21px" width="21px" aria-hidden="true" viewBox="0 0 30 30">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#social-facebook"></use>
+									</svg>
+								</a>
+								
+								<a class="twitter" href="https://twitter.com/intent/tweet?text=Python+Dictionary&url=https%3A%2F%2Fwww.learnbyexample.org%2Fpython-dictionary%2F&via=Learn+By+Example">
+									<svg height="21px" width="21px" aria-hidden="true" viewBox="0 0 30 30">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#social-twitter"></use>
+									</svg>
+								</a>
+
+								<a class="pinterest" href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.learnbyexample.org%2Fpython-dictionary%2F&amp;media=https://www.learnbyexample.org/wp-content/uploads/2019/06/Learn-Python-Programming.png&description=Python+Dictionary">
+									<svg height="23px" width="23px" aria-hidden="true" viewBox="0 0 30 30">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#social-pinterest"></use>
+									</svg>
+								</a>
+								
+								<a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.learnbyexample.org%2Fpython-dictionary%2F&title=Python+Dictionary">
+									<svg height="21px" width="21px" aria-hidden="true" viewBox="0 0 30 30">
+										<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#social-linkedin"></use>
+									</svg>
+								</a>
+							</div>
+						
+						</div>
+						
+						
+								
+						
+						<div class="entry-content">
+							
+<h2 class="invisi wp-block-heading" id="what-is-python-dictionary">What is Python dictionary?</h2>
+
+
+
 <p>Dictionaries are Python’s implementation of a data structure, generally known as associative arrays, hashes, or hashmaps.</p>
+
+
+
 <p>You can think of a dictionary as a mapping between a set of indexes (known as keys) and a set of values. Each key maps to a value. The association of a key and a value is called a <strong>key:value pair</strong> or sometimes an <strong>item</strong>.</p>
+
+
+
 <p>As an example, we’ll build a dictionary that stores employee record.</p>
+
+
+
 <div class="wp-block-image"><figure class="aligncenter"><img loading="lazy" decoding="async" src="../wp-content/uploads/python/Dictionary-Key-Value-Pairs-Illustration.png" alt="dictionary key value pairs illustration2"></figure></div>
-<h2 id="create-a-dictionary">Create a Dictionary</h2>
+
+
+
+<h2 class="wp-block-heading" id="create-a-dictionary">Create a Dictionary</h2>
+
+
+
 <p>You can create a dictionary by placing a comma-separated list of <code>key:value</code> pairs in curly braces <code>{}</code>. Each key is separated from its associated value by a colon <code>:</code></p>
+
+
+
 <div class="example"><div class="excode"><pre><code><span class="com"># Create a dictionary to store employee record</span>
 D = {<span class="str">'name'</span>: <span class="str">'Bob'</span>,
      <span class="str">'age'</span>: <span class="lit">25</span>,
      <span class="str">'job'</span>: <span class="str">'Dev'</span>,
      <span class="str">'city'</span>: <span class="str">'New York'</span>,
-     <span class="str">'email'</span>: <span class="str">'<a href="https://www.learnbyexample.org/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="64060b06241301064a070b09">[email&#160;protected]</a>'</span>}</code></pre></div></div>
-<h2 id="the-dict-constructor">The dict() Constructor</h2>
+     <span class="str">'email'</span>: <span class="str">'bob@web.com'</span>}</code></pre></div></div>
+
+
+
+<h2 class="wp-block-heading" id="the-dict-constructor">The dict() Constructor</h2>
+
+
+
 <p>You can convert two-value sequences into a dictionary with Python’s <a>dict()</a> constructor. The first item in each sequence is used as the key and the second as the value.</p>
+
+
+
 <div class="example"><div class="excode"><pre><code><span class="com"># Create a dictionary with a list of two-item tuples</span>
 L = [(<span class="str">'name'</span>, <span class="str">'Bob'</span>),
      (<span class="str">'age'</span>, <span class="lit">25</span>),
@@ -344,6 +393,9 @@ L = [(<span class="str">'name'</span>, <span class="str">'Bob'</span>),
 D = dict(L)
 <span class="kwd">print</span>(D)
 <span class="com"># Prints {'name': 'Bob', 'age': 25, 'job': 'Dev'}</span></code></pre></div></div>
+
+
+
 <div class="example"><div class="excode"><pre><code><span class="com"># Create a dictionary with a tuple of two-item lists</span>
 T = ([<span class="str">'name'</span>, <span class="str">'Bob'</span>],
      [<span class="str">'age'</span>, <span class="lit">25</span>],
@@ -352,16 +404,34 @@ T = ([<span class="str">'name'</span>, <span class="str">'Bob'</span>],
 D = dict(T)
 <span class="kwd">print</span>(D)
 <span class="com"># Prints {'name': 'Bob', 'age': 25, 'job': 'Dev'}</span></code></pre></div></div>
+
+
+
 <p>When the keys are simple strings, it is sometimes easier to specify key:value pairs using <strong>keyword arguments</strong>.</p>
+
+
+
 <div class="example"><div class="excode"><pre><code>D = dict(name = <span class="str">'Bob'</span>,
          age = <span class="lit">25</span>,
          job = <span class="str">'Dev'</span>)
 
 <span class="kwd">print</span>(D)
 <span class="com"># Prints {'name': 'Bob', 'age': 25, 'job': 'Dev'}</span></code></pre></div></div>
-<h2 id="other-ways-to-create-dictionaries">Other Ways to Create Dictionaries</h2>
+
+
+
+<h2 class="wp-block-heading" id="other-ways-to-create-dictionaries">Other Ways to Create Dictionaries</h2>
+
+
+
 <p>There are lots of other ways to create a dictionary.</p>
+
+
+
 <p>You can use <code>dict()</code> function along with the <a href="../python-zip-function/index.html">zip()</a> function, to combine separate lists of keys and values obtained dynamically at runtime.</p>
+
+
+
 <div class="example"><div class="excode"><pre><code><span class="com"># Create a dictionary with list of zipped keys/values</span>
 keys = [<span class="str">'name'</span>, <span class="str">'age'</span>, <span class="str">'job'</span>]
 values = [<span class="str">'Bob'</span>, <span class="lit">25</span>, <span class="str">'Dev'</span>]
@@ -370,7 +440,13 @@ D = dict(zip(keys, values))
 
 <span class="kwd">print</span>(D)
 <span class="com"># Prints {'name': 'Bob', 'age': 25, 'job': 'Dev'}</span></code></pre></div></div>
+
+
+
 <p>You’ll often want to create a dictionary with default values for each key. The <a href="../python-dictionary-fromkeys-method/index.html">fromkeys()</a> method offers a way to do this.</p>
+
+
+
 <div class="example"><div class="excode"><pre><code><span class="com"># Initialize dictionary with default value '0' for each key</span>
 keys = [<span class="str">'a'</span>, <span class="str">'b'</span>, <span class="str">'c'</span>]
 defaultValue = <span class="lit">0</span><span class="pln">
@@ -379,29 +455,77 @@ D </span>= dict.fromkeys(keys,defaultValue)<span class="pln">
 
 </span><span class="kwd">print</span>(D)
 <span class="com"># Prints {'a': 0, 'b': 0, 'c': 0}</span></code></pre></div></div>
+
+
+
 <p>There is one more way to create a dictionary based on existing dictionary, called <a href="../python-dictionary-comprehension/index.html">Dictionary comprehension</a>.</p>
-<h2 id="important-properties-of-a-dictionary">Important Properties of a Dictionary</h2>
+
+
+
+<h2 class="wp-block-heading" id="important-properties-of-a-dictionary">Important Properties of a Dictionary</h2>
+
+
+
 <p>Dictionaries are pretty straightforward, but here are a few points you should be aware of when using them.</p>
-<h3 id="unique-dictionary-keys">Keys must be unique:</h3>
+
+
+
+<h3 class="wp-block-heading" id="unique-dictionary-keys">Keys must be unique:</h3>
+
+
+
 <p>A key can appear in a dictionary only once.</p>
+
+
+
 <p>Even if you specify a key more than once during the creation of a dictionary, the last value for that key becomes the associated value.</p>
+
+
+
 <div class="example"><div class="excode"><pre><code>D = {<span class="str">'name'</span>: <span class="str">'Bob'</span>,
      <span class="str">'age'</span>: <span class="lit">25</span>,
      <span class="str">'name'</span>: <span class="str">'Jane'</span>}
 <span class="kwd">print</span>(D)
 <span class="com"># Prints {'name': 'Jane', 'age': 25}</span></code></pre></div></div>
+
+
+
 <p>Notice that the first occurrence of &#8216;name&#8217; is replaced&nbsp;by the second one.</p>
-<h3 id="immutable-dictionary-key">Key must be immutable type:</h3>
+
+
+
+<h3 class="wp-block-heading" id="immutable-dictionary-key">Key must be immutable type:</h3>
+
+
+
 <p>You can use any object of immutable type as dictionary keys &#8211; such as numbers, strings, booleans or tuples.</p>
+
+
+
 <div class="example"><div class="excode"><pre><code>D = {(<span class="lit">2</span>,<span class="lit">2</span>): <span class="lit">25</span>,
      <span class="kwd">True</span>: <span class="str">'a'</span>,
      <span class="str">'name'</span>: <span class="str">'Bob'</span>}</code></pre></div></div>
+
+
+
 <p>An exception is raised when mutable object is used as a key.</p>
+
+
+
 <div class="example exerr"><div class="excode"><pre><code><span class="com"># TypeError: unhashable type: 'list'</span>
 D = {[<span class="lit">2</span>,<span class="lit">2</span>]: <span class="lit">25</span>,
      <span class="str">'name'</span>: <span class="str">'Bob'</span>}</code></pre></div></div>
-<h3 id="any-type-dictionary-value">Value can be of any type:</h3>
+
+
+
+<h3 class="wp-block-heading" id="any-type-dictionary-value">Value can be of any type:</h3>
+
+
+
 <p>There are no restrictions on dictionary values. A dictionary value can be any type of object and can appear in a dictionary multiple times.</p>
+
+
+
 <div class="example"><div class="excode"><pre><code><span class="com"># values of different datatypes</span>
 D = {<span class="str">'a'</span>:[<span class="lit">1</span>,<span class="lit">2</span>,<span class="lit">3</span>],
      <span class="str">'b'</span>:{<span class="lit">1</span>,<span class="lit">2</span>,<span class="lit">3</span>}}
@@ -410,20 +534,47 @@ D = {<span class="str">'a'</span>:[<span class="lit">1</span>,<span class="lit">
 D = {<span class="str">'a'</span>:[<span class="lit">1</span>,<span class="lit">2</span>],
      <span class="str">'b'</span>:[<span class="lit">1</span>,<span class="lit">2</span>],
      <span class="str">'c'</span>:[<span class="lit">1</span>,<span class="lit">2</span>]}</code></pre></div></div>
-<h2 id="access-dictionary-items">Access Dictionary Items</h2>
+
+
+
+<h2 class="wp-block-heading" id="access-dictionary-items">Access Dictionary Items</h2>
+
+
+
 <p>The order of <code>key:value</code> pairs is not always the same. In fact, if you write the same example on another PC, you may get a different result. In general, the order of items in a dictionary is unpredictable.</p>
+
+
+
 <p>But this is not a problem because the items of a dictionary are not indexed with integer indices. Instead, you use the keys to access the corresponding values.</p>
+
+
+
 <p>You can fetch a value from a dictionary by referring to its key in square brackets <code>[]</code>.</p>
+
+
+
 <div class="example"><div class="excode"><pre><code>D = {<span class="str">'name'</span>: <span class="str">'Bob'</span>,
      <span class="str">'age'</span>: <span class="lit">25</span>,
      <span class="str">'job'</span>: <span class="str">'Dev'</span>}<span class="pln">
 
 </span><span class="kwd">print</span>(D[<span class="str">'name'</span>])
 <span class="com"># Prints Bob</span></code></pre></div></div>
+
+
+
 <p>If you refer to a key that is not in the dictionary, you’ll get an exception.</p>
+
+
+
 <div class="example exerr"><div class="excode"><pre><code><span class="kwd">print</span>(D[<span class="str">'salary'</span>])
 <span class="com"># Triggers KeyError: 'salary'</span></code></pre></div></div>
+
+
+
 <p>To avoid such exception, you can use the special dictionary <a href="../python-dictionary-get-method/index.html">get()</a> method. This method returns the value for key if key is in the dictionary, else <code>None</code>, so that this method never raises a <code>KeyError</code>.</p>
+
+
+
 <div class="example"><div class="excode"><pre><code><span class="com"># When key is present</span>
 <span class="kwd">print</span>(D.<span class="kwd">get</span>(<span class="str">'name'</span>))
 <span class="com"># Prints Bob</span>
@@ -431,8 +582,17 @@ D = {<span class="str">'a'</span>:[<span class="lit">1</span>,<span class="lit">
 <span class="com"># When key is absent</span>
 <span class="kwd">print</span>(D.<span class="kwd">get</span>(<span class="str">'salary'</span>))
 <span class="com"># Prints None</span></code></pre></div></div>
-<h2 id="add-or-update-dictionary-items">Add or Update Dictionary Items</h2>
+
+
+
+<h2 class="wp-block-heading" id="add-or-update-dictionary-items">Add or Update Dictionary Items</h2>
+
+
+
 <p>Adding or updating dictionary items is easy. Just refer to the item by its key and assign a value. If the key is already present in the dictionary, its value is replaced by the new one.</p>
+
+
+
 <div class="example"><div class="excode"><pre><code>D = {<span class="str">'name'</span>: <span class="str">'Bob'</span>,
      <span class="str">'age'</span>: <span class="lit">25</span>,
      <span class="str">'job'</span>: <span class="str">'Dev'</span>}
@@ -440,7 +600,13 @@ D = {<span class="str">'a'</span>:[<span class="lit">1</span>,<span class="lit">
 D[<span class="str">'name'</span>] = <span class="str">'Sam'</span>
 <span class="kwd">print</span>(D)
 <span class="com"># Prints {'name': 'Sam', 'age': 25, 'job': 'Dev'}</span></code></pre></div></div>
+
+
+
 <p>If the key is new, it is added to the dictionary with its value.</p>
+
+
+
 <div class="example"><div class="excode"><pre><code>D = {<span class="str">'name'</span>: <span class="str">'Bob'</span>,
      <span class="str">'age'</span>: <span class="lit">25</span>,
      <span class="str">'job'</span>: <span class="str">'Dev'</span>}
@@ -448,24 +614,48 @@ D[<span class="str">'name'</span>] = <span class="str">'Sam'</span>
 D[<span class="str">'city'</span>] = <span class="str">'New York'</span>
 <span class="kwd">print</span>(D)
 <span class="com"># Prints {'name': 'Bob', 'age': 25, 'job': 'Dev', 'city': 'New York'}</span></code></pre></div></div>
-<h2 id="merge-two-dictionaries">Merge Two Dictionaries</h2>
+
+
+
+<h2 class="wp-block-heading" id="merge-two-dictionaries">Merge Two Dictionaries</h2>
+
+
+
 <p>Use the built-in&nbsp;<a href="../python-dictionary-update-method/index.html">update()</a> method to merge the keys and values of one dictionary into another. Note that this method blindly overwrites values of the same key if there’s a clash.</p>
+
+
+
 <div class="example"><div class="excode"><pre><code>D1 = {<span class="str">'name'</span>: <span class="str">'Bob'</span>,
       <span class="str">'age'</span>: <span class="lit">25</span>,
       <span class="str">'job'</span>: <span class="str">'Dev'</span>}<span class="pln">
 
 D2 </span>= {<span class="str">'age'</span>: <span class="lit">30</span>,
       <span class="str">'city'</span>: <span class="str">'New York'</span>,
-      <span class="str">'email'</span>: <span class="str">'<a href="https://www.learnbyexample.org/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="23414c41635446410d404c4e">[email&#160;protected]</a>'</span>}<span class="pln">
+      <span class="str">'email'</span>: <span class="str">'bob@web.com'</span>}<span class="pln">
 
 D1</span>.update(D2)
 <span class="kwd">print</span>(D1)
 <span class="com"># Prints {'name': 'Bob', 'age': 30, 'job': 'Dev',</span>
-<span class="com">#         'city': 'New York', 'email': '<a href="https://www.learnbyexample.org/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="64060b06241301064a070b09">[email&#160;protected]</a>'}</span></code></pre></div></div>
-<h2 id="remove-dictionary-items">Remove Dictionary Items</h2>
+<span class="com">#         'city': 'New York', 'email': 'bob@web.com'}</span></code></pre></div></div>
+
+
+
+<h2 class="wp-block-heading" id="remove-dictionary-items">Remove Dictionary Items</h2>
+
+
+
 <p>There are several ways to remove items from a dictionary.</p>
-<h3>Remove an Item by Key</h3>
+
+
+
+<h3 class="wp-block-heading">Remove an Item by Key</h3>
+
+
+
 <p>If you know the key of the item you want, you can use <a href="../python-dictionary-pop-method/index.html">pop()</a> method. It removes the key and returns its value.</p>
+
+
+
 <div class="example"><div class="excode"><pre><code>D = {<span class="str">'name'</span>: <span class="str">'Bob'</span>,
      <span class="str">'age'</span>: <span class="lit">25</span>,
      <span class="str">'job'</span>: <span class="str">'Dev'</span>}<span class="pln">
@@ -477,7 +667,13 @@ x </span>= D.pop(<span class="str">'age'</span>)
 </span><span class="com"># get removed value</span>
 <span class="kwd">print</span>(x)
 <span class="com"># Prints 25</span></code></pre></div></div>
+
+
+
 <p>If you don’t need the removed value, use the&nbsp;<a>del</a>&nbsp;statement.</p>
+
+
+
 <div class="example"><div class="excode"><pre><code>D = {<span class="str">'name'</span>: <span class="str">'Bob'</span>,
      <span class="str">'age'</span>: <span class="lit">25</span>,
      <span class="str">'job'</span>: <span class="str">'Dev'</span>}<span class="pln">
@@ -485,8 +681,17 @@ x </span>= D.pop(<span class="str">'age'</span>)
 </span><span class="kwd">del</span> D[<span class="str">'age'</span>]
 <span class="kwd">print</span>(D)
 <span class="com"># Prints {'name': 'Bob', 'job': 'Dev'}</span></code></pre></div></div>
-<h3>Remove Last Inserted Item</h3>
+
+
+
+<h3 class="wp-block-heading">Remove Last Inserted Item</h3>
+
+
+
 <p>The <a href="../python-dictionary-popitem-method/index.html">popitem()</a> method removes and returns the last inserted item.</p>
+
+
+
 <div class="example"><div class="excode"><pre><code>D = {<span class="str">'name'</span>: <span class="str">'Bob'</span>,
      <span class="str">'age'</span>: <span class="lit">25</span>,
      <span class="str">'job'</span>: <span class="str">'Dev'</span>}<span class="pln">
@@ -498,11 +703,23 @@ x </span>= D.popitem()
 </span><span class="com"># get removed pair</span>
 <span class="kwd">print</span>(x)
 <span class="com"># Prints ('job', 'Dev')</span></code></pre></div></div>
+
+
+
 <div class="simple-note">
 <p>In versions before 3.7, <code>popitem()</code> would remove a random item.</p>
 </div>
-<h3>Remove all Items</h3>
+
+
+
+<h3 class="wp-block-heading">Remove all Items</h3>
+
+
+
 <p>To delete all keys and values from a dictionary, use <a href="../python-dictionary-clear-method/index.html">clear()</a> method.<br></p>
+
+
+
 <div class="example"><div class="excode"><pre><code>D = {<span class="str">'name'</span>: <span class="str">'Bob'</span>,
      <span class="str">'age'</span>: <span class="lit">25</span>,
      <span class="str">'job'</span>: <span class="str">'Dev'</span>}<span class="pln">
@@ -510,9 +727,21 @@ x </span>= D.popitem()
 D</span>.clear()
 <span class="kwd">print</span>(D)
 <span class="com"># Prints {}</span></code></pre></div></div>
-<h2 id="get-all-keys-values-and-key-value-pairs">Get All Keys, Values and Key:Value Pairs</h2>
+
+
+
+<h2 class="wp-block-heading" id="get-all-keys-values-and-key-value-pairs">Get All Keys, Values and Key:Value Pairs</h2>
+
+
+
 <p>There are three dictionary methods that return all of the dictionary&#8217;s keys, values and key-value pairs: <a href="../python-dictionary-keys-method/index.html">keys()</a>, <a href="../python-dictionary-values-method/index.html">values()</a>, and <a href="../python-dictionary-items-method/index.html">items()</a>. These methods are useful in loops that need to step through dictionary entries one by one.<br></p>
+
+
+
 <p>All the three methods return <strong>iterable object</strong>. If you want a true list from these methods, wrap them in a <code>list()</code> function.</p>
+
+
+
 <div class="example"><div class="excode"><pre><code>D = {<span class="str">'name'</span>: <span class="str">'Bob'</span>,
      <span class="str">'age'</span>: <span class="lit">25</span>,
      <span class="str">'job'</span>: <span class="str">'Dev'</span>}<span class="pln">
@@ -528,8 +757,17 @@ D</span>.clear()
 </span><span class="com"># get all pairs</span>
 <span class="kwd">print</span>(list(D.items()))
 <span class="com"># Prints [('name', 'Bob'), ('age', 25), ('job', 'Dev')]</span></code></pre></div></div>
-<h2 id="iterate-through-a-dictionary">Iterate Through a Dictionary</h2>
+
+
+
+<h2 class="wp-block-heading" id="iterate-through-a-dictionary">Iterate Through a Dictionary</h2>
+
+
+
 <p>If you use a dictionary in a for loop, it traverses the keys of the dictionary by default.</p>
+
+
+
 <div class="example"><div class="excode"><pre><code>D = {<span class="str">'name'</span>: <span class="str">'Bob'</span>,
      <span class="str">'age'</span>: <span class="lit">25</span>,
      <span class="str">'job'</span>: <span class="str">'Dev'</span>}<span class="pln">
@@ -537,7 +775,13 @@ D</span>.clear()
 </span><span class="kwd">for</span> x <span class="kwd">in</span> D:
     <span class="kwd">print</span>(x)
 <span class="com"># Prints name age job</span></code></pre></div></div>
+
+
+
 <p>To iterate over the values of a dictionary, index from key to value inside the for loop.</p>
+
+
+
 <div class="example"><div class="excode"><pre><code>D = {<span class="str">'name'</span>: <span class="str">'Bob'</span>,
      <span class="str">'age'</span>: <span class="lit">25</span>,
      <span class="str">'job'</span>: <span class="str">'Dev'</span>}<span class="pln">
@@ -545,8 +789,17 @@ D</span>.clear()
 </span><span class="kwd">for</span> x <span class="kwd">in</span> D:
     <span class="kwd">print</span>(D[x])
 <span class="com"># Prints Bob 25 Dev</span></code></pre></div></div>
-<h2 id="check-if-a-key-or-value-exists">Check if a Key or Value Exists</h2>
+
+
+
+<h2 class="wp-block-heading" id="check-if-a-key-or-value-exists">Check if a Key or Value Exists</h2>
+
+
+
 <p>If you want to know whether a key exists in a dictionary, use <a>in</a>&nbsp;and&nbsp;<a>not in</a>&nbsp;operators with&nbsp;<a href="../python-if-else-elif-statement/index.html">if statement</a>.<br></p>
+
+
+
 <div class="example"><div class="excode"><pre><code>D = {<span class="str">'name'</span>: <span class="str">'Bob'</span>,
      <span class="str">'age'</span>: <span class="lit">25</span>,
      <span class="str">'job'</span>: <span class="str">'Dev'</span>}<span class="pln">
@@ -555,7 +808,13 @@ D</span>.clear()
 <span class="com"># Prints True</span>
 <span class="kwd">print</span>(<span class="str">'salary'</span> <span class="kwd">in</span> D)
 <span class="com"># Prints False</span></code></pre></div></div>
+
+
+
 <p>To check if a certain value exists in a dictionary, you can use method <code>values()</code>, which returns the values as a list, and then use the <code>in</code> operator.</p>
+
+
+
 <div class="example"><div class="excode"><pre><code>D = {<span class="str">'name'</span>: <span class="str">'Bob'</span>,
      <span class="str">'age'</span>: <span class="lit">25</span>,
      <span class="str">'job'</span>: <span class="str">'Dev'</span>}<span class="pln">
@@ -564,64 +823,114 @@ D</span>.clear()
 <span class="com"># Prints True</span>
 <span class="kwd">print</span>(<span class="str">'Sam'</span> <span class="kwd">in</span> D.values())
 <span class="com"># Prints False</span></code></pre></div></div>
+
+
+
 <div class="simple-note"><p><b>in Operator on List vs Dictionary</b></p><p>The <code>in</code> operator uses different algorithms for lists and dictionaries. For lists, it uses a search algorithm. As the list gets longer, the search time gets longer. For dictionaries, Python uses a different algorithm called <a href="https://en.wikipedia.org/wiki/Hash_table">Hash Table</a>, which has a remarkable property: the operator takes the same amount of time, regardless of how many items are in the dictionary.</p></div>
-<h2 id="find-dictionary-length">Find Dictionary Length</h2>
+
+
+
+<h2 class="wp-block-heading" id="find-dictionary-length">Find Dictionary Length</h2>
+
+
+
 <p>To find how many <code>key:value</code> pairs a dictionary has, use&nbsp;<a href="../python-len-function/index.html">len()</a>&nbsp;method.</p>
+
+
+
 <div class="example"><div class="excode"><pre><code>D = {<span class="str">'name'</span>: <span class="str">'Bob'</span>,
      <span class="str">'age'</span>: <span class="lit">25</span>,
      <span class="str">'job'</span>: <span class="str">'Dev'</span>}<span class="pln">
 
 </span><span class="kwd">print</span>(len(D))
 <span class="com"># Prints 3</span></code></pre></div></div>
-<h2 id="python-dictionary-methods">Python Dictionary Methods</h2>
+
+
+
+<h2 class="wp-block-heading" id="python-dictionary-methods">Python Dictionary Methods</h2>
+
+
+
 <p>Python has a set of built-in methods that you can invoke on dictionary objects.</p>
+
+
+
 <table class="parametertabler tabler"><caption class="wp-caption-text">Python Dictionary Methods</caption><tbody><tr class="tabler-header"><td>Method</td><td>Description</td></tr><tr><td><a href="../python-dictionary-clear-method/index.html">clear()</a></td><td>Removes all items from the dictionary</td></tr><tr><td><a href="../python-dictionary-copy-method/index.html">copy()</a></td><td>Returns a shallow copy of the dictionary</td></tr><tr><td><a href="../python-dictionary-fromkeys-method/index.html">fromkeys()</a></td><td>Creates a new dictionary with the specified keys and values</td></tr><tr><td><a href="../python-dictionary-get-method/index.html">get()</a></td><td>Returns the value of the specified key</td></tr><tr><td><a href="../python-dictionary-items-method/index.html">items()</a></td><td>Returns a list of key:value pair</td></tr><tr><td><a href="../python-dictionary-keys-method/index.html">keys()</a></td><td>Returns a list of all keys from dictionary</td></tr><tr><td><a href="../python-dictionary-pop-method/index.html">pop()</a></td><td>Removes and returns single dictionary item with specified key.</td></tr><tr><td><a href="../python-dictionary-popitem-method/index.html">popitem()</a></td><td>Removes and returns last inserted key:value pair from the dictionary.</td></tr><tr><td><a href="../python-dictionary-setdefault-method/index.html">setdefault()</a></td><td>Returns the value of the specified key, if present. Else, inserts the key with a specified value.</td></tr><tr><td><a href="../python-dictionary-update-method/index.html">update()</a></td><td>Updates the dictionary with the specified key:value pairs</td></tr><tr><td><a href="../python-dictionary-values-method/index.html">values()</a></td><td>Returns a list of all values from dictionary</td></tr></tbody></table>
-<h2 id="builtin-functions-with-dictionary">Built-in Functions with Dictionary</h2>
+
+
+
+<h2 class="wp-block-heading" id="builtin-functions-with-dictionary">Built-in Functions with Dictionary</h2>
+
+
+
 <p>Python also has a set of built-in functions that you can use with dictionary objects.</p>
+
+
+
 <table class="parametertabler tabler"><caption class="wp-caption-text">Python Built-in Functions with Dictionary</caption><tbody><tr class="tabler-header"><td>Method</td><td>Description</td></tr><tr><td><a href="../python-all-function/index.html">all()</a></td><td>Returns True if all list items are true</td></tr><tr><td><a href="../python-any-function/index.html">any()</a></td><td>Returns True if any list item is true</td></tr><tr><td><a href="../python-len-function/index.html">len()</a></td><td>Returns the number of items in the list</td></tr><tr><td><a href="../python-sorted-function/index.html">sorted()</a></td><td>Returns a sorted list</td></tr></tbody></table>
+						</div>
+					</article>
+
+					<div class="social-sharing bottom-sharing">
+						<div class="share-text">SHARE</div>
+						
+						<a class="facebook" href="https://www.facebook.com/sharer/sharer.php?caption=Python+Dictionary&u=https%3A%2F%2Fwww.learnbyexample.org%2Fpython-dictionary%2F">
+							<svg height="25px" width="25px" aria-hidden="true" viewBox="0 0 30 30">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#social-facebook"></use>
+							</svg>
+						</a>
+						
+						<a class="twitter" href="https://twitter.com/intent/tweet?text=Python+Dictionary&url=https%3A%2F%2Fwww.learnbyexample.org%2Fpython-dictionary%2F&via=Learn+By+Example">
+							<svg height="25px" width="25px" aria-hidden="true" viewBox="0 0 30 30">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#social-twitter"></use>
+							</svg>
+						</a>
+
+						<a class="pinterest" href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.learnbyexample.org%2Fpython-dictionary%2F&amp;media=https://www.learnbyexample.org/wp-content/uploads/2019/06/Learn-Python-Programming.png&description=Python+Dictionary">
+							<svg height="27px" width="27px" aria-hidden="true" viewBox="0 0 30 30">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#social-pinterest"></use>
+							</svg>
+						</a>
+						
+						<a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.learnbyexample.org%2Fpython-dictionary%2F&title=Python+Dictionary">
+							<svg height="25px" width="25px" aria-hidden="true" viewBox="0 0 30 30">
+								<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#social-linkedin"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</main>
+		</div>
+	</div>
+	
+
+
+	
 </div>
-</article>
-<div class="social-sharing bottom-sharing">
-<div class="share-text">SHARE</div>
-<a class="facebook" href="https://www.facebook.com/sharer/sharer.php?caption=Python+Dictionary&u=https%3A%2F%2Fwww.learnbyexample.org%2Fpython-dictionary%2F">
-<svg height="25px" width="25px" aria-hidden="true" viewBox="0 0 30 30">
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#social-facebook"></use>
-</svg>
-</a>
-<a class="twitter" href="https://twitter.com/intent/tweet?text=Python+Dictionary&url=https%3A%2F%2Fwww.learnbyexample.org%2Fpython-dictionary%2F&via=Learn+By+Example">
-<svg height="25px" width="25px" aria-hidden="true" viewBox="0 0 30 30">
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#social-twitter"></use>
-</svg>
-</a>
-<a class="pinterest" href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fwww.learnbyexample.org%2Fpython-dictionary%2F&amp;media=https://www.learnbyexample.org/wp-content/uploads/2019/06/Learn-Python-Programming.png&description=Python+Dictionary">
-<svg height="27px" width="27px" aria-hidden="true" viewBox="0 0 30 30">
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#social-pinterest"></use>
-</svg>
-</a>
-<a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwww.learnbyexample.org%2Fpython-dictionary%2F&title=Python+Dictionary">
-<svg height="25px" width="25px" aria-hidden="true" viewBox="0 0 30 30">
-<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#social-linkedin"></use>
-</svg>
-</a>
-</div>
-</div>
-</main>
-</div>
-</div>
-</div>
+
 <style type="text/css" media="screen"></style>
-<script data-cfasync="false" src="https://www.learnbyexample.org/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">for(var navLinks=document.getElementById("nav-sidebar").getElementsByTagName("a"),i=0;i<navLinks.length;i++)navLinks[i].href===document.URL&&(navLinks[i].classList.add("current-chapter"),navLinks[i].scrollIntoView({block:"center",inline:"center"}),document.querySelector("header").scrollIntoView(!0))</script>
+
+<script type="text/javascript">for(var navLinks=document.getElementById("nav-sidebar").getElementsByTagName("a"),i=0;i<navLinks.length;i++)navLinks[i].href===document.URL&&(navLinks[i].classList.add("current-chapter"),navLinks[i].scrollIntoView({block:"center",inline:"center"}),document.querySelector("header").scrollIntoView(!0))</script>
+
+
 <footer id="colophon" class="site-footer">
-<div class="container">
-<ul class="footer-menu">
-<li><a href="https://www.learnbyexample.org/disclaimer/">Disclaimer</a></li>
-<li><a href="https://www.learnbyexample.org/privacy-policy/">Privacy Policy</a></li>
-<li><a href="https://www.learnbyexample.org/contact/">Contact Us</a></li>
-</ul>
-<div class="copyright">Copyright &copy; 2022 LearnByExample.org All rights reserved.</div>
-</div>
+	<div class="container">
+		<ul class="footer-menu">
+			<li><a href="https://www.learnbyexample.org/disclaimer/">Disclaimer</a></li>
+			<li><a href="https://www.learnbyexample.org/privacy-policy/">Privacy Policy</a></li>
+			<li><a href="https://www.learnbyexample.org/contact/">Contact Us</a></li>
+		</ul>
+		<div class="copyright">Copyright &copy; 2024 LearnByExample.org All rights reserved.</div>
+	</div>
 </footer>
+
 </div>
+
+
 </body>
 </html>
+<!--
+Performance optimized by Redis Object Cache. Learn more: https://wprediscache.com
 
+Retrieved 530 objects (173 KB) from Redis using PhpRedis (v5.3.7).
+-->
