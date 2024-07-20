@@ -6,7 +6,7 @@
 <link rel="profile" href="https://gmpg.org/xfn/11" />
 
 <meta name='robots' content='max-image-preview:large' />
-<script type="application/ld+json">{"@context":"http:\/\/schema.org","publisher":{"@type":"Organization","name":"Learn By Example","logo":{"@type":"ImageObject","url":"https:\/\/www.learnbyexample.org\/wp-content\/themes\/siddhai-child\/logo\/logo.png","height":90,"width":193}},"@type":"BlogPosting","mainEntityOfPage":"https:\/\/www.learnbyexample.org\/python-nested-list\/","headline":"Python Nested List","datePublished":"2019-06-12T05:16:05+00:00","dateModified":"2022-12-20T10:59:08+00:00","author":{"@type":"Person","name":"learnbyexample"},"image":{"@type":"ImageObject","url":"https:\/\/www.learnbyexample.org\/wp-content\/uploads\/2019\/06\/Learn-Python-Programming.png","width":763,"height":436}}</script>
+<script type="application/ld+json">{"@context":"http:\/\/schema.org","publisher":{"@type":"Organization","name":"Learn By Example","logo":{"@type":"ImageObject","url":"https:\/\/www.learnbyexample.org\/wp-content\/themes\/siddhai-child\/logo\/logo.png","height":90,"width":193}},"@type":"BlogPosting","mainEntityOfPage":"https:\/\/www.learnbyexample.org\/python-nested-list\/","headline":"Python Nested List","datePublished":"2019-06-12T05:16:05+00:00","dateModified":"2024-06-20T16:29:54+00:00","author":{"@type":"Person","name":"learnbyexample"},"image":{"@type":"ImageObject","url":"https:\/\/www.learnbyexample.org\/wp-content\/uploads\/2019\/06\/Learn-Python-Programming.png","width":763,"height":436}}</script>
 	<!-- This site is optimized with the Yoast SEO plugin v15.2 - https://yoast.com/wordpress/plugins/seo/ -->
 	<title>Python Nested List - Learn By Example</title>
 	<meta name="description" content="Learn to create a nested list in Python, access change and add nested list items, find nested list length, iterate through a nested list and more." />
@@ -19,7 +19,7 @@
 	<meta property="og:url" content="https://www.learnbyexample.org/python-nested-list/" />
 	<meta property="og:site_name" content="Learn By Example" />
 	<meta property="article:published_time" content="2019-06-12T05:16:05+00:00" />
-	<meta property="article:modified_time" content="2022-12-20T10:59:08+00:00" />
+	<meta property="article:modified_time" content="2024-06-20T16:29:54+00:00" />
 	<meta property="og:image" content="https://www.learnbyexample.org/wp-content/uploads/2019/06/Learn-Python-Programming.png" />
 	<meta property="og:image:width" content="763" />
 	<meta property="og:image:height" content="436" />
@@ -27,7 +27,7 @@
 	<meta name="twitter:label1" value="Written by">
 	<meta name="twitter:data1" value="learnbyexample">
 	<meta name="twitter:label2" value="Est. reading time">
-	<meta name="twitter:data2" value="2 minutes">
+	<meta name="twitter:data2" value="4 minutes">
 	<!-- / Yoast SEO plugin. -->
 
 
@@ -296,7 +296,7 @@ pre .com{color:#65798c}pre .dec,pre .lit{color:#c53929}pre .atv,pre .str{color:#
 			
 			<div class="nav-rightbar-wrapper">
 				<nav class="nav-rightbar">
-					<div class="story-highlights" id="navigation"><div class="tab"><label for="tab-title" class="story-highlights-title">Table Of Contents</label><input id="tab-title" type="checkbox" name="tabs"><label class="main-tab-icon tabicon" for="tab-title"></label><ul class="main-tab tab-content"><li><a href="index.html#what-is-python-nested-list">What is Python Nested List?</a></li><li><a href="index.html#create-a-nested-list">Create a Nested List</a></li><li><a href="index.html#access-nested-list-items-by-index">Access Nested List Items by Index</a></li><li><a href="index.html#nested-list-negative-indexing">Negative List Indexing In a Nested List</a></li><li><a href="index.html#change-nested-list-items">Change Nested List Item Value</a></li><li><a href="index.html#add-nested-list-items">Add items to a Nested list</a></li><li><a href="index.html#remove-nested-list-items">Remove items from a Nested List</a></li><li><a href="index.html#find-nested-list-length">Find Nested List Length</a></li><li><a href="index.html#iterate-through-a-nested-list">Iterate through a Nested List</a></li></ul></div></div>				</nav>
+					<div class="story-highlights"><div class="tab"><label for="tab-title" class="story-highlights-title">Table Of Contents</label><ul class="main-tab tab-content"><li><a href="index.html#">Introduction</a></li><li><a href="index.html#creating-a-nested-list">Creating a Nested List</a></li><li><a href="index.html#accessing-elements-in-a-nested-list">Accessing Elements in a Nested List</a></li><li><a href="index.html#negative-list-indexing-in-a-nested-list">Negative List Indexing In a Nested List</a></li><li><a href="index.html#modifying-elements-in-a-nested-list">Modifying Elements in a Nested List</a></li><li><a href="index.html#adding-elements-to-a-nested-list">Adding Elements to a Nested List</a></li><li><a href="index.html#removing-elements-from-a-nested-list">Removing Elements from a Nested List</a></li><li><a href="index.html#finding-the-length-of-a-nested-list">Finding the Length of a Nested List</a></li><li><a href="index.html#iterating-through-a-nested-list">Iterating Through a Nested List</a></li><li class="tab"><a href="index.html#common-use-cases-for-nested-lists">Common Use Cases for Nested Lists</a><ul class="tab-content"><li><a href="index.html#matrices-and-2d-arrays">Matrices and 2D Arrays</a></li><li><a href="index.html#tables-of-data">Tables of Data</a></li><li><a href="index.html#graphs-and-trees">Graphs and Trees</a></li></ul></li></ul></div></div>				</nav>
 			</div>
 			
 			<main id="main">
@@ -340,216 +340,278 @@ pre .com{color:#65798c}pre .dec,pre .lit{color:#c53929}pre .atv,pre .str{color:#
 						
 						<div class="entry-content">
 							
-<h2 class="invisi wp-block-heading" id="what-is-python-nested-list">What is Python Nested List?</h2>
+<p>Nested lists in Python are <a href="../python-list/index.html">lists</a> that contain other lists as their elements. This structure allows you to create multi-dimensional data representations, which are particularly useful when working with matrices, tables, or other complex data arrangements.</p>
 
 
 
-<p>A <a href="../python-list/index.html">list</a> can contain any sort object, even another list (sublist), which in turn can contain sublists themselves, and so on. This is known as <strong>nested list</strong>.</p>
+<p>Let&#8217;s learn more about nested lists in Python and explore various operations and techniques for working with them.</p>
 
 
 
-<p>You can use them to arrange data into hierarchical structures.</p>
+<h2 class="wp-block-heading" id="creating-a-nested-list">Creating a Nested List</h2>
 
 
 
-<h2 class="wp-block-heading" id="create-a-nested-list">Create a Nested List</h2>
+<p>A nested list can be created by placing lists within a list. Here are some basic examples:</p>
 
 
 
-<p>A nested list is created by placing a comma-separated sequence of sublists. </p>
+<div class="example"><div class="excode"><pre><code><span class="com"># Basic nested list</span>
+L = [[<span class="lit">1</span>, <span class="lit">2</span>, <span class="lit">3</span>], [<span class="lit">4</span>, <span class="lit">5</span>, <span class="lit">6</span>], [<span class="lit">7</span>, <span class="lit">8</span>, <span class="lit">9</span>]]
+
+<span class="com"># Nested list with different lengths of inner lists</span>
+L = [[<span class="lit">1</span>, <span class="lit">2</span>], [<span class="lit">3</span>, <span class="lit">4</span>, <span class="lit">5</span>], [<span class="lit">6</span>, <span class="lit">7</span>, <span class="lit">8</span>, <span class="lit">9</span>]]
+
+<span class="com"># Nested list with mixed data types</span>
+L = [[<span class="str">"Alice"</span>, <span class="lit">30</span>], [<span class="str">"Bob"</span>, <span class="lit">25</span>], [<span class="str">"Charlie"</span>, <span class="lit">35</span>]]
+
+<span class="com"># Deeper nested lists</span>
+L = [<span class="str">'a'</span>, <span class="str">'b'</span>, [<span class="str">'cc'</span>, <span class="str">'dd'</span>, [<span class="str">'eee'</span>, <span class="str">'fff'</span>]], <span class="str">'g'</span>, <span class="str">'h'</span>]</code></pre></div></div>
 
 
 
-<div class="example"><div class="excode"><pre><code>L = [<span class="str">'a'</span>, [<span class="str">'bb'</span>, [<span class="str">'ccc'</span>, <span class="str">'ddd'</span>], <span class="str">'ee'</span>, <span class="str">'ff'</span>], <span class="str">'g'</span>, <span class="str">'h'</span>]</code></pre></div></div>
+<h2 class="wp-block-heading" id="accessing-elements-in-a-nested-list">Accessing Elements in a Nested List</h2>
 
 
 
-<h2 class="wp-block-heading" id="access-nested-list-items-by-index">Access Nested List Items by Index</h2>
+<p>To access elements in a nested list, you use multiple indices – one for each level of the list. The first index specifies which of the inner lists to access, and the subsequent indices specify the element within that inner list.</p>
 
 
 
-<p>You can access individual items in a nested list using multiple indexes.</p>
+<p>The indexes for the elements in a nested list are illustrated as below:</p>
 
 
 
-<p>The indexes for the items in a nested list are illustrated as below:</p>
-
-
-
-<div class="wp-block-image"><figure class="aligncenter"><img loading="lazy" fetchpriority="high" decoding="async" src="../wp-content/uploads/python/Python-Nested-List-Indexing.png" width="560" height="359" alt="Python Nested List Indexing"></figure></div>
-
-
-
-<div class="example"><div class="excode"><pre><code>L = [<span class="str">'a'</span>, <span class="str">'b'</span>, [<span class="str">'cc'</span>, <span class="str">'dd'</span>, [<span class="str">'eee'</span>, <span class="str">'fff'</span>]], <span class="str">'g'</span>, <span class="str">'h'</span>]
-
-<span class="kwd">print</span>(L[<span class="lit">2</span>])
-<span class="com"># Prints ['cc', 'dd', ['eee', 'fff']]</span>
-
-<span class="kwd">print</span>(L[<span class="lit">2</span>][<span class="lit">2</span>])
-<span class="com"># Prints ['eee', 'fff']</span>
-
-<span class="kwd">print</span>(L[<span class="lit">2</span>][<span class="lit">2</span>][<span class="lit">0</span>])
-<span class="com"># Prints eee</span></code></pre></div></div>
-
-
-
-<h2 class="wp-block-heading" id="nested-list-negative-indexing">Negative List Indexing In a Nested List</h2>
-
-
-
-<p>You can access a nested list by negative indexing as well.</p>
-
-
-
-<p>Negative indexes count backward from the end of the list. So,&nbsp;<code>L[-1]</code>&nbsp;refers to the last item,&nbsp;<code>L[-2]</code>&nbsp;is the second-last, and so on.</p>
-
-
-
-<p>The negative indexes for the items in a nested list are illustrated as below:</p>
-
-
-
-<div class="wp-block-image"><figure class="aligncenter"><img loading="lazy" decoding="async" src="../wp-content/uploads/python/Python-Nested-List-Negative-Indexing.png" width="560" height="359" alt="Python Nested List Negative Indexing"></figure></div>
+<div class="wp-block-image"><figure class="aligncenter"><img loading="lazy" decoding="async" src="../wp-content/uploads/python/Python-Nested-List-Indexing.png" alt="python nested list indexing"></figure></div>
 
 
 
 <div class="example"><div class="excode"><pre><code>L = [<span class="str">'a'</span>, <span class="str">'b'</span>, [<span class="str">'cc'</span>, <span class="str">'dd'</span>, [<span class="str">'eee'</span>, <span class="str">'fff'</span>]], <span class="str">'g'</span>, <span class="str">'h'</span>]
 
-<span class="kwd">print</span>(L[-<span class="lit">3</span>])
-<span class="com"># Prints ['cc', 'dd', ['eee', 'fff']]</span>
-
-<span class="kwd">print</span>(L[-<span class="lit">3</span>][-<span class="lit">1</span>])
-<span class="com"># Prints ['eee', 'fff']</span>
-
-<span class="kwd">print</span>(L[-<span class="lit">3</span>][-<span class="lit">1</span>][-<span class="lit">2</span>])
-<span class="com"># Prints eee</span></code></pre></div></div>
+<span class="kwd">print</span>(L[<span class="lit">2</span>])         <span class="com"># Output: ['cc', 'dd', ['eee', 'fff']]</span>
+<span class="kwd">print</span>(L[<span class="lit">2</span>][<span class="lit">2</span>])      <span class="com"># Output: ['eee', 'fff']</span>
+<span class="kwd">print</span>(L[<span class="lit">2</span>][<span class="lit">2</span>][<span class="lit">0</span>])   <span class="com"># Output: eee</span></code></pre></div></div>
 
 
 
-<h2 class="wp-block-heading" id="change-nested-list-items">Change Nested List Item Value</h2>
+<p>In this list, <code>L[2]</code> accesses the third element, which is itself a list: <code>['cc', 'dd', ['eee', 'fff']]</code>. To get to &#8216;eee&#8217;, we need another index: <code>L[2][2]</code> gets us to the third element of this inner list, which is yet another list: <code>['eee', 'fff']</code>. Finally, <code>L[2][2][0]</code> gives us the first element of this innermost list, which is the string &#8216;eee&#8217;.</p>
 
 
 
-<p>You can change the value of a specific item in a nested list by referring to its index number.</p>
+<h2 class="wp-block-heading" id="negative-list-indexing-in-a-nested-list">Negative List Indexing In a Nested List</h2>
+
+
+
+<p>In Python, negative indexing provides a convenient way to access elements from the end of a list. Just like positive indices start from 0 and count upwards, negative indices start from -1 and count downwards. So, -1 refers to the last element, -2 to the second-last, and so on.</p>
+
+
+
+<p>This concept also applies to nested lists, where each level of nesting can be accessed with its own negative index.</p>
+
+
+
+<p>The negative indexes for the elements in a nested list are illustrated as below:</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter"><img loading="lazy" decoding="async" src="../wp-content/uploads/python/Python-Nested-List-Negative-Indexing.png" alt="python nested list negative indexing"></figure></div>
+
+
+
+<div class="example"><div class="excode"><pre><code>L = [<span class="str">'a'</span>, <span class="str">'b'</span>, [<span class="str">'cc'</span>, <span class="str">'dd'</span>, [<span class="str">'eee'</span>, <span class="str">'fff'</span>]], <span class="str">'g'</span>, <span class="str">'h'</span>]
+
+<span class="kwd">print</span>(L[-<span class="lit">3</span>])           <span class="com"># Output: ['cc', 'dd', ['eee', 'fff']]</span>
+<span class="kwd">print</span>(L[-<span class="lit">3</span>][-<span class="lit">1</span>])       <span class="com"># Output: ['eee', 'fff']</span>
+<span class="kwd">print</span>(L[-<span class="lit">3</span>][-<span class="lit">1</span>][-<span class="lit">2</span>])   <span class="com"># Output: eee</span></code></pre></div></div>
+
+
+
+<h2 class="wp-block-heading" id="modifying-elements-in-a-nested-list">Modifying Elements in a Nested List</h2>
+
+
+
+<p>Just like with regular lists, You can modify elements in nested lists by specifying the indices of the element you want to change:</p>
 
 
 
 <div class="example"><div class="excode"><pre><code>L = [<span class="str">'a'</span>, [<span class="str">'bb'</span>, <span class="str">'cc'</span>], <span class="str">'d'</span>]
 L[<span class="lit">1</span>][<span class="lit">1</span>] = <span class="lit">0</span>
 <span class="kwd">print</span>(L)
-<span class="com"># Prints ['a', ['bb', 0], 'd']</span></code></pre></div></div>
+<span class="com"># Output: ['a', ['bb', 0], 'd']</span></code></pre></div></div>
 
 
 
-<h2 class="wp-block-heading" id="add-nested-list-items">Add items to a Nested list</h2>
+<h2 class="wp-block-heading" id="adding-elements-to-a-nested-list">Adding Elements to a Nested List</h2>
 
 
 
-<p>To add new values to the end of the nested list, use <a href="../python-list-append-method/index.html">append()</a> method.</p>
+<p>Nested lists in Python can be modified using the same list operations as regular lists. This means you can add elements to nested lists using methods like <a href="../python-list-append-method/index.html">append()</a>, <a href="../python-list-insert-method/index.html">insert()</a>, and <a href="../python-list-extend-method/index.html">extend()</a>.</p>
+
+
+
+<p>To add a new element to the end of a nested list, you can use the <code>append()</code> method.</p>
 
 
 
 <div class="example"><div class="excode"><pre><code>L = [<span class="str">'a'</span>, [<span class="str">'bb'</span>, <span class="str">'cc'</span>], <span class="str">'d'</span>]
 L[<span class="lit">1</span>].append(<span class="str">'xx'</span>)
 <span class="kwd">print</span>(L)
-<span class="com"># Prints ['a', ['bb', 'cc', 'xx'], 'd']</span></code></pre></div></div>
+<span class="com"># Output: ['a', ['bb', 'cc', 'xx'], 'd']</span></code></pre></div></div>
 
 
 
-<p>When you want to insert an item at a specific position in a nested list, use <a href="../python-list-insert-method/index.html">insert()</a> method.</p>
+<p>If you need to insert an element at a specific position within a nested list, the <code>insert()</code> method is the right tool.</p>
 
 
 
 <div class="example"><div class="excode"><pre><code>L = [<span class="str">'a'</span>, [<span class="str">'bb'</span>, <span class="str">'cc'</span>], <span class="str">'d'</span>]
 L[<span class="lit">1</span>].insert(<span class="lit">0</span>,<span class="str">'xx'</span>)
 <span class="kwd">print</span>(L)
-<span class="com"># Prints ['a', ['xx', 'bb', 'cc'], 'd']</span></code></pre></div></div>
+<span class="com"># Output: ['a', ['xx', 'bb', 'cc'], 'd']</span></code></pre></div></div>
 
 
 
-<p>You can merge one list into another by using <a href="../python-list-extend-method/index.html">extend()</a> method.</p>
+<p>Finally, the <code>extend()</code> method allows you to merge one list into another.</p>
 
 
 
 <div class="example"><div class="excode"><pre><code>L = [<span class="str">'a'</span>, [<span class="str">'bb'</span>, <span class="str">'cc'</span>], <span class="str">'d'</span>]
-L[<span class="lit">1</span>].extend([<span class="lit">1</span>,<span class="lit">2</span>,<span class="lit">3</span>])
+L[<span class="lit">1</span>].extend([<span class="lit">1</span>, <span class="lit">2</span>, <span class="lit">3</span>])
 <span class="kwd">print</span>(L)
-<span class="com"># Prints ['a', ['bb', 'cc', 1, 2, 3], 'd']</span></code></pre></div></div>
+<span class="com"># Output: ['a', ['bb', 'cc', 1, 2, 3], 'd']</span></code></pre></div></div>
 
 
 
-<h2 class="wp-block-heading" id="remove-nested-list-items">Remove items from a Nested List</h2>
+<h2 class="wp-block-heading" id="removing-elements-from-a-nested-list">Removing Elements from a Nested List</h2>
 
 
 
-<p>If you know the index of the item you want, you can use <a href="../python-list-pop-method/index.html">pop()</a> method. It modifies the list and returns the removed item.</p>
+<p>There are different ways to remove elements from a nested list depending on your specific needs.</p>
+
+
+
+<p>If you know the index of the element you want to remove, the <a href="../python-list-pop-method/index.html">pop()</a> method is a good choice. This method not only removes the element at the specified index but also returns its value.</p>
 
 
 
 <div class="example"><div class="excode"><pre><code>L = [<span class="str">'a'</span>, [<span class="str">'bb'</span>, <span class="str">'cc'</span>, <span class="str">'dd'</span>], <span class="str">'e'</span>]
 x = L[<span class="lit">1</span>].pop(<span class="lit">1</span>)
 <span class="kwd">print</span>(L)
-<span class="com"># Prints ['a', ['bb', 'dd'], 'e']</span><span class="pln">
+<span class="com"># Output: ['a', ['bb', 'dd'], 'e']</span>
 
-</span><span class="com"># removed item</span>
+<span class="com"># removed element</span>
 <span class="kwd">print</span>(x)
-<span class="com"># Prints cc</span></code></pre></div></div>
+<span class="com"># Output: cc</span></code></pre></div></div>
 
 
 
-<p>If you don’t need the removed value, use the <a>del</a> statement.</p>
+<p>In cases where you don&#8217;t need the removed value, the <code>del</code> statement is a simple and efficient way to delete an element by its index.</p>
 
 
 
 <div class="example"><div class="excode"><pre><code>L = [<span class="str">'a'</span>, [<span class="str">'bb'</span>, <span class="str">'cc'</span>, <span class="str">'dd'</span>], <span class="str">'e'</span>]
 <span class="kwd">del</span> L[<span class="lit">1</span>][<span class="lit">1</span>]
 <span class="kwd">print</span>(L)
-<span class="com"># Prints ['a', ['bb', 'dd'], 'e']</span></code></pre></div></div>
+<span class="com"># Output: ['a', ['bb', 'dd'], 'e']</span></code></pre></div></div>
 
 
 
-<p>If you’re not sure where the item is in the list, use <a href="../python-list-remove-method/index.html">remove()</a> method to delete it by value.</p>
+<p>If you don&#8217;t know the exact index but know the value of the element you want to remove, the <a href="../python-list-remove-method/index.html">remove()</a> method is the way to go. This method searches the list and removes the first occurrence of the specified value.</p>
 
 
 
 <div class="example"><div class="excode"><pre><code>L = [<span class="str">'a'</span>, [<span class="str">'bb'</span>, <span class="str">'cc'</span>, <span class="str">'dd'</span>], <span class="str">'e'</span>]
 L[<span class="lit">1</span>].<span class="kwd">remove</span>(<span class="str">'cc'</span>)
 <span class="kwd">print</span>(L)
-<span class="com"># Prints ['a', ['bb', 'dd'], 'e']</span></code></pre></div></div>
+<span class="com"># Output: ['a', ['bb', 'dd'], 'e']</span></code></pre></div></div>
 
 
 
-<h2 class="wp-block-heading" id="find-nested-list-length">Find Nested List Length</h2>
+<h2 class="wp-block-heading" id="finding-the-length-of-a-nested-list">Finding the Length of a Nested List</h2>
 
 
 
-<p>You can use the built-in <a href="../python-len-function/index.html">len()</a>&nbsp;function to find how many items a nested sublist has.</p>
+<p>Determining the number of elements within a nested list is simple using Python&#8217;s built-in <a href="../python-len-function/index.html">len()</a> function. This function returns the length of a list, which is the number of elements it contains.</p>
 
 
 
 <div class="example"><div class="excode"><pre><code>L = [<span class="str">'a'</span>, [<span class="str">'bb'</span>, <span class="str">'cc'</span>], <span class="str">'d'</span>]
 
-<span class="kwd">print</span>(len(L))
-<span class="com"># Prints 3</span>
-
-<span class="kwd">print</span>(len(L[<span class="lit">1</span>]))
-<span class="com"># Prints 2</span></code></pre></div></div>
+<span class="kwd">print</span>(len(L))      <span class="com"># Output: 3</span>
+<span class="kwd">print</span>(len(L[<span class="lit">1</span>]))   <span class="com"># Output: 2</span></code></pre></div></div>
 
 
 
-<h2 class="wp-block-heading" id="iterate-through-a-nested-list">Iterate through a Nested List</h2>
+<h2 class="wp-block-heading" id="iterating-through-a-nested-list">Iterating Through a Nested List</h2>
 
 
 
-<p>To iterate over the items of a nested list, use simple <a href="../python-for-loop/index.html">for loop</a>.</p>
+<p>You can iterate through nested lists using nested loops. In this approach, an outer loop iterates over the sublists within the main list, while an inner loop iterates over the individual elements within each sublist.</p>
 
 
 
-<div class="example"><div class="excode"><pre><code>L = [[<span class="lit">1</span>, <span class="lit">2</span>, <span class="lit">3</span>],[<span class="lit">4</span>, <span class="lit">5</span>, <span class="lit">6</span>],[<span class="lit">7</span>, <span class="lit">8</span>, <span class="lit">9</span>]]<span class="pln">   
-</span><span class="kwd">for</span> list <span class="kwd">in</span> L:
+<div class="example"><div class="excode"><pre><code>L = [[<span class="lit">1</span>, <span class="lit">2</span>, <span class="lit">3</span>],[<span class="lit">4</span>, <span class="lit">5</span>, <span class="lit">6</span>],[<span class="lit">7</span>, <span class="lit">8</span>, <span class="lit">9</span>]]   
+<span class="kwd">for</span> list <span class="kwd">in</span> L:
     <span class="kwd">for</span> number <span class="kwd">in</span> list:
         <span class="kwd">print</span>(number, <span class="kwd">end</span>=<span class="str">' '</span>)
-<span class="com"># Prints 1 2 3 4 5 6 7 8 9</span></code></pre></div></div>
+<span class="com"># Output: 1 2 3 4 5 6 7 8 9</span></code></pre></div></div>
+
+
+
+<h2 class="wp-block-heading" id="common-use-cases-for-nested-lists">Common Use Cases for Nested Lists</h2>
+
+
+
+<p>Nested lists provide a powerful and flexible way to organize and structure data in a hierarchical manner.</p>
+
+
+
+<h3 class="wp-block-heading" id="matrices-and-2d-arrays">Matrices and 2D Arrays</h3>
+
+
+
+<p>One common use case is representing matrices and 2D arrays, which are useful in mathematical computations and data science.</p>
+
+
+
+<div class="example"><div class="excode"><pre><code>matrix = [
+    [<span class="lit">1</span>, <span class="lit">2</span>, <span class="lit">3</span>],
+    [<span class="lit">4</span>, <span class="lit">5</span>, <span class="lit">6</span>],
+    [<span class="lit">7</span>, <span class="lit">8</span>, <span class="lit">9</span>]
+]</code></pre></div></div>
+
+
+
+<h3 class="wp-block-heading" id="tables-of-data">Tables of Data</h3>
+
+
+
+<p>Nested lists are also used to represent tabular data; each inner list can act as a row, with elements representing the data within each column.</p>
+
+
+
+<div class="example"><div class="excode"><pre><code>table = [
+    [<span class="str">"Name"</span>, <span class="str">"Age"</span>, <span class="str">"Occupation"</span>],
+    [<span class="str">"Alice"</span>, <span class="lit">30</span>, <span class="str">"Engineer"</span>],
+    [<span class="str">"Bob"</span>, <span class="lit">25</span>, <span class="str">"Artist"</span>]
+]</code></pre></div></div>
+
+
+
+<h3 class="wp-block-heading" id="graphs-and-trees">Graphs and Trees</h3>
+
+
+
+<p>Even in more complex scenarios, such as graph theory or data structures, nested lists can be useful. In graph representation, nested lists can store adjacency lists, where each inner list contains the neighbors of a particular node.</p>
+
+
+
+<div class="example"><div class="excode"><pre><code>graph = [
+    [<span class="lit">1</span>, <span class="lit">2</span>],    <span class="com"># Neighbors of node 0</span>
+    [<span class="lit">0</span>, <span class="lit">3</span>],    <span class="com"># Neighbors of node 1</span>
+    [<span class="lit">0</span>, <span class="lit">3</span>],    <span class="com"># Neighbors of node 2</span>
+    [<span class="lit">1</span>, <span class="lit">2</span>]     <span class="com"># Neighbors of node 3</span>
+]</code></pre></div></div>
 						</div>
 					</article>
 
@@ -614,5 +676,5 @@ L[<span class="lit">1</span>].<span class="kwd">remove</span>(<span class="str">
 <!--
 Performance optimized by Redis Object Cache. Learn more: https://wprediscache.com
 
-Retrieved 526 objects (156 KB) from Redis using PhpRedis (v5.3.7).
+Retrieved 528 objects (160 KB) from Redis using PhpRedis (v5.3.7).
 -->
